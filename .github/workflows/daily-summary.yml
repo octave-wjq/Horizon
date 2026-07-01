@@ -2,8 +2,9 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs daily at 08:00 Asia/Shanghai
-      timezone: 'Asia/Shanghai'
+    # GitHub scheduled workflows use UTC and can be heavily delayed at the top
+    # of the hour. 00:17 UTC is 08:17 Asia/Shanghai.
+    - cron: '17 0 * * *'
   workflow_dispatch:      # Allow manual trigger
 
 jobs:
