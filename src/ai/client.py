@@ -293,6 +293,17 @@ class OpenAIClient(AIClient):
                 )
             else:
                 raise
+        # Some misconfigured base_url values (e.g. missing `/v1`) make the
+        # OpenAI SDK return a raw HTML/string body instead of a completion object.
+        if isinstance(response, str) or not hasattr(response, "choices"):
+            preview = str(response)[:120].replace("\n", " ")
+            base = getattr(getattr(self.client, "base_url", None), "host", None) or self.config.base_url
+            raise ValueError(
+                "OpenAI-compatible endpoint returned a non-completion response "
+                f"(got {type(response).__name__}: {preview!r}...). "
+                "Check ai.base_url (usually needs a trailing `/v1`) and that "
+                f"the model supports chat completions. base_url={base!r} model={self.model!r}"
+            )
         usage = getattr(response, "usage", None)
         if usage is not None:
             record_usage(

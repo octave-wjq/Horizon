@@ -1,12 +1,12 @@
 theme: jekyll-theme-cayman
 title: Horizon Daily
-description: AI-curated daily digest of tech and research news
-baseurl: "/Horizon" # the subpath of your site, e.g. /blog
-url: "https://thysrael.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+description: AI-curated daily digest — agents, RAG, med-AI, generative media
+baseurl: "/Horizon"
+url: "https://octave-wjq.github.io"
 
 # Build settings
 markdown: kramdown
-future: true # Allow future posts to be published
+future: true
 plugins:
   - jekyll-feed
 feed:

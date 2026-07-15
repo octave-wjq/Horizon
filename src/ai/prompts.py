@@ -20,42 +20,46 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information.
+CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information for a reader focused on these themes:
 
-Score content on a 0-10 scale based on importance and relevance:
+1) AI agents & developer tooling: multi-agent systems, tool-use, coding agents, vibe coding, Cursor/Claude Code/Codex/Aider-style workflows, open-source agent frameworks
+2) Enterprise RAG & LLM infrastructure: retrieval systems, knowledge bases, vector/hybrid search, GraphRAG, serving stacks (vLLM/SGLang/Ollama), model releases and practical deployment
+3) Medical-engineering / digital health applications: clinical or biomedical LLM use-cases, agent simulation, digital twins, elderly care / aging assistive AI, real-world clinical landing
+4) Generative media: text-to-image, text-to-video, diffusion systems, ComfyUI workflows, multimodal generation progress
+
+Score content on a 0-10 scale based on importance AND alignment with the themes above:
 
 **9-10: Groundbreaking** - Major breakthroughs, paradigm shifts, or highly significant announcements
-- New major version releases of widely-used technologies
-- Significant research breakthroughs
-- Important industry-changing announcements
+- New major releases of widely-used AI tools/models/frameworks in the themes above
+- Significant research breakthroughs with clear technical substance
+- Important industry-changing product or open-source announcements
 
 **7-8: High Value** - Important developments worth immediate attention
-- Interesting technical deep-dives
-- Novel approaches to known problems
-- Insightful analysis or commentary
-- Valuable tools or libraries
+- Practical how-tos or deep-dives that help build/use agents, RAG, coding tools, medical AI, or gen-media systems
+- Novel approaches, strong open-source tooling, or high-signal academic/industry results
+- Insightful analysis that changes how a practitioner should build or evaluate systems
 
 **5-6: Interesting** - Worth knowing but not urgent
-- Incremental improvements
-- Useful tutorials
-- Moderate community interest
+- Incremental improvements, decent tutorials, moderate community interest
+- Adjacent AI news with only weak connection to the themes
 
 **3-4: Low Priority** - Generic or routine content
-- Minor updates
-- Common knowledge
-- Overly promotional content
+- Minor updates, common knowledge, generic startup hype, low technical depth
 
 **0-2: Noise** - Not relevant or low quality
-- Spam or purely promotional
-- Off-topic content
-- Trivial updates
+- Spam, pure promotion, entertainment/politics/off-topic, trivial updates
 
-Consider:
+Scoring bias (important):
+- Prefer concrete methods, open-source repos, reproducible results, benchmarks, deployment lessons, clinical/engineering evidence
+- Prefer actionable engineering guidance over vague "AI will change everything" commentary
+- Boost content about enterprise RAG patterns, agent simulation, elderly-care applications, and T2I/T2V systems even if community engagement is moderate
+- Penalize generic consumer ChatGPT tips, crypto/finance noise, and broad tech news unrelated to the themes
+
+Also consider:
 - Technical depth and novelty
-- Potential impact on the field
+- Potential impact on practitioners and researchers
 - Quality of writing/presentation
-- Relevance to software engineering, AI/ML, and systems research
-- Community discussion quality: insightful comments, diverse viewpoints, and debates increase value
+- Community discussion quality: insightful comments increase value
 - Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
 """
 

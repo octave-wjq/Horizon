@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  macOS LaunchAgent for Horizon daily digests.
+
+  Setup:
+    1. Edit WorkingDirectory / ProgramArguments paths below to your machine.
+    2. Ensure .env has OPENAI_API_KEY, GITHUB_TOKEN, HORIZON_WEBHOOK_URL.
+    3. chmod +x scripts/daily-local.sh
+    4. cp scripts/com.horizon.daily.plist ~/Library/LaunchAgents/
+    5. launchctl load ~/Library/LaunchAgents/com.horizon.daily.plist
+    6. launchctl start com.horizon.daily   # optional immediate test
+
+  Default schedule: every day at 08:00 local time.
+-->
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.horizon.daily</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/octave/桌面/work/Horizon</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/bash</string>
+      <string>/Users/octave/桌面/work/Horizon/scripts/daily-local.sh</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <!-- launchd has a minimal PATH; include common uv install locations -->
+      <key>PATH</key>
+      <string>/Users/octave/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+      <key>HOURS</key>
+      <string>24</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+      <key>Hour</key>
+      <integer>8</integer>
+      <key>Minute</key>
+      <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/octave/桌面/work/Horizon/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/octave/桌面/work/Horizon/logs/launchd.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+  </dict>
+</plist>
