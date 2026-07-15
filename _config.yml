@@ -1,0 +1,23 @@
+theme: jekyll-theme-cayman
+title: Horizon Daily
+description: AI-curated daily digest — agents, RAG, med-AI, generative media
+baseurl: "/Horizon"
+url: "https://octave-wjq.github.io"
+
+# Build settings
+markdown: kramdown
+future: true
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+exclude:
+  - ".github"
+  - "node_modules"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
