@@ -2,16 +2,19 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub scheduled workflows use UTC. 20:00 UTC is 04:00 Asia/Shanghai;
-    # this intentionally runs early to offset the observed schedule delay.
-    - cron: '0 22 * * *'
-  workflow_dispatch:      # Allow manual trigger
+    # GitHub cron is UTC only.
+    # 23:30 UTC ≈ 07:30 Asia/Shanghai (next calendar morning).
+    # Use :30 past the hour — top-of-hour schedules are often delayed/skipped under load.
+    - cron: '30 23 * * *'
+    # Backup slot same day evening UTC in case the morning slot is skipped.
+    - cron: '30 11 * * *'
+  workflow_dispatch:      # Manual trigger: Actions → Daily Horizon Summary → Run workflow
 
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Needed to commit changes
+      contents: write  # Needed to commit changes / deploy Pages
 
     steps:
       - name: Checkout code
@@ -31,11 +34,29 @@ jobs:
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
 
+      - name: Verify required secrets
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
+        run: |
+          missing=0
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY secret is empty. Set it in repo Settings → Secrets and variables → Actions."
+            missing=1
+          else
+            echo "OPENAI_API_KEY is set (length=${#OPENAI_API_KEY})"
+          fi
+          if [ -z "$HORIZON_WEBHOOK_URL" ]; then
+            echo "::error::HORIZON_WEBHOOK_URL secret is empty. Feishu push will be skipped/fail."
+            missing=1
+          else
+            echo "HORIZON_WEBHOOK_URL is set (length=${#HORIZON_WEBHOOK_URL})"
+          fi
+          exit "$missing"
+
       - name: Run Horizon
         env:
-          # Map secrets to environment variables expected by config.json
-          # Required for this fork: OPENAI_API_KEY (Packy/OpenAI-compatible)
-          # Optional: HORIZON_WEBHOOK_URL for Feishu, GITHUB_TOKEN for higher GitHub API quota
+          # Required: OPENAI_API_KEY (Packy/OpenAI-compatible), HORIZON_WEBHOOK_URL (Feishu)
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
