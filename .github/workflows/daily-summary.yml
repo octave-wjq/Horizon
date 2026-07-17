@@ -2,13 +2,15 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub cron is UTC only.
-    # 23:30 UTC ≈ 07:30 Asia/Shanghai (next calendar morning).
-    # Use :30 past the hour — top-of-hour schedules are often delayed/skipped under load.
-    - cron: '30 23 * * *'
-    # Backup slot same day evening UTC in case the morning slot is skipped.
-    - cron: '30 11 * * *'
-  workflow_dispatch:      # Manual trigger: Actions → Daily Horizon Summary → Run workflow
+    # GitHub cron is UTC. Times below are Asia/Shanghai (UTC+8):
+    #   07:30  primary
+    #   08:30  retry if primary missed/failed
+    #   09:30  final retry
+    # :30 past the hour reduces top-of-hour Actions congestion skips.
+    - cron: '30 23 * * *'   # 07:30 Asia/Shanghai
+    - cron: '30 0 * * *'    # 08:30 Asia/Shanghai
+    - cron: '30 1 * * *'    # 09:30 Asia/Shanghai
+  workflow_dispatch:        # Always runs (ignores "already done today" skip)
 
 jobs:
   daily-summary:
@@ -20,21 +22,60 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: Decide whether to run today
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Use Shanghai calendar date so morning retries share the same "day".
+          TODAY=$(TZ=Asia/Shanghai date +'%Y-%m-%d')
+          echo "DATE=$TODAY" >> "$GITHUB_ENV"
+          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual dispatch → always run"
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Scheduled retries: skip if today's digest already landed on gh-pages.
+          POST_PATH="_posts/${TODAY}-summary-zh.md"
+          API="https://api.github.com/repos/${{ github.repository }}/contents/${POST_PATH}?ref=gh-pages"
+          code=$(curl -sS -o /tmp/post_meta.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$API" || true)
+
+          if [ "$code" = "200" ]; then
+            echo "Found existing $POST_PATH on gh-pages (HTTP $code) → skip retry"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "No successful digest for $TODAY yet (HTTP $code) → run"
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.gate.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install uv
+        if: steps.gate.outputs.should_run == 'true'
         uses: astral-sh/setup-uv@v6
 
       - name: Install dependencies
+        if: steps.gate.outputs.should_run == 'true'
         run: uv sync
 
       - name: Prepare GitHub Actions config
+        if: steps.gate.outputs.should_run == 'true'
         run: cp data/config.github.json data/config.json
 
       - name: Verify required secrets
+        if: steps.gate.outputs.should_run == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
@@ -55,6 +96,7 @@ jobs:
           exit "$missing"
 
       - name: Run Horizon
+        if: steps.gate.outputs.should_run == 'true'
         env:
           # Required: OPENAI_API_KEY (Packy/OpenAI-compatible), HORIZON_WEBHOOK_URL (Feishu)
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -67,10 +109,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: uv run horizon --hours 24
 
-      - name: Set current date as environment variable
-        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
       - name: Deploy to GitHub Pages
+        if: steps.gate.outputs.should_run == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -79,3 +119,9 @@ jobs:
           commit_message: "📝 Daily Summary: ${{ env.DATE }}"
           publish_branch: gh-pages
           enable_jekyll: true
+
+      - name: Skipped because already delivered today
+        if: steps.gate.outputs.should_run != 'true'
+        run: |
+          echo "Skip: digest for ${{ steps.gate.outputs.today }} already exists on gh-pages."
+          echo "No Feishu re-send. Use workflow_dispatch to force a fresh run."
