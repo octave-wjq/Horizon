@@ -62,7 +62,7 @@
         "owner": "microsoft",
         "repo": "autogen",
         "enabled": true,
-        "category": "ai-agent"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -70,7 +70,7 @@
         "owner": "crewAIInc",
         "repo": "crewAI",
         "enabled": true,
-        "category": "ai-agent"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -78,7 +78,7 @@
         "owner": "geekan",
         "repo": "MetaGPT",
         "enabled": true,
-        "category": "ai-agent"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -86,7 +86,7 @@
         "owner": "langgenius",
         "repo": "dify",
         "enabled": true,
-        "category": "ai-rag"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -94,7 +94,7 @@
         "owner": "langchain-ai",
         "repo": "langchain",
         "enabled": true,
-        "category": "ai-rag"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -102,7 +102,7 @@
         "owner": "run-llama",
         "repo": "llama_index",
         "enabled": true,
-        "category": "ai-rag"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -110,7 +110,7 @@
         "owner": "infiniflow",
         "repo": "ragflow",
         "enabled": true,
-        "category": "ai-rag"
+        "category": "llm-app"
       },
       {
         "type": "repo_releases",
@@ -182,7 +182,7 @@
         "owner": "astral-sh",
         "repo": "uv",
         "enabled": false,
-        "category": "ai-tools"
+        "category": "ai-coding"
       },
       {
         "type": "user_events",
@@ -191,12 +191,44 @@
         "repo": null,
         "enabled": false,
         "category": "other"
+      },
+      {
+        "type": "repo_releases",
+        "username": null,
+        "owner": "medalpaca",
+        "repo": "medalpaca",
+        "enabled": true,
+        "category": "med-ai"
+      },
+      {
+        "type": "repo_releases",
+        "username": null,
+        "owner": "epfml",
+        "repo": "Meditron",
+        "enabled": false,
+        "category": "med-ai"
+      },
+      {
+        "type": "repo_releases",
+        "username": null,
+        "owner": "Stanford-AIMI",
+        "repo": "CheXagent",
+        "enabled": true,
+        "category": "med-ai"
+      },
+      {
+        "type": "repo_releases",
+        "username": null,
+        "owner": "OpenBMB",
+        "repo": "XAgent",
+        "enabled": false,
+        "category": "ai-agent"
       }
     ],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 30,
-      "min_score": 80,
+      "fetch_top_stories": 25,
+      "min_score": 90,
       "category": "ai-news"
     },
     "rss": [
@@ -204,14 +236,14 @@
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
-        "category": "ai-tools",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
         "name": "Latent Space",
         "url": "https://www.latent.space/feed",
         "enabled": true,
-        "category": "ai-agent",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
@@ -225,21 +257,21 @@
         "name": "Lilian Weng",
         "url": "https://lilianweng.github.io/index.xml",
         "enabled": true,
-        "category": "ai-llm",
+        "category": "ai-research",
         "content_extractor": null
       },
       {
         "name": "Chip Huyen",
         "url": "https://huyenchip.com/feed.xml",
         "enabled": true,
-        "category": "ai-tools",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
         "name": "Sebastian Raschka",
         "url": "https://sebastianraschka.com/rss_feed.xml",
         "enabled": true,
-        "category": "ai-llm",
+        "category": "ai-research",
         "content_extractor": null
       },
       {
@@ -253,7 +285,7 @@
         "name": "Jay Alammar",
         "url": "https://jalammar.github.io/feed.xml",
         "enabled": true,
-        "category": "ai-llm",
+        "category": "ai-research",
         "content_extractor": null
       },
       {
@@ -274,7 +306,7 @@
         "name": "Hugging Face Blog",
         "url": "https://huggingface.co/blog/feed.xml",
         "enabled": true,
-        "category": "ai-tools",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
@@ -288,14 +320,14 @@
         "name": "Google DeepMind Blog",
         "url": "https://deepmind.google/blog/rss.xml",
         "enabled": true,
-        "category": "ai-llm",
+        "category": "ai-research",
         "content_extractor": null
       },
       {
         "name": "Google AI Blog",
         "url": "https://blog.google/technology/ai/rss/",
         "enabled": true,
-        "category": "ai-news",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
@@ -330,13 +362,13 @@
         "name": "MarkTechPost",
         "url": "https://marktechpost.com/feed/",
         "enabled": true,
-        "category": "ai-news",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
         "name": "AI News",
         "url": "https://www.artificialintelligence-news.com/feed/",
-        "enabled": true,
+        "enabled": false,
         "category": "ai-news",
         "content_extractor": null
       },
@@ -351,7 +383,7 @@
         "name": "Machine Learning Mastery",
         "url": "https://machinelearningmastery.com/feed/",
         "enabled": true,
-        "category": "ai-tools",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
@@ -365,35 +397,35 @@
         "name": "量子位",
         "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
         "enabled": true,
-        "category": "ai-news",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
         "name": "新智元",
         "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
         "enabled": true,
-        "category": "ai-news",
+        "category": "llm-app",
         "content_extractor": null
       },
       {
         "name": "Nature Machine Intelligence",
         "url": "https://www.nature.com/natmachintell.rss",
         "enabled": true,
-        "category": "med-ai",
+        "category": "med-paper",
         "content_extractor": null
       },
       {
         "name": "Nature Medical Research",
         "url": "https://www.nature.com/subjects/medical-research.rss",
-        "enabled": false,
-        "category": "med-ai",
+        "enabled": true,
+        "category": "med-paper",
         "content_extractor": null
       },
       {
         "name": "Nature Medicine",
         "url": "https://www.nature.com/nm.rss",
         "enabled": true,
-        "category": "med-ai",
+        "category": "med-paper",
         "content_extractor": null
       },
       {
@@ -407,13 +439,13 @@
         "name": "The Lancet Online",
         "url": "https://www.thelancet.com/rssfeed/lancet_online.xml",
         "enabled": true,
-        "category": "med-ai",
+        "category": "med-paper",
         "content_extractor": null
       },
       {
         "name": "Meta Engineering",
         "url": "https://engineering.fb.com/feed/",
-        "enabled": true,
+        "enabled": false,
         "category": "gen-media",
         "content_extractor": null
       },
@@ -449,14 +481,14 @@
         "name": "The Batch",
         "url": "https://www.deeplearning.ai/the-batch/feed/",
         "enabled": false,
-        "category": "ai-news",
+        "category": "other",
         "content_extractor": null
       },
       {
         "name": "AI Weekly",
         "url": "https://aiweekly.co/issues.rss",
         "enabled": false,
-        "category": "ai-news",
+        "category": "other",
         "content_extractor": null
       },
       {
@@ -465,55 +497,70 @@
         "enabled": false,
         "category": "other",
         "content_extractor": null
+      },
+      {
+        "name": "NEJM",
+        "url": "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc&feed=rss",
+        "enabled": true,
+        "category": "med-paper",
+        "content_extractor": null
+      },
+      {
+        "name": "Nature ML Subject",
+        "url": "https://www.nature.com/subjects/machine-learning.rss",
+        "enabled": true,
+        "category": "ai-research",
+        "content_extractor": null
+      },
+      {
+        "name": "arXiv cs.AI",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "enabled": true,
+        "category": "ai-research",
+        "content_extractor": null
+      },
+      {
+        "name": "arXiv cs.CL",
+        "url": "https://rss.arxiv.org/rss/cs.CL",
+        "enabled": true,
+        "category": "llm-app",
+        "content_extractor": null
+      },
+      {
+        "name": "arXiv cs.CV",
+        "url": "https://rss.arxiv.org/rss/cs.CV",
+        "enabled": false,
+        "category": "ai-research",
+        "content_extractor": null
+      },
+      {
+        "name": "arXiv q-bio.QM",
+        "url": "https://rss.arxiv.org/rss/q-bio.QM",
+        "enabled": true,
+        "category": "med-paper",
+        "content_extractor": null
       }
     ],
     "reddit": {
       "enabled": true,
       "subreddits": [
         {
+          "subreddit": "MachineLearning",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 20,
+          "category": "ai-research"
+        },
+        {
           "subreddit": "LocalLLaMA",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
           "fetch_limit": 15,
-          "min_score": 40,
-          "category": "ai-infra"
-        },
-        {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
           "min_score": 30,
-          "category": "ai-research"
-        },
-        {
-          "subreddit": "ChatGPTCoding",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 20,
-          "category": "ai-coding"
-        },
-        {
-          "subreddit": "ClaudeAI",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 20,
-          "category": "ai-coding"
-        },
-        {
-          "subreddit": "OpenAI",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 30,
-          "category": "ai-llm"
+          "category": "llm-app"
         },
         {
           "subreddit": "LangChain",
@@ -521,8 +568,8 @@
           "sort": "hot",
           "time_filter": "day",
           "fetch_limit": 15,
-          "min_score": 10,
-          "category": "ai-rag"
+          "min_score": 5,
+          "category": "llm-app"
         },
         {
           "subreddit": "Rag",
@@ -530,60 +577,105 @@
           "sort": "hot",
           "time_filter": "day",
           "fetch_limit": 15,
-          "min_score": 5,
+          "min_score": 3,
           "category": "ai-rag"
+        },
+        {
+          "subreddit": "OpenAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 40,
+          "category": "ai-llm"
+        },
+        {
+          "subreddit": "ChatGPTCoding",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 25,
+          "category": "ai-coding"
+        },
+        {
+          "subreddit": "ClaudeAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 25,
+          "category": "ai-coding"
+        },
+        {
+          "subreddit": "Cursor",
+          "enabled": false,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 10,
+          "category": "ai-coding"
         },
         {
           "subreddit": "StableDiffusion",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 40,
+          "fetch_limit": 10,
+          "min_score": 50,
           "category": "gen-media"
         },
         {
           "subreddit": "comfyui",
-          "enabled": true,
+          "enabled": false,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
+          "fetch_limit": 10,
           "min_score": 10,
           "category": "gen-media"
         },
         {
-          "subreddit": "Singularity",
+          "subreddit": "HealthIT",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 5,
+          "category": "med-ai"
+        },
+        {
+          "subreddit": "medicine",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
           "fetch_limit": 15,
           "min_score": 50,
+          "category": "med-ai"
+        },
+        {
+          "subreddit": "Singularity",
+          "enabled": false,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50,
           "category": "ai-news"
         },
         {
           "subreddit": "artificial",
-          "enabled": true,
+          "enabled": false,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
+          "fetch_limit": 10,
           "min_score": 40,
           "category": "ai-news"
-        },
-        {
-          "subreddit": "Cursor",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 10,
-          "category": "ai-coding"
         },
         {
           "subreddit": "ChatGPT",
           "enabled": false,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
+          "fetch_limit": 10,
           "min_score": 80,
           "category": "ai-llm"
         },
@@ -592,7 +684,7 @@
           "enabled": false,
           "sort": "hot",
           "time_filter": "day",
-          "fetch_limit": 15,
+          "fetch_limit": 10,
           "min_score": 100,
           "category": "other"
         }
@@ -642,97 +734,120 @@
         "TypeScript"
       ],
       "keywords": [
-        "agent",
-        "rag",
         "llm",
-        "vllm",
+        "rag",
+        "agent",
+        "workflow",
+        "orchestration",
+        "dify",
         "langchain",
         "llamaindex",
-        "dify",
-        "comfyui",
-        "diffusion",
-        "openai",
-        "claude",
-        "cursor",
-        "aider",
-        "multimodal",
-        "video generation",
-        "text-to-image",
+        "ragflow",
+        "knowledge base",
+        "retrieval",
+        "enterprise",
+        "inference",
+        "serving",
+        "vllm",
+        "deployment",
+        "production",
         "medical",
-        "healthcare"
+        "clinical",
+        "healthcare",
+        "biomedical",
+        "radiology",
+        "pathology",
+        "ehr",
+        "fhir",
+        "drug discovery",
+        "genomics",
+        "aging",
+        "elderly",
+        "digital health",
+        "medgemma",
+        "meditron",
+        "chex"
       ],
-      "min_stars": 20,
-      "max_items": 25,
-      "category": "ai-tools"
+      "min_stars": 15,
+      "max_items": 30,
+      "category": "llm-app"
     },
     "gdelt": {
       "enabled": true,
-      "query": "(AI agent OR multi-agent OR \"coding agent\" OR \"enterprise RAG\" OR \"text-to-video\" OR \"medical AI\" OR \"digital health\" OR \"elderly care\")",
+      "query": "(\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"biomedical AI\" OR \"healthcare LLM\" OR \"clinical large language model\" OR \"AI radiology\" OR \"AI pathology\" OR \"elderly care AI\" OR \"AI drug discovery\" OR \"LLM application\" OR \"enterprise RAG\" OR \"production LLM\" OR \"AI clinical decision\" OR \"foundation model healthcare\")",
       "mode": "ArtList",
-      "max_records": 20,
+      "max_records": 35,
       "timespan": "24h",
       "language": "english",
       "country": null,
-      "category": "ai-news"
+      "category": "med-ai"
     },
     "google_news": {
       "enabled": true,
-      "query": "AI agent OR coding agent OR enterprise RAG OR \"text-to-video\" OR \"medical AI\" OR \"digital health\" OR \"elderly care AI\"",
+      "query": "\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"healthcare LLM\" OR \"biomedical AI\" OR \"AI radiology\" OR \"clinical decision support\" OR \"LLM deployment\" OR \"enterprise RAG\" OR \"production AI agents\" OR \"AI elderly care\" OR \"foundation model medicine\"",
       "language": "en",
       "country": "US",
       "ceid": null,
-      "max_results": 25,
-      "category": "ai-news"
+      "max_results": 40,
+      "category": "med-ai"
     }
   },
   "filtering": {
-    "ai_score_threshold": 6.8,
+    "ai_score_threshold": 6.5,
     "time_window_hours": 24,
-    "max_items": 25,
+    "max_items": 28,
     "category_groups": {
-      "agents_coding": {
-        "name": "AI Agent / Vibecoding / 编程工具",
-        "limit": 8,
+      "med_ai": {
+        "name": "医工交叉 / 医疗LLM / 临床落地 / 论文",
+        "limit": 10,
         "categories": [
-          "ai-agent",
-          "ai-coding",
-          "ai-tools"
+          "med-ai",
+          "med-paper"
         ]
       },
-      "llm_rag_infra": {
-        "name": "大模型 / RAG / 推理基础设施",
-        "limit": 7,
+      "llm_apps": {
+        "name": "LLM落地应用 / 企业部署 / 行业场景",
+        "limit": 9,
+        "categories": [
+          "llm-app",
+          "ai-rag",
+          "ai-agent"
+        ]
+      },
+      "llm_research": {
+        "name": "大模型进展 / 评测 / 基础设施",
+        "limit": 5,
         "categories": [
           "ai-llm",
-          "ai-rag",
           "ai-infra",
           "ai-research"
         ]
       },
-      "med_ai": {
-        "name": "医工交叉 / 医疗落地 / 照护仿真",
-        "limit": 5,
+      "agents_coding": {
+        "name": "AI编程 / 开发工具",
+        "limit": 3,
         "categories": [
-          "med-ai"
+          "ai-coding",
+          "ai-tools"
         ]
       },
       "gen_media": {
         "name": "文生图 / 文生视频",
-        "limit": 4,
+        "limit": 2,
         "categories": [
           "gen-media"
         ]
       },
       "news": {
         "name": "综合 AI 资讯",
-        "limit": 4,
+        "limit": 2,
         "categories": [
           "ai-news"
         ]
       }
     },
     "default_group": "other",
-    "default_group_limit": 2
+    "default_group_limit": 1
   },
   "extractors": {},
   "email": {

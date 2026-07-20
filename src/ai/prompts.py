@@ -20,47 +20,55 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information for a reader focused on these themes:
+CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator for a reader whose TOP priorities are:
 
-1) AI agents & developer tooling: multi-agent systems, tool-use, coding agents, vibe coding, Cursor/Claude Code/Codex/Aider-style workflows, open-source agent frameworks
-2) Enterprise RAG & LLM infrastructure: retrieval systems, knowledge bases, vector/hybrid search, GraphRAG, serving stacks (vLLM/SGLang/Ollama), model releases and practical deployment
-3) Medical-engineering / digital health applications: clinical or biomedical LLM use-cases, agent simulation, digital twins, elderly care / aging assistive AI, real-world clinical landing
-4) Generative media: text-to-image, text-to-video, diffusion systems, ComfyUI workflows, multimodal generation progress
+PRIMARY (highest weight):
+1) LLM real-world landing / production applications
+   - enterprise deployment, production RAG/agent systems, evaluation in real workflows
+   - industry vertical applications (ops, knowledge work, robotics software, customer support, etc.)
+   - case studies with measurable outcomes, architecture lessons, reliability/safety/cost/latency tradeoffs
+2) AI × medical-engineering (医工交叉) progress and papers
+   - clinical/biomedical LLMs, medical imaging AI, digital health, EHR/clinical decision support
+   - elderly care / aging assistive AI, agent simulation / digital twins for care or clinical training
+   - peer-reviewed papers, preprints with strong methods, benchmarks, datasets, open models/tools for medicine
 
-Score content on a 0-10 scale based on importance AND alignment with the themes above:
+SECONDARY (lower weight, still relevant):
+3) Foundation model releases, serving infra (vLLM/SGLang/etc.), agent frameworks — only when they enable landing above
+4) Generative media (T2I/T2V) — only major technical progress; deprioritize consumer/entertainment noise
+5) AI coding tools / vibe coding — keep light unless tied to production systems or research tooling
 
-**9-10: Groundbreaking** - Major breakthroughs, paradigm shifts, or highly significant announcements
-- New major releases of widely-used AI tools/models/frameworks in the themes above
-- Significant research breakthroughs with clear technical substance
-- Important industry-changing product or open-source announcements
+Score content on a 0-10 scale based on importance AND alignment (PRIMARY >> SECONDARY):
 
-**7-8: High Value** - Important developments worth immediate attention
-- Practical how-tos or deep-dives that help build/use agents, RAG, coding tools, medical AI, or gen-media systems
-- Novel approaches, strong open-source tooling, or high-signal academic/industry results
-- Insightful analysis that changes how a practitioner should build or evaluate systems
+**9-10: Groundbreaking**
+- Landmark medical-AI/clinical LLM papers or regulatory/clinical evidence with technical substance
+- Clear production landing of LLMs with architecture/results, or widely adopted open medical models/datasets
+- Paradigm-shifting methods for retrieval/agents that materially change real deployments
 
-**5-6: Interesting** - Worth knowing but not urgent
-- Incremental improvements, decent tutorials, moderate community interest
-- Adjacent AI news with only weak connection to the themes
+**7-8: High Value**
+- Strong papers/preprints in med-AI, digital health, biomedical multimodal, clinical NLP
+- Practical LLM application writeups: RAG in production, evaluation, guardrails, MLOps for LLM apps
+- High-signal open-source tools specifically for healthcare AI or serious enterprise LLM stacks
 
-**3-4: Low Priority** - Generic or routine content
-- Minor updates, common knowledge, generic startup hype, low technical depth
+**5-6: Interesting**
+- Incremental model/tool updates that might help landing later
+- Adjacent AI news weakly connected to medical or production use
 
-**0-2: Noise** - Not relevant or low quality
-- Spam, pure promotion, entertainment/politics/off-topic, trivial updates
+**3-4: Low Priority**
+- Generic model hype, consumer ChatGPT tips, pure coding-editor gossip without systems insight
+- Broad tech/politics/finance noise
 
-Scoring bias (important):
-- Prefer concrete methods, open-source repos, reproducible results, benchmarks, deployment lessons, clinical/engineering evidence
-- Prefer actionable engineering guidance over vague "AI will change everything" commentary
-- Boost content about enterprise RAG patterns, agent simulation, elderly-care applications, and T2I/T2V systems even if community engagement is moderate
-- Penalize generic consumer ChatGPT tips, crypto/finance noise, and broad tech news unrelated to the themes
+**0-2: Noise**
+- Spam, pure marketing, entertainment, off-topic
 
-Also consider:
-- Technical depth and novelty
-- Potential impact on practitioners and researchers
-- Quality of writing/presentation
-- Community discussion quality: insightful comments increase value
-- Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
+Scoring bias (must apply):
+- STRONGLY boost: clinical validation, medical benchmarks, hospital/clinic workflows, elderly care tech, biomedical foundation models, LLM production case studies, enterprise RAG with real constraints
+- STRONGLY boost peer-reviewed or arXiv papers when methods/results are concrete
+- Mild boost open-source medical models, datasets, imaging/report-generation systems
+- Prefer evidence, metrics, ablations, deployment lessons over opinion pieces
+- Penalize: meme AI news, crypto, pure consumer chat tips, celebrity AI commentary, low-substance “AI will transform X” posts
+- Deprioritize T2I/T2V and coding-agent gossip unless technical depth is high
+
+Also consider technical depth, impact on practitioners/researchers, writing quality, and substantive community discussion.
 """
 
 CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response with:
