@@ -49,9 +49,10 @@ Score content on a 0-10 scale based on importance AND alignment (PRIMARY >> SECO
 - Practical LLM application writeups: RAG in production, evaluation, guardrails, MLOps for LLM apps
 - High-signal open-source tools specifically for healthcare AI or serious enterprise LLM stacks
 
-**5-6: Interesting**
-- Incremental model/tool updates that might help landing later
-- Adjacent AI news weakly connected to medical or production use
+**5-6: Interesting (default home for decent papers & useful landing notes)**
+- arXiv / journal papers with a clear method or empirical result in LLM apps, agents, RAG, multimodal, or medical AI — even if incremental
+- Solid tutorials / engineering notes that a practitioner could apply this week
+- Adjacent technical AI news with real substance
 
 **3-4: Low Priority**
 - Generic model hype, consumer ChatGPT tips, pure coding-editor gossip without systems insight
@@ -62,11 +63,11 @@ Score content on a 0-10 scale based on importance AND alignment (PRIMARY >> SECO
 
 Scoring bias (must apply):
 - STRONGLY boost: clinical validation, medical benchmarks, hospital/clinic workflows, elderly care tech, biomedical foundation models, LLM production case studies, enterprise RAG with real constraints
-- STRONGLY boost peer-reviewed or arXiv papers when methods/results are concrete
-- Mild boost open-source medical models, datasets, imaging/report-generation systems
+- STRONGLY boost peer-reviewed or arXiv papers: give at least 5.5 when the abstract/title shows a real method/result in AI/LLM/med-AI (do NOT starve the digest of papers)
 - Prefer evidence, metrics, ablations, deployment lessons over opinion pieces
 - Penalize: meme AI news, crypto, pure consumer chat tips, celebrity AI commentary, low-substance “AI will transform X” posts
 - Deprioritize T2I/T2V and coding-agent gossip unless technical depth is high
+- On mixed days, rank interesting papers and production LLM writeups above generic social buzz
 
 Also consider technical depth, impact on practitioners/researchers, writing quality, and substantive community discussion.
 """

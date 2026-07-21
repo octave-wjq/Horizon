@@ -484,6 +484,11 @@ class FilteringConfig(BaseModel):
     ai_score_threshold: float = 7.0
     time_window_hours: int = 24
     max_items: Optional[int] = Field(default=None, gt=0)
+    # If fewer than this many items pass the score threshold, top up with the
+    # next-highest scored items so the digest is not empty on quiet days.
+    min_items: Optional[int] = Field(default=None, gt=0)
+    # Prefer paper-like items when topping up / filling the floor.
+    min_paper_items: Optional[int] = Field(default=None, gt=0)
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)

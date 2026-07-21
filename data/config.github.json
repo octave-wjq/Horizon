@@ -793,7 +793,7 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 6.5,
+    "ai_score_threshold": 5.0,
     "time_window_hours": 24,
     "max_items": 28,
     "category_groups": {
@@ -847,7 +847,9 @@
       }
     },
     "default_group": "other",
-    "default_group_limit": 1
+    "default_group_limit": 1,
+    "min_items": 5,
+    "min_paper_items": 2
   },
   "extractors": {},
   "email": {

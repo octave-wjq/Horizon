@@ -632,6 +632,101 @@ class HorizonOrchestrator:
 
         return [item for i, item in enumerate(items) if i not in drop_indices]
 
+    @staticmethod
+    def _is_paper_like(item: ContentItem) -> bool:
+        """Heuristic: research papers / preprints the reader wants daily."""
+        category = str((item.metadata or {}).get("category") or "").lower()
+        if category in {"med-paper", "ai-research", "med-ai"}:
+            return True
+        haystack = " ".join(
+            [
+                item.title or "",
+                str(item.url or ""),
+                item.source_type.value if item.source_type else "",
+                " ".join(item.ai_tags or []),
+                str((item.metadata or {}).get("source_name") or ""),
+            ]
+        ).lower()
+        markers = (
+            "arxiv.org",
+            "arxiv",
+            "biorxiv",
+            "medrxiv",
+            "pubmed",
+            "nature.com",
+            "sciencedirect",
+            "springer",
+            "acm.org",
+            "ieee",
+            "openreview",
+            "acl anthology",
+            "preprint",
+            "peer-reviewed",
+            "journal",
+            "doi.org",
+            "paper",
+            "论文",
+        )
+        return any(m in haystack for m in markers)
+
+    def _apply_digest_floor(
+        self,
+        selected: List[ContentItem],
+        pool: List[ContentItem],
+        *,
+        log: bool = True,
+    ) -> List[ContentItem]:
+        """Ensure min_items / min_paper_items by topping up from scored pool."""
+        filtering = self.config.filtering
+        min_items = filtering.min_items or 0
+        min_papers = filtering.min_paper_items or 0
+        if min_items <= 0 and min_papers <= 0:
+            return selected
+
+        selected_ids = {item.id for item in selected}
+        remaining = [
+            item
+            for item in sorted(pool, key=lambda x: x.ai_score or 0, reverse=True)
+            if item.id not in selected_ids
+            and item.ai_score is not None
+            and (item.ai_score or 0) > 0
+        ]
+        result = list(selected)
+        added_papers = 0
+        added_any = 0
+
+        # First fill paper floor.
+        if min_papers > 0:
+            papers_have = sum(1 for item in result if self._is_paper_like(item))
+            need = max(0, min_papers - papers_have)
+            for item in remaining:
+                if need <= 0:
+                    break
+                if not self._is_paper_like(item):
+                    continue
+                result.append(item)
+                selected_ids.add(item.id)
+                need -= 1
+                added_papers += 1
+            remaining = [item for item in remaining if item.id not in selected_ids]
+
+        # Then fill overall floor.
+        if min_items > 0 and len(result) < min_items:
+            for item in remaining:
+                if len(result) >= min_items:
+                    break
+                result.append(item)
+                added_any += 1
+
+        result.sort(key=lambda item: item.ai_score or 0, reverse=True)
+        if log and (added_papers or added_any):
+            self.console.print(
+                f"📥 Digest floor: +{added_papers} papers, +{added_any} other "
+                f"→ {len(result)} items "
+                f"(min_items={min_items or '-'}, min_paper_items={min_papers or '-'})\n"
+            )
+        return result
+
     async def filter_items(
         self,
         items: List[ContentItem],
@@ -647,17 +742,27 @@ class HorizonOrchestrator:
             if threshold is not None
             else self.config.filtering.ai_score_threshold
         )
+        scored_pool = [
+            item for item in items if item.ai_score is not None
+        ]
+        scored_pool.sort(key=lambda item: item.ai_score or 0, reverse=True)
+
         threshold_items = [
             item
-            for item in items
-            if item.ai_score is not None and item.ai_score >= effective_threshold
+            for item in scored_pool
+            if (item.ai_score or 0) >= effective_threshold
         ]
-        threshold_items.sort(key=lambda item: item.ai_score or 0, reverse=True)
+        above_threshold_count = len(threshold_items)
 
         if log:
             self.console.print(
-                f"⭐️ {len(threshold_items)} items scored ≥ {effective_threshold}\n"
+                f"⭐️ {above_threshold_count} items scored ≥ {effective_threshold}\n"
             )
+
+        # Floor before dedup so quiet days still keep candidate papers.
+        threshold_items = self._apply_digest_floor(
+            threshold_items, scored_pool, log=log
+        )
 
         deduped_items = threshold_items
         if topic_dedup and deduped_items:
@@ -670,14 +775,29 @@ class HorizonOrchestrator:
                 f"→ {len(deduped_items)} unique items\n"
             )
 
+        # Re-apply floor after dedup in case papers were collapsed away.
+        deduped_items = self._apply_digest_floor(deduped_items, scored_pool, log=log)
+
         balanced_digest = (
             self.apply_balanced_digest(deduped_items, log=log)
             if apply_balance
             else BalancedDigestResult(items=deduped_items)
         )
+
+        # Final floor after balance quotas (groups can empty a quiet day).
+        floored = self._apply_digest_floor(
+            balanced_digest.items, scored_pool, log=log
+        )
+        if floored is not balanced_digest.items:
+            balanced_digest = BalancedDigestResult(
+                items=floored,
+                enabled=balanced_digest.enabled,
+                group_counts=balanced_digest.group_counts,
+            )
+
         return FilteringPipelineResult(
             items=balanced_digest.items,
-            threshold_count=len(threshold_items),
+            threshold_count=above_threshold_count,
             topic_dedup_count=len(deduped_items),
             topic_dedup_removed=topic_dedup_removed,
             balanced_digest=balanced_digest,
