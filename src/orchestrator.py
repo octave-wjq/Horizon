@@ -1,9 +1,11 @@
 """Main orchestrator coordinating the entire workflow."""
 
 import asyncio
+import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from typing import Dict, List, Literal, Optional
 from urllib.parse import unquote_plus, urlsplit
 import httpx
@@ -228,6 +230,9 @@ class HorizonOrchestrator:
             analyzed_items = await self._analyze_content(merged_items)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
+            # 4.5 Drop stories already covered in recent digests (cross-day dedup)
+            analyzed_items = self.filter_recently_covered_items(analyzed_items)
+
             # 5. Filter, deduplicate, and balance the digest
             filtering_result = await self.filter_items(
                 analyzed_items,
@@ -240,6 +245,10 @@ class HorizonOrchestrator:
 
             # 5.6 Apply digest limits after any targeted re-analysis changes scores.
             important_items = self.apply_balanced_digest(important_items).items
+            # Final cross-day pass in case balance reordered from a larger pool.
+            important_items = self.filter_recently_covered_items(
+                important_items, log_label="final"
+            )
 
             # Show per-sub-source selection breakdown
             selected_counts: Dict[str, int] = defaultdict(int)
@@ -501,6 +510,86 @@ class HorizonOrchestrator:
         if meta.get("domain"):
             return meta["domain"]
         return item.author or "unknown"
+
+    @staticmethod
+    def _normalize_title_key(title: str) -> str:
+        """Normalize titles for fuzzy cross-day duplicate detection."""
+        text = (title or "").lower()
+        text = re.sub(r"https?://\S+", " ", text)
+        text = re.sub(r"[^\w\u4e00-\u9fff]+", " ", text, flags=re.UNICODE)
+        return re.sub(r"\s+", " ", text).strip()
+
+    def load_recent_digest_keys(self, days: Optional[int] = None) -> set[str]:
+        """Collect URL/title keys from recent local digests for cross-day dedup."""
+        if days is None:
+            days = getattr(self.config.filtering, "recent_digest_days", 3) or 0
+        if days <= 0:
+            return set()
+
+        keys: set[str] = set()
+        paths: List[Path] = []
+        summaries_dir = Path(getattr(self.storage, "summaries_dir", Path("data/summaries")))
+        posts_dir = Path("docs/_posts")
+        if summaries_dir.exists():
+            paths.extend(summaries_dir.glob("horizon-*.md"))
+        if posts_dir.exists():
+            paths.extend(posts_dir.glob("*-summary-*.md"))
+
+        # Prefer newest files; keep roughly 2 files/day (zh/en) * days.
+        # Skip today's files so same-day re-runs are not emptied.
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        paths = sorted(paths, key=lambda p: p.stat().st_mtime, reverse=True)
+        selected_paths: List[Path] = []
+        for path in paths:
+            name = path.name
+            if today in name:
+                continue
+            selected_paths.append(path)
+            if len(selected_paths) >= max(days * 2, days):
+                break
+
+        url_re = re.compile(r"\((https?://[^)\s]+)\)")
+        title_re = re.compile(r"^\d+\.\s+\[([^\]]+)\]", re.MULTILINE)
+        for path in selected_paths:
+            try:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            for url in url_re.findall(text):
+                keys.add("url:" + str(_deduplication_url_key(url)))
+            for title in title_re.findall(text):
+                norm = self._normalize_title_key(title)
+                if norm:
+                    keys.add("title:" + norm)
+        return keys
+
+    def filter_recently_covered_items(
+        self,
+        items: List[ContentItem],
+        *,
+        log_label: str = "pre-filter",
+    ) -> List[ContentItem]:
+        """Remove items already present in recent digests by URL or title."""
+        recent = self.load_recent_digest_keys()
+        if not recent or not items:
+            return items
+
+        kept: List[ContentItem] = []
+        dropped = 0
+        for item in items:
+            url_key = "url:" + str(_deduplication_url_key(str(item.url)))
+            title_key = "title:" + self._normalize_title_key(item.title or "")
+            if url_key in recent or (title_key != "title:" and title_key in recent):
+                dropped += 1
+                continue
+            kept.append(item)
+
+        if dropped:
+            self.console.print(
+                f"🧹 Cross-day dedup ({log_label}): removed {dropped} items "
+                f"already covered in recent digests → {len(kept)} left\n"
+            )
+        return kept
 
     def merge_cross_source_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
         """Merge items that point to the same URL from different sources.

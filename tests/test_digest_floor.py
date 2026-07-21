@@ -51,3 +51,26 @@ def test_digest_floor_tops_up_papers_and_min_items() -> None:
 def test_is_paper_like_detects_arxiv() -> None:
     item = make_item("x", 5.0, url="https://arxiv.org/abs/2401.0001")
     assert HorizonOrchestrator._is_paper_like(item)
+
+
+def test_cross_day_dedup_filters_recent_titles(tmp_path, monkeypatch) -> None:
+    summaries = tmp_path / "summaries"
+    summaries.mkdir()
+    # yesterday digest
+    (summaries / "horizon-2026-07-20-zh.md").write_text(
+        "# Horizon\n\n1. [Google 发布 Med-Gemini 医疗 AI](https://example.com/med-gemini)\n",
+        encoding="utf-8",
+    )
+    filtering = FilteringConfig(recent_digest_days=3)
+    orch = make_orch(filtering)
+    orch.storage = SimpleNamespace(summaries_dir=summaries)
+    monkeypatch.chdir(tmp_path)
+
+    items = [
+        make_item("dup", 8.0, url="https://example.com/med-gemini"),
+        make_item("fresh", 7.5, url="https://example.com/new"),
+    ]
+    items[0].title = "Google 发布 Med-Gemini 医疗 AI"
+    items[1].title = "Brand new GraphRAG framework"
+    kept = orch.filter_recently_covered_items(items, log_label="test")
+    assert [i.id for i in kept] == ["fresh"]

@@ -228,22 +228,22 @@
     "hackernews": {
       "enabled": true,
       "fetch_top_stories": 25,
-      "min_score": 90,
-      "category": "ai-news"
+      "min_score": 120,
+      "category": "ai-hotspot"
     },
     "rss": [
       {
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
-        "category": "llm-app",
+        "category": "ai-hotspot",
         "content_extractor": null
       },
       {
         "name": "Latent Space",
         "url": "https://www.latent.space/feed",
         "enabled": true,
-        "category": "llm-app",
+        "category": "ai-hotspot",
         "content_extractor": null
       },
       {
@@ -515,14 +515,14 @@
       {
         "name": "arXiv cs.AI",
         "url": "https://rss.arxiv.org/rss/cs.AI",
-        "enabled": true,
+        "enabled": false,
         "category": "ai-research",
         "content_extractor": null
       },
       {
         "name": "arXiv cs.CL",
         "url": "https://rss.arxiv.org/rss/cs.CL",
-        "enabled": true,
+        "enabled": false,
         "category": "llm-app",
         "content_extractor": null
       },
@@ -774,40 +774,50 @@
     },
     "gdelt": {
       "enabled": true,
-      "query": "(\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"biomedical AI\" OR \"healthcare LLM\" OR \"clinical large language model\" OR \"AI radiology\" OR \"AI pathology\" OR \"elderly care AI\" OR \"AI drug discovery\" OR \"LLM application\" OR \"enterprise RAG\" OR \"production LLM\" OR \"AI clinical decision\" OR \"foundation model healthcare\")",
+      "query": "(\"GraphRAG\" OR \"context engineering\" OR \"agent engineering\" OR \"knowledge graph\" OR \"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"enterprise RAG\" OR \"production LLM\" OR \"AI evaluation\")",
       "mode": "ArtList",
-      "max_records": 35,
+      "max_records": 20,
       "timespan": "24h",
       "language": "english",
       "country": null,
-      "category": "med-ai"
+      "category": "ai-hotspot"
     },
     "google_news": {
       "enabled": true,
-      "query": "\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"healthcare LLM\" OR \"biomedical AI\" OR \"AI radiology\" OR \"clinical decision support\" OR \"LLM deployment\" OR \"enterprise RAG\" OR \"production AI agents\" OR \"AI elderly care\" OR \"foundation model medicine\"",
+      "query": "\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"healthcare LLM\" OR \"Med-Gemini\" OR \"enterprise RAG\" OR GraphRAG OR \"knowledge graph\" OR \"context engineering\" OR \"agent engineering\" OR \"AI evals\" OR \"model context protocol\" OR MCP OR \"compound AI\" OR \"AI memory architecture\" OR \"production LLM\" OR \"AI observability\"",
       "language": "en",
       "country": "US",
       "ceid": null,
-      "max_results": 40,
-      "category": "med-ai"
+      "max_results": 30,
+      "category": "ai-hotspot"
     }
   },
   "filtering": {
-    "ai_score_threshold": 5.0,
+    "ai_score_threshold": 6.8,
     "time_window_hours": 24,
-    "max_items": 28,
+    "max_items": 12,
+    "min_items": 4,
+    "min_paper_items": 2,
+    "recent_digest_days": 3,
     "category_groups": {
       "med_ai": {
-        "name": "医工交叉 / 医疗LLM / 临床落地 / 论文",
-        "limit": 10,
+        "name": "医工交叉 / 医疗LLM / 论文",
+        "limit": 4,
         "categories": [
           "med-ai",
           "med-paper"
         ]
       },
+      "hotspots": {
+        "name": "AI热点 / 新概念 / 工程范式",
+        "limit": 3,
+        "categories": [
+          "ai-hotspot"
+        ]
+      },
       "llm_apps": {
-        "name": "LLM落地应用 / 企业部署 / 行业场景",
-        "limit": 9,
+        "name": "LLM落地 / RAG / Agent 生产",
+        "limit": 3,
         "categories": [
           "llm-app",
           "ai-rag",
@@ -815,8 +825,8 @@
         ]
       },
       "llm_research": {
-        "name": "大模型进展 / 评测 / 基础设施",
-        "limit": 5,
+        "name": "大模型 / 评测 / 基建",
+        "limit": 2,
         "categories": [
           "ai-llm",
           "ai-infra",
@@ -824,32 +834,30 @@
         ]
       },
       "agents_coding": {
-        "name": "AI编程 / 开发工具",
-        "limit": 3,
+        "name": "AI编程工具",
+        "limit": 1,
         "categories": [
           "ai-coding",
           "ai-tools"
         ]
       },
       "gen_media": {
-        "name": "文生图 / 文生视频",
-        "limit": 2,
+        "name": "生成式媒体",
+        "limit": 1,
         "categories": [
           "gen-media"
         ]
       },
       "news": {
-        "name": "综合 AI 资讯",
-        "limit": 2,
+        "name": "综合资讯",
+        "limit": 1,
         "categories": [
           "ai-news"
         ]
       }
     },
     "default_group": "other",
-    "default_group_limit": 1,
-    "min_items": 5,
-    "min_paper_items": 2
+    "default_group_limit": 1
   },
   "extractors": {},
   "email": {

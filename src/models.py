@@ -489,6 +489,8 @@ class FilteringConfig(BaseModel):
     min_items: Optional[int] = Field(default=None, gt=0)
     # Prefer paper-like items when topping up / filling the floor.
     min_paper_items: Optional[int] = Field(default=None, gt=0)
+    # Drop items already covered in recent local digests (by URL/title).
+    recent_digest_days: int = Field(default=3, ge=0)
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)
