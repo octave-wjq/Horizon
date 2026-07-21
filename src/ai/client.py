@@ -192,6 +192,15 @@ class OpenAIClient(AIClient):
     # and require `max_completion_tokens` instead.
     _MODELS_REQUIRING_MAX_COMPLETION_TOKENS = ("o1", "o3", "o4", "gpt-5")
 
+    # Packy / Codex-sale style models often only expose the Responses API
+    # (chat.completions returns protocol_not_supported).
+    _MODELS_PREFERRING_RESPONSES_API = (
+        "gpt-5.6",
+        "gpt-5.5",
+        "gpt-5.4",
+        "codex-",
+    )
+
     def __init__(self, config: AIConfig):
         """Initialize OpenAI-compatible client.
 
@@ -219,6 +228,10 @@ class OpenAIClient(AIClient):
         self._use_max_completion_tokens = any(
             config.model.startswith(prefix)
             for prefix in self._MODELS_REQUIRING_MAX_COMPLETION_TOKENS
+        )
+        self._use_responses_api = any(
+            config.model.startswith(prefix)
+            for prefix in self._MODELS_PREFERRING_RESPONSES_API
         )
 
     @classmethod
@@ -261,6 +274,14 @@ class OpenAIClient(AIClient):
         if self.provider in self._TEMP_CLAMP and temperature <= 0:
             temperature = 0.01
 
+        if self._use_responses_api:
+            return await self._complete_via_responses(
+                system=system,
+                user=user,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+
         try:
             response = await self._do_request(
                 system=system,
@@ -271,7 +292,17 @@ class OpenAIClient(AIClient):
                 use_max_completion_tokens=self._use_max_completion_tokens,
             )
         except Exception as exc:
-            if self._supports_temperature and self._is_temperature_unsupported(str(exc)):
+            message = str(exc)
+            if self._is_chat_protocol_unsupported(message):
+                # Packy-style gateways: model only supports /v1/responses.
+                self._use_responses_api = True
+                return await self._complete_via_responses(
+                    system=system,
+                    user=user,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+            if self._supports_temperature and self._is_temperature_unsupported(message):
                 self._supports_temperature = False
                 response = await self._do_request(
                     system=system,
@@ -281,7 +312,7 @@ class OpenAIClient(AIClient):
                     include_temperature=False,
                     use_max_completion_tokens=self._use_max_completion_tokens,
                 )
-            elif not self._use_max_completion_tokens and self._is_max_tokens_unsupported(str(exc)):
+            elif not self._use_max_completion_tokens and self._is_max_tokens_unsupported(message):
                 self._use_max_completion_tokens = True
                 response = await self._do_request(
                     system=system,
@@ -312,6 +343,66 @@ class OpenAIClient(AIClient):
                 output_tokens=getattr(usage, "completion_tokens", 0),
             )
         return response.choices[0].message.content
+
+    async def _complete_via_responses(
+        self,
+        *,
+        system: str,
+        user: str,
+        temperature: float,
+        max_tokens: int,
+    ) -> str:
+        """Call the OpenAI Responses API and return plain text output."""
+        request_kwargs: dict = {
+            "model": self.model,
+            "input": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            "max_output_tokens": max_tokens,
+        }
+        if self._supports_temperature:
+            request_kwargs["temperature"] = temperature
+
+        try:
+            response = await self.client.responses.create(**request_kwargs)
+        except Exception as exc:
+            message = str(exc)
+            if self._supports_temperature and self._is_temperature_unsupported(message):
+                self._supports_temperature = False
+                request_kwargs.pop("temperature", None)
+                response = await self.client.responses.create(**request_kwargs)
+            else:
+                raise
+
+        usage = getattr(response, "usage", None)
+        if usage is not None:
+            record_usage(
+                self.provider,
+                input_tokens=getattr(usage, "input_tokens", 0)
+                or getattr(usage, "prompt_tokens", 0)
+                or 0,
+                output_tokens=getattr(usage, "output_tokens", 0)
+                or getattr(usage, "completion_tokens", 0)
+                or 0,
+            )
+
+        text = getattr(response, "output_text", None)
+        if text:
+            return text
+
+        # Fallback: stitch text parts from structured output items.
+        chunks: list[str] = []
+        for item in getattr(response, "output", None) or []:
+            for part in getattr(item, "content", None) or []:
+                part_text = getattr(part, "text", None)
+                if part_text:
+                    chunks.append(part_text)
+        if chunks:
+            return "".join(chunks)
+        raise ValueError(
+            f"Responses API returned empty content for model={self.model!r}"
+        )
 
     async def _do_request(
         self,
@@ -351,6 +442,15 @@ class OpenAIClient(AIClient):
     def _is_max_tokens_unsupported(message: str) -> bool:
         lowered = message.lower()
         return "max_tokens" in lowered and "max_completion_tokens" in lowered
+
+    @staticmethod
+    def _is_chat_protocol_unsupported(message: str) -> bool:
+        lowered = message.lower()
+        return (
+            "protocol_not_supported" in lowered
+            or ("chat completions" in lowered and "不支持" in message)
+            or ("chat completions" in lowered and "not support" in lowered)
+        )
 
 
 class AzureOpenAIClient(AIClient):
