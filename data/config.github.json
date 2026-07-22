@@ -515,14 +515,14 @@
       {
         "name": "arXiv cs.AI",
         "url": "https://rss.arxiv.org/rss/cs.AI",
-        "enabled": true,
+        "enabled": false,
         "category": "ai-research",
         "content_extractor": null
       },
       {
         "name": "arXiv cs.CL",
         "url": "https://rss.arxiv.org/rss/cs.CL",
-        "enabled": true,
+        "enabled": false,
         "category": "llm-app",
         "content_extractor": null
       },
