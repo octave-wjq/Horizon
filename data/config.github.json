@@ -227,8 +227,8 @@
     ],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 25,
-      "min_score": 120,
+      "fetch_top_stories": 30,
+      "min_score": 100,
       "category": "ai-hotspot"
     },
     "rss": [
@@ -250,7 +250,7 @@
         "name": "Interconnects",
         "url": "https://www.interconnects.ai/feed",
         "enabled": true,
-        "category": "ai-llm",
+        "category": "ai-hotspot",
         "content_extractor": null
       },
       {
@@ -348,7 +348,7 @@
         "name": "Last Week in AI",
         "url": "https://lastweekin.ai/feed",
         "enabled": true,
-        "category": "ai-news",
+        "category": "ai-hotspot",
         "content_extractor": null
       },
       {
@@ -515,14 +515,14 @@
       {
         "name": "arXiv cs.AI",
         "url": "https://rss.arxiv.org/rss/cs.AI",
-        "enabled": false,
+        "enabled": true,
         "category": "ai-research",
         "content_extractor": null
       },
       {
         "name": "arXiv cs.CL",
         "url": "https://rss.arxiv.org/rss/cs.CL",
-        "enabled": false,
+        "enabled": true,
         "category": "llm-app",
         "content_extractor": null
       },
@@ -774,9 +774,9 @@
     },
     "gdelt": {
       "enabled": true,
-      "query": "(\"GraphRAG\" OR \"context engineering\" OR \"agent engineering\" OR \"knowledge graph\" OR \"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"enterprise RAG\" OR \"production LLM\" OR \"AI evaluation\")",
+      "query": "(\"AI engineering\" OR \"LLM\" OR \"AI agent\" OR \"foundation model\" OR \"open-source AI\" OR \"medical AI\" OR \"clinical AI\" OR \"digital health\")",
       "mode": "ArtList",
-      "max_records": 20,
+      "max_records": 25,
       "timespan": "24h",
       "language": "english",
       "country": null,
@@ -784,11 +784,11 @@
     },
     "google_news": {
       "enabled": true,
-      "query": "\"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"healthcare LLM\" OR \"Med-Gemini\" OR \"enterprise RAG\" OR GraphRAG OR \"knowledge graph\" OR \"context engineering\" OR \"agent engineering\" OR \"AI evals\" OR \"model context protocol\" OR MCP OR \"compound AI\" OR \"AI memory architecture\" OR \"production LLM\" OR \"AI observability\"",
+      "query": "(\"AI engineering\" OR \"LLM engineering\" OR \"AI agents\" OR \"foundation model\" OR \"open source AI\" OR \"AI framework\" OR \"AI architecture\" OR \"medical AI\" OR \"clinical AI\" OR \"digital health\" OR \"healthcare AI\")",
       "language": "en",
       "country": "US",
       "ceid": null,
-      "max_results": 30,
+      "max_results": 35,
       "category": "ai-hotspot"
     }
   },
@@ -812,7 +812,8 @@
         "name": "AI热点 / 新概念 / 工程范式",
         "limit": 3,
         "categories": [
-          "ai-hotspot"
+          "ai-hotspot",
+          "ai-news"
         ]
       },
       "llm_apps": {

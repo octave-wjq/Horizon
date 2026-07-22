@@ -31,11 +31,14 @@ PRIMARY (highest weight):
    - elderly care / aging assistive AI, agent simulation / digital twins for care or clinical training
    - peer-reviewed papers / strong preprints with methods, benchmarks, datasets, open medical models
 3) Daily AI hotspots & emerging concepts (must surface when genuinely new)
-   - new paradigms/frameworks practitioners are adopting this week
-   - examples: GraphRAG / knowledge-graph engineering, context engineering, agent engineering,
-     evals/observability, MCP/tool protocols, memory architectures, compound AI systems,
-     structured output, routing/orchestration patterns, new open standards
-   - explain WHY the concept matters for building systems, not just name-drop hype
+   - Concepts/practices that builders are currently discussing as new or newly important —
+     names change over time; do NOT require any fixed keyword list to match
+   - Prefer items that introduce, name, or crystallize a reusable engineering idea/pattern/tool
+     (a new abstraction, workflow, protocol, evaluation practice, systems architecture, etc.)
+   - Historical examples of this *type* (not a required search list): GraphRAG, context engineering,
+     agent engineering, MCP, evals/observability, compound AI — use them only as analogies for
+     “this is the kind of thing that matters when it is new”
+   - Explain WHY it matters for building systems now; skip pure buzzword recycling
 
 SECONDARY (lower weight, still relevant):
 4) Foundation model releases, serving infra (vLLM/SGLang/etc.) — when they enable landing above
@@ -51,8 +54,8 @@ Score content on a 0-10 scale based on importance AND alignment (PRIMARY >> SECO
 
 **7-8: High Value**
 - Strong papers/preprints in med-AI, digital health, biomedical multimodal, clinical NLP
-- Practical LLM application writeups: RAG/GraphRAG in production, evaluation, guardrails, MLOps
-- Emerging concept explainers with concrete systems impact (graph engineering, context eng, evals, MCP…)
+- Practical LLM application writeups: production RAG/agents, evaluation, guardrails, MLOps
+- Emerging concept explainers with concrete systems impact (whatever the current new paradigm is)
 - High-signal open-source tools for healthcare AI or serious enterprise LLM stacks
 
 **5-6: Interesting**
@@ -68,12 +71,15 @@ Score content on a 0-10 scale based on importance AND alignment (PRIMARY >> SECO
 - Spam, pure marketing, entertainment, off-topic, near-duplicates of recent news
 
 Scoring bias (must apply):
-- STRONGLY boost: clinical validation, medical benchmarks, LLM production case studies, GraphRAG/knowledge-graph systems, context/agent engineering, new eval frameworks, tool/MCP protocols
-- Boost 2–4 truly interesting papers/day (methods + results), but do NOT inflate scores just to fill the list
+- STRONGLY boost: clinical validation, medical benchmarks, LLM production case studies
+- STRONGLY boost content that defines or popularizes a newly important engineering concept/practice
+  (judge by novelty + practitioner impact, not by matching a fixed jargon list)
+- Boost 2–4 truly interesting papers/day (methods + results), including from arXiv when substantive;
+  do NOT inflate scores just to fill the list
 - Prefer evidence, metrics, ablations, deployment lessons over opinion pieces
 - Penalize: meme AI news, crypto, celebrity commentary, low-substance hype, duplicate coverage of yesterday’s story
-- Deprioritize pure infra micro-optimizations (KV-cache n-th paper) unless clearly breakthrough
-- Be selective: a tight high-signal digest beats a long list
+- Deprioritize pure infra micro-optimizations (n-th KV-cache paper) unless clearly breakthrough
+- Be selective: a tight high-signal digest (~8–12 items) beats a long list
 
 Also consider technical depth, impact on practitioners/researchers, writing quality, and substantive community discussion.
 """
