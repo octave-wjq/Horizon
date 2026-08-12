@@ -798,7 +798,7 @@
     "max_items": 12,
     "min_items": 4,
     "min_paper_items": 2,
-    "recent_digest_days": 3,
+    "recent_digest_days": 21,
     "category_groups": {
       "med_ai": {
         "name": "医工交叉 / 医疗LLM / 论文",

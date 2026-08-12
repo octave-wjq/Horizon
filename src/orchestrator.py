@@ -264,6 +264,11 @@ class HorizonOrchestrator:
 
             # 7. Generate and save daily summaries for each configured language
             today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            # Persist selection BEFORE writing markdown so CI has a durable ledger
+            # even when data/summaries and docs/_posts are gitignored.
+            if important_items:
+                self.record_digest_for_dedup(important_items, today)
+
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
                 summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
@@ -511,38 +516,107 @@ class HorizonOrchestrator:
             return meta["domain"]
         return item.author or "unknown"
 
+    _ARXIV_ID_RE = re.compile(
+        r"(?:arxiv\.org/(?:abs|pdf)/|arxiv:\s*)(\d{4}\.\d{4,5})(?:v\d+)?",
+        re.IGNORECASE,
+    )
+
     @staticmethod
     def _normalize_title_key(title: str) -> str:
         """Normalize titles for fuzzy cross-day duplicate detection."""
         text = (title or "").lower()
         text = re.sub(r"https?://\S+", " ", text)
+        # Drop common digest noise words that vary across rewrites.
+        text = re.sub(
+            r"\b(nature|报道|推出|发布|详解|研究|论文|开源|最新|官方)\b",
+            " ",
+            text,
+            flags=re.IGNORECASE,
+        )
         text = re.sub(r"[^\w\u4e00-\u9fff]+", " ", text, flags=re.UNICODE)
         return re.sub(r"\s+", " ", text).strip()
 
-    def load_recent_digest_keys(self, days: Optional[int] = None) -> set[str]:
-        """Collect URL/title keys from recent local digests for cross-day dedup."""
-        if days is None:
-            days = getattr(self.config.filtering, "recent_digest_days", 3) or 0
-        if days <= 0:
-            return set()
+    @classmethod
+    def _extract_arxiv_ids(cls, *parts: str) -> set[str]:
+        ids: set[str] = set()
+        for part in parts:
+            if not part:
+                continue
+            for match in cls._ARXIV_ID_RE.findall(str(part)):
+                ids.add(match.lower())
+        return ids
 
+    @staticmethod
+    def _title_char_bigrams(title_key: str) -> set[str]:
+        compact = title_key.replace(" ", "")
+        if len(compact) < 2:
+            return {compact} if compact else set()
+        return {compact[i : i + 2] for i in range(len(compact) - 1)}
+
+    @classmethod
+    def _titles_are_near_duplicate(cls, title_a: str, title_b: str) -> bool:
+        """Fuzzy title match for rewritten Chinese/English headlines."""
+        a = cls._normalize_title_key(title_a)
+        b = cls._normalize_title_key(title_b)
+        if not a or not b:
+            return False
+        if a == b or a in b or b in a:
+            return True
+        ga, gb = cls._title_char_bigrams(a), cls._title_char_bigrams(b)
+        if not ga or not gb:
+            return False
+        jaccard = len(ga & gb) / len(ga | gb)
+        # 0.45 catches rewrites like “Nature 报道…MRI…” vs “可泛化脑部 MRI…”.
+        return jaccard >= 0.45
+
+    def _item_identity_keys(self, item: ContentItem) -> set[str]:
         keys: set[str] = set()
+        url = str(item.url or "")
+        title = item.title or ""
+        content = item.content or ""
+        if url:
+            keys.add("url:" + str(_deduplication_url_key(url)))
+        title_key = self._normalize_title_key(title)
+        if title_key:
+            keys.add("title:" + title_key)
+        for arxiv_id in self._extract_arxiv_ids(url, title, content, item.id or ""):
+            keys.add(f"arxiv:{arxiv_id}")
+        return keys
+
+    def load_recent_digest_records(self, days: Optional[int] = None) -> List[dict]:
+        """Load durable seen records + keys scraped from local digest files."""
+        if days is None:
+            days = getattr(self.config.filtering, "recent_digest_days", 14) or 0
+        if days <= 0:
+            days = 14
+
+        records: List[dict] = []
+        seen_pairs: set[tuple[str, str]] = set()
+
+        # 1) Durable ledger (works on GitHub Actions when committed).
+        # Do not aggressively date-filter the ledger: it is already size-capped
+        # on write and is the only history CI has when markdown digests are
+        # gitignored.
+        for rec in self.storage.load_seen_items():
+            records.append(rec)
+            seen_pairs.add((rec.get("url_key") or "", rec.get("title_key") or ""))
+
+        # 2) Local markdown digests (developer machine / restored gh-pages posts).
         paths: List[Path] = []
-        summaries_dir = Path(getattr(self.storage, "summaries_dir", Path("data/summaries")))
+        summaries_dir = Path(
+            getattr(self.storage, "summaries_dir", Path("data/summaries"))
+        )
         posts_dir = Path("docs/_posts")
         if summaries_dir.exists():
             paths.extend(summaries_dir.glob("horizon-*.md"))
         if posts_dir.exists():
             paths.extend(posts_dir.glob("*-summary-*.md"))
 
-        # Prefer newest files; keep roughly 2 files/day (zh/en) * days.
-        # Skip today's files so same-day re-runs are not emptied.
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         paths = sorted(paths, key=lambda p: p.stat().st_mtime, reverse=True)
         selected_paths: List[Path] = []
         for path in paths:
-            name = path.name
-            if today in name:
+            if today in path.name:
                 continue
             selected_paths.append(path)
             if len(selected_paths) >= max(days * 2, days):
@@ -550,17 +624,71 @@ class HorizonOrchestrator:
 
         url_re = re.compile(r"\((https?://[^)\s]+)\)")
         title_re = re.compile(r"^\d+\.\s+\[([^\]]+)\]", re.MULTILINE)
+        cutoff = (
+            datetime.now(timezone.utc) - timedelta(days=days)
+        ).strftime("%Y-%m-%d")
         for path in selected_paths:
             try:
                 text = path.read_text(encoding="utf-8", errors="ignore")
             except OSError:
                 continue
-            for url in url_re.findall(text):
-                keys.add("url:" + str(_deduplication_url_key(url)))
-            for title in title_re.findall(text):
-                norm = self._normalize_title_key(title)
-                if norm:
-                    keys.add("title:" + norm)
+            date_match = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+            file_date = date_match.group(1) if date_match else ""
+            if file_date and file_date < cutoff:
+                continue
+            titles = title_re.findall(text)
+            urls = url_re.findall(text)
+            for title in titles:
+                title_key = self._normalize_title_key(title)
+                pair = ("", title_key)
+                if pair in seen_pairs or any(
+                    r.get("title_key") == title_key for r in records if title_key
+                ):
+                    continue
+                rec = {
+                    "date": file_date,
+                    "title": title,
+                    "title_key": title_key,
+                    "url": "",
+                    "url_key": "",
+                    "extra_keys": [
+                        f"arxiv:{aid}"
+                        for aid in self._extract_arxiv_ids(title, text)
+                    ],
+                }
+                records.append(rec)
+                seen_pairs.add(pair)
+            for url in urls:
+                url_key = str(_deduplication_url_key(url))
+                if any(r.get("url_key") == url_key for r in records if url_key):
+                    continue
+                rec = {
+                    "date": file_date,
+                    "title": "",
+                    "title_key": "",
+                    "url": url,
+                    "url_key": url_key,
+                    "extra_keys": [
+                        f"arxiv:{aid}" for aid in self._extract_arxiv_ids(url)
+                    ],
+                }
+                records.append(rec)
+
+        return records
+
+    def load_recent_digest_keys(self, days: Optional[int] = None) -> set[str]:
+        """Collect exact identity keys from recent digests / seen ledger."""
+        keys: set[str] = set()
+        for rec in self.load_recent_digest_records(days=days):
+            if rec.get("url_key"):
+                keys.add("url:" + str(rec["url_key"]))
+            if rec.get("title_key"):
+                keys.add("title:" + str(rec["title_key"]))
+            for extra in rec.get("extra_keys") or []:
+                keys.add(str(extra))
+            # Also index raw titles for fuzzy pass.
+            if rec.get("title"):
+                keys.add("rawtitle:" + str(rec["title"]))
         return keys
 
     def filter_recently_covered_items(
@@ -569,17 +697,39 @@ class HorizonOrchestrator:
         *,
         log_label: str = "pre-filter",
     ) -> List[ContentItem]:
-        """Remove items already present in recent digests by URL or title."""
-        recent = self.load_recent_digest_keys()
-        if not recent or not items:
+        """Remove items already present in recent digests by URL/title/arxiv."""
+        records = self.load_recent_digest_records()
+        if not records or not items:
+            if not records:
+                self.console.print(
+                    "[yellow]Cross-day dedup: no seen history yet "
+                    "(data/seen_items.json empty / no local digests).[/yellow]\n"
+                )
             return items
+
+        exact_keys: set[str] = set()
+        prior_titles: List[str] = []
+        for rec in records:
+            if rec.get("url_key"):
+                exact_keys.add("url:" + str(rec["url_key"]))
+            if rec.get("title_key"):
+                exact_keys.add("title:" + str(rec["title_key"]))
+            for extra in rec.get("extra_keys") or []:
+                exact_keys.add(str(extra))
+            if rec.get("title"):
+                prior_titles.append(str(rec["title"]))
+            elif rec.get("title_key"):
+                prior_titles.append(str(rec["title_key"]))
 
         kept: List[ContentItem] = []
         dropped = 0
         for item in items:
-            url_key = "url:" + str(_deduplication_url_key(str(item.url)))
-            title_key = "title:" + self._normalize_title_key(item.title or "")
-            if url_key in recent or (title_key != "title:" and title_key in recent):
+            identity = self._item_identity_keys(item)
+            if identity & exact_keys:
+                dropped += 1
+                continue
+            title = item.title or ""
+            if any(self._titles_are_near_duplicate(title, prev) for prev in prior_titles):
                 dropped += 1
                 continue
             kept.append(item)
@@ -590,6 +740,19 @@ class HorizonOrchestrator:
                 f"already covered in recent digests → {len(kept)} left\n"
             )
         return kept
+
+    def record_digest_for_dedup(self, items: List[ContentItem], date: str) -> None:
+        """Persist selected items so future runs can drop repeats."""
+        path = self.storage.record_seen_digest_items(
+            items,
+            date=date,
+            url_key_fn=lambda url: str(_deduplication_url_key(url)),
+            title_key_fn=self._normalize_title_key,
+            extra_keys_fn=lambda item: sorted(self._item_identity_keys(item)),
+        )
+        self.console.print(
+            f"🧾 Recorded {len(items)} items into seen ledger: {path}\n"
+        )
 
     def merge_cross_source_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
         """Merge items that point to the same URL from different sources.

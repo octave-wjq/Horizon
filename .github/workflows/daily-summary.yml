@@ -74,6 +74,97 @@ jobs:
         if: steps.gate.outputs.should_run == 'true'
         run: cp data/config.github.json data/config.json
 
+      - name: Restore previous digests for cross-day dedup
+        if: steps.gate.outputs.should_run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p docs/_posts data/summaries
+          # Pull recent zh digests from gh-pages (summaries/posts are gitignored on main).
+          API="https://api.github.com/repos/${{ github.repository }}/contents/_posts?ref=gh-pages"
+          curl -sS -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$API" -o /tmp/posts.json || echo '[]' > /tmp/posts.json
+          python3 - <<'PY'
+          import json, os, base64, urllib.request
+          from pathlib import Path
+          token = os.environ["GH_TOKEN"]
+          try:
+              posts = json.loads(Path("/tmp/posts.json").read_text())
+          except Exception:
+              posts = []
+          if not isinstance(posts, list):
+              print("No posts list from gh-pages:", type(posts), posts if isinstance(posts, dict) else "")
+              raise SystemExit(0)
+          zh = sorted(
+              [p for p in posts if isinstance(p, dict) and str(p.get("name","")).endswith("-summary-zh.md")],
+              key=lambda p: p.get("name",""),
+              reverse=True,
+          )[:14]
+          out = Path("docs/_posts")
+          for p in zh:
+              url = p.get("download_url")
+              name = p.get("name")
+              if not url or not name:
+                  continue
+              req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}", "User-Agent": "horizon-dedup"})
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  data = r.read()
+              (out / name).write_bytes(data)
+              print("restored", name, "bytes", len(data))
+          print("restored_count", len(zh))
+          PY
+          ls -la docs/_posts | head -20
+          # Bootstrap / merge seen ledger from restored posts if needed
+          uv run python - <<'PY'
+          from pathlib import Path
+          import re
+          from src.storage.manager import StorageManager
+          from src.orchestrator import HorizonOrchestrator, _deduplication_url_key
+
+          storage = StorageManager()
+          existing = storage.load_seen_items()
+          known = {(r.get("url_key"), r.get("title_key")) for r in existing}
+          title_re = re.compile(r"^\d+\.\s+\[([^\]]+)\]\((https?://[^)]+)\)", re.M)
+          title_only_re = re.compile(r"^\d+\.\s+\[([^\]]+)\]", re.M)
+          url_re = re.compile(r"\((https?://[^)\s]+)\)")
+          added = 0
+          for path in sorted(Path("docs/_posts").glob("*-summary-zh.md")):
+              m = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+              date = m.group(1) if m else ""
+              text = path.read_text(encoding="utf-8", errors="ignore")
+              paired = title_re.findall(text)
+              if paired:
+                  for title, url in paired:
+                      url_key = str(_deduplication_url_key(url))
+                      title_key = HorizonOrchestrator._normalize_title_key(title)
+                      if (url_key, title_key) in known:
+                          continue
+                      existing.append({
+                          "date": date, "title": title, "url": url,
+                          "url_key": url_key, "title_key": title_key,
+                          "extra_keys": [f"arxiv:{a}" for a in HorizonOrchestrator._extract_arxiv_ids(title, url, text)],
+                      })
+                      known.add((url_key, title_key))
+                      added += 1
+              else:
+                  for title in title_only_re.findall(text):
+                      title_key = HorizonOrchestrator._normalize_title_key(title)
+                      if ("", title_key) in known:
+                          continue
+                      existing.append({
+                          "date": date, "title": title, "url": "",
+                          "url_key": "", "title_key": title_key,
+                          "extra_keys": [f"arxiv:{a}" for a in HorizonOrchestrator._extract_arxiv_ids(title, text)],
+                      })
+                      known.add(("", title_key))
+                      added += 1
+          storage.save_seen_items(existing)
+          print("seen_bootstrap_added", added, "total", len(existing))
+          PY
+
       - name: Verify required secrets
         if: steps.gate.outputs.should_run == 'true'
         env:
@@ -108,6 +199,24 @@ jobs:
           # Prefer optional PAT for higher GitHub API quota; fall back to workflow token
           GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: uv run horizon --hours 24
+
+      - name: Persist seen ledger for future cross-day dedup
+        if: steps.gate.outputs.should_run == 'true'
+        run: |
+          set -euo pipefail
+          if [ ! -f data/seen_items.json ]; then
+            echo "No data/seen_items.json produced; skip commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen_items.json
+          if git diff --staged --quiet; then
+            echo "seen ledger unchanged"
+          else
+            git commit -m "chore: update seen digest ledger ${{ env.DATE }}"
+            git push origin HEAD:main
+          fi
 
       - name: Deploy to GitHub Pages
         if: steps.gate.outputs.should_run == 'true'

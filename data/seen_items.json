@@ -1,0 +1,2980 @@
+{
+  "version": 1,
+  "updated_at": "2026-08-12T07:03:31.085636+00:00",
+  "items": [
+    {
+      "date": "2026-07-15",
+      "title": "并行 Codex 挑战 Erdős 难题",
+      "url": "",
+      "url_key": "",
+      "title_key": "并行 codex 挑战 erdős 难题",
+      "extra_keys": [
+        "arxiv:2303.01505"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "AI 工程转向以代理为中心的系统",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 工程转向以代理为中心的系统",
+      "extra_keys": [
+        "arxiv:2303.01505"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "PrismML 将 Qwen3.6-27B 压缩到边缘设备可运行",
+      "url": "",
+      "url_key": "",
+      "title_key": "prismml 将 qwen3 6 27b 压缩到边缘设备可运行",
+      "extra_keys": [
+        "arxiv:2303.01505"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "四款编程代理对比 Scaffold-to-PR 任务",
+      "url": "",
+      "url_key": "",
+      "title_key": "四款编程代理对比 scaffold to pr 任务",
+      "extra_keys": [
+        "arxiv:2303.01505"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "audio.cpp 发布高速本地 GGML 语音栈",
+      "url": "",
+      "url_key": "",
+      "title_key": "audio cpp 发布高速本地 ggml 语音栈",
+      "extra_keys": [
+        "arxiv:2303.01505"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "LLM 评审临床 AI 摘要",
+      "url": "",
+      "url_key": "",
+      "title_key": "llm 评审临床 ai 摘要",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "为什么跑分高的 AI 上线后会失灵",
+      "url": "",
+      "url_key": "",
+      "title_key": "为什么跑分高的 ai 上线后会失灵",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Nature 提出自适应医疗 AI 动态试验框架",
+      "url": "",
+      "url_key": "",
+      "title_key": "提出自适应医疗 ai 动态试验框架",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "MONAI Deploy 面向临床 AI 生产部署",
+      "url": "",
+      "url_key": "",
+      "title_key": "monai deploy 面向临床 ai 生产部署",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "医院 AI 临床决策支持的 QMS 框架",
+      "url": "",
+      "url_key": "",
+      "title_key": "医院 ai 临床决策支持的 qms 框架",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Google 发布 Med-Gemini 医疗 AI",
+      "url": "",
+      "url_key": "",
+      "title_key": "google med gemini 医疗 ai",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "电子束灭活空气中耐多药细菌",
+      "url": "",
+      "url_key": "",
+      "title_key": "电子束灭活空气中耐多药细菌",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "超冷延长新生小鼠假死状态",
+      "url": "",
+      "url_key": "",
+      "title_key": "超冷延长新生小鼠假死状态",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "妊娠睡眠呼吸障碍的脐带血生物标志物",
+      "url": "",
+      "url_key": "",
+      "title_key": "妊娠睡眠呼吸障碍的脐带血生物标志物",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Hugging Face 事件暴露护栏局限",
+      "url": "",
+      "url_key": "",
+      "title_key": "hugging face 事件暴露护栏局限",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Stanford HAI 谈安全医疗 AI 平台",
+      "url": "",
+      "url_key": "",
+      "title_key": "stanford hai 谈安全医疗 ai 平台",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "可穿戴健康模型达到人群规模。",
+      "url": "",
+      "url_key": "",
+      "title_key": "可穿戴健康模型达到人群规模",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Cura 1T 瞄准端到端临床智能体",
+      "url": "",
+      "url_key": "",
+      "title_key": "cura 1t 瞄准端到端临床智能体",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "AgentRedBench 瞄准 SaaS 智能体提示注入风险。",
+      "url": "",
+      "url_key": "",
+      "title_key": "agentredbench 瞄准 saas 智能体提示注入风险",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Google Research 推出 Med-Gemini 医疗 AI 模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "google research med gemini 医疗 ai 模型",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Ensemble QSP 以有界上下文实现自主 PK-PD 建模",
+      "url": "",
+      "url_key": "",
+      "title_key": "ensemble qsp 以有界上下文实现自主 pk pd 建模",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "AEGIS 为开源移液机器人增加安全检查",
+      "url": "",
+      "url_key": "",
+      "title_key": "aegis 为开源移液机器人增加安全检查",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "EpiNarrate 用情景数据生成可靠公共卫生叙事。",
+      "url": "",
+      "url_key": "",
+      "title_key": "epinarrate 用情景数据生成可靠公共卫生叙事",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "研究测试 LLM 评判临床 AI 摘要的能力",
+      "url": "",
+      "url_key": "",
+      "title_key": "研究测试 llm 评判临床 ai 摘要的能力",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "临床试验需要为自适应医疗人工智能重新设计。",
+      "url": "",
+      "url_key": "",
+      "title_key": "临床试验需要为自适应医疗人工智能重新设计",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Cursor 详解智能体集群的模型经济学。",
+      "url": "",
+      "url_key": "",
+      "title_key": "cursor 详解智能体集群的模型经济学",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "GraphDx 降低序贯 AI 诊断成本",
+      "url": "",
+      "url_key": "",
+      "title_key": "graphdx 降低序贯 ai 诊断成本",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "SkillCorpus 整理开放智能体技能以服务真实 LLM 任务。",
+      "url": "",
+      "url_key": "",
+      "title_key": "skillcorpus 整理开放智能体技能以服务真实 llm 任务",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "DyneTrion 模拟连贯的蛋白质动力学。",
+      "url": "",
+      "url_key": "",
+      "title_key": "dynetrion 模拟连贯的蛋白质动力学",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Salesforce 借助 Bedrock 导入功能简化 LLM 部署",
+      "url": "",
+      "url_key": "",
+      "title_key": "salesforce 借助 bedrock 导入功能简化 llm 部署",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "研究发现 LLM 在 EPR 去标识化中会产生幻觉",
+      "url": "",
+      "url_key": "",
+      "title_key": "研究发现 llm 在 epr 去标识化中会产生幻觉",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "AMA 称 AI 病历助手节省 1.5 万小时",
+      "url": "",
+      "url_key": "",
+      "title_key": "ama 称 ai 病历助手节省 1 5 万小时",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "MONAI Deploy 推动医学影像 AI 进入临床生产环境",
+      "url": "",
+      "url_key": "",
+      "title_key": "monai deploy 推动医学影像 ai 进入临床生产环境",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "NVIDIA 概述 RAG 生产落地的四个步骤",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia 概述 rag 生产落地的四个步骤",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "HypoArena 评测前瞻性假设发现能力。",
+      "url": "",
+      "url_key": "",
+      "title_key": "hypoarena 评测前瞻性假设发现能力",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "有害思维链痕迹可跨 LLM 迁移",
+      "url": "",
+      "url_key": "",
+      "title_key": "有害思维链痕迹可跨 llm 迁移",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "TerminalTraj 扩展可验证终端智能体训练数据",
+      "url": "",
+      "url_key": "",
+      "title_key": "terminaltraj 扩展可验证终端智能体训练数据",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "成本感知的技能改写可降低智能体开销。",
+      "url": "",
+      "url_key": "",
+      "title_key": "成本感知的技能改写可降低智能体开销",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "JoLT 近乎无损压缩 LLM KV 缓存。",
+      "url": "",
+      "url_key": "",
+      "title_key": "jolt 近乎无损压缩 llm kv 缓存",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "长度惩罚会降低思维链的可监测性。",
+      "url": "",
+      "url_key": "",
+      "title_key": "长度惩罚会降低思维链的可监测性",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "VarRate 以可变秩压缩 KV 缓存",
+      "url": "",
+      "url_key": "",
+      "title_key": "varrate 以可变秩压缩 kv 缓存",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "title": "arXiv 的 AI 写作估计暴露检测器局限",
+      "url": "",
+      "url_key": "",
+      "title_key": "arxiv 的 ai 写作估计暴露检测器局限",
+      "extra_keys": [
+        "arxiv:2602.01244",
+        "arxiv:2607.15286",
+        "arxiv:2607.15557",
+        "arxiv:2410.03111",
+        "arxiv:2607.09786",
+        "arxiv:2603.20397",
+        "arxiv:2607.15766",
+        "arxiv:2607.12550",
+        "arxiv:2607.15498",
+        "arxiv:2510.27378",
+        "arxiv:2607.15314",
+        "arxiv:2606.02240",
+        "arxiv:2605.22759",
+        "arxiv:2607.15309",
+        "arxiv:2506.11613",
+        "arxiv:2602.12670",
+        "arxiv:2607.07666",
+        "arxiv:2404.18416",
+        "arxiv:2607.15280",
+        "arxiv:2607.15544",
+        "arxiv:2606.09421",
+        "arxiv:2506.22405",
+        "arxiv:2607.15620"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Bonsai 27B 将 27B 级模型带上手机",
+      "url": "",
+      "url_key": "",
+      "title_key": "bonsai 27b 将 27b 级模型带上手机",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Cursor 信任边界漏洞被公开披露",
+      "url": "",
+      "url_key": "",
+      "title_key": "cursor 信任边界漏洞被公开披露",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "编码代理与不断升高的软件高塔",
+      "url": "",
+      "url_key": "",
+      "title_key": "编码代理与不断升高的软件高塔",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "并行 Codex 工作流攻克 Erdős 问题",
+      "url": "",
+      "url_key": "",
+      "title_key": "并行 codex 工作流攻克 erdős 问题",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "AI 工程转向以智能体为中心的系统",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 工程转向以智能体为中心的系统",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "RAGAS、DeepEval 与 Promptfoo 对比",
+      "url": "",
+      "url_key": "",
+      "title_key": "ragas deepeval 与 promptfoo 对比",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "用于急诊流量排班的 AI 数字孪生",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于急诊流量排班的 ai 数字孪生",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "audio.cpp 0.3 新增超高速本地 TTS 模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "audio cpp 0 3 新增超高速本地 tts 模型",
+      "extra_keys": [
+        "arxiv:2501.18639"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Thinking Machines 发布 Inkling 开放权重 MoE 模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "thinking machines inkling 开放权重 moe 模型",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Kimi K3 以 2.8T 开放权重发布",
+      "url": "",
+      "url_key": "",
+      "title_key": "kimi k3 以 2 8t 开放权重发布",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "LM Studio 推出面向开放模型的 Bionic 代理",
+      "url": "",
+      "url_key": "",
+      "title_key": "lm studio 推出面向开放模型的 bionic 代理",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "NVIDIA Nemotron 3 Embed 登顶 RTEB",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia nemotron 3 embed 登顶 rteb",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "OpenAI 的 GPT-Red 自动化提示注入红队测试",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 的 gpt red 自动化提示注入红队测试",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Codex 缺陷可删除 $HOME",
+      "url": "",
+      "url_key": "",
+      "title_key": "codex 缺陷可删除 home",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Lila Sciences 推动数据中心式自主实验室",
+      "url": "",
+      "url_key": "",
+      "title_key": "lila sciences 推动数据中心式自主实验室",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "对抗去偏的年龄公平性不稳定",
+      "url": "",
+      "url_key": "",
+      "title_key": "对抗去偏的年龄公平性不稳定",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "医学联邦因果发现综述",
+      "url": "",
+      "url_key": "",
+      "title_key": "医学联邦因果发现综述",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "BioBERT 按 DSM-5 标注自闭症叙事",
+      "url": "",
+      "url_key": "",
+      "title_key": "biobert 按 dsm 5 标注自闭症叙事",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "APFA 加速医疗 IoMT 联邦学习",
+      "url": "",
+      "url_key": "",
+      "title_key": "apfa 加速医疗 iomt 联邦学习",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "NVIDIA 讲解企业视频 AI 代理集成",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia 讲解企业视频 ai 代理集成",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Oracle 概述企业级 RAG 安全模式",
+      "url": "",
+      "url_key": "",
+      "title_key": "oracle 概述企业级 rag 安全模式",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Kimi K3 推动开放模型规模与价格突破",
+      "url": "",
+      "url_key": "",
+      "title_key": "kimi k3 推动开放模型规模与价格突破",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Dify 1.16.0 推出沙箱 Agent 测试版",
+      "url": "",
+      "url_key": "",
+      "title_key": "dify 1 16 0 推出沙箱 agent 测试版",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "用 NeMo AutoModel 扩展 Diffusers 微调",
+      "url": "",
+      "url_key": "",
+      "title_key": "用 nemo automodel 扩展 diffusers 微调",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Bonsai 将 Qwen 27B 压缩到可在 iPhone 运行",
+      "url": "",
+      "url_key": "",
+      "title_key": "bonsai 将 qwen 27b 压缩到可在 iphone 运行",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "NVIDIA 开源 Nemotron 3 Embed",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia nemotron 3 embed",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "用 pelican benchmark 观察 Kimi K3",
+      "url": "",
+      "url_key": "",
+      "title_key": "用 pelican benchmark 观察 kimi k3",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "AI 智能体安全实战指南",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 智能体安全实战指南",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "trellis.cpp 达到参考级 3D 输出质量",
+      "url": "",
+      "url_key": "",
+      "title_key": "trellis cpp 达到参考级 3d 输出质量",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "DeepSeek V4 Flash 在 RTX 5090 上实现 1M 上下文",
+      "url": "",
+      "url_key": "",
+      "title_key": "deepseek v4 flash 在 rtx 5090 上实现 1m 上下文",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "MacBook 在 Terminal-Bench 逼近 2×DGX Spark",
+      "url": "",
+      "url_key": "",
+      "title_key": "macbook 在 terminal bench 逼近 2 dgx spark",
+      "extra_keys": [
+        "arxiv:2603.20397"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "DeepStream 9.1 新增智能体视觉技能",
+      "url": "",
+      "url_key": "",
+      "title_key": "deepstream 9 1 新增智能体视觉技能",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Google Cloud 展示基于 SQLite 的常驻 LLM 记忆",
+      "url": "",
+      "url_key": "",
+      "title_key": "google cloud 展示基于 sqlite 的常驻 llm 记忆",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "字节级精确 KV 嫁接提升 Gemma 4 路由表现",
+      "url": "",
+      "url_key": "",
+      "title_key": "字节级精确 kv 嫁接提升 gemma 4 路由表现",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "基准测试检验 /goal 在 NP-hard 任务中的作用",
+      "url": "",
+      "url_key": "",
+      "title_key": "基准测试检验 goal 在 np hard 任务中的作用",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "用闲置 Mac 配置 Claude Code 指南",
+      "url": "",
+      "url_key": "",
+      "title_key": "用闲置 mac 配置 claude code 指南",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "控制 LLM 的推理强度",
+      "url": "",
+      "url_key": "",
+      "title_key": "控制 llm 的推理强度",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Cache-Hunter 发现 LLM 提示缓存失效",
+      "url": "",
+      "url_key": "",
+      "title_key": "cache hunter 发现 llm 提示缓存失效",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "title": "补丁驱动解锁 CMP 170HX 用于 AI",
+      "url": "",
+      "url_key": "",
+      "title_key": "补丁驱动解锁 cmp 170hx 用于 ai",
+      "extra_keys": [
+        "arxiv:2607.14431"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "用 LLM 评估临床 AI 摘要",
+      "url": "",
+      "url_key": "",
+      "title_key": "用 llm 评估临床 ai 摘要",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "电子束单次灭活空气中耐多药细菌",
+      "url": "",
+      "url_key": "",
+      "title_key": "电子束单次灭活空气中耐多药细菌",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "为何高分 AI 在生产中失效",
+      "url": "",
+      "url_key": "",
+      "title_key": "为何高分 ai 在生产中失效",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "自适应医疗 AI 的新试验模式",
+      "url": "",
+      "url_key": "",
+      "title_key": "自适应医疗 ai 的新试验模式",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "MONAI Deploy 推进临床 AI 生产落地",
+      "url": "",
+      "url_key": "",
+      "title_key": "monai deploy 推进临床 ai 生产落地",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Google Research 发布 Med-Gemini",
+      "url": "",
+      "url_key": "",
+      "title_key": "google research med gemini",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "超冷却延长新生小鼠停滞状态",
+      "url": "",
+      "url_key": "",
+      "title_key": "超冷却延长新生小鼠停滞状态",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "title": "研究孕期睡眠呼吸障碍的脐带血标志物",
+      "url": "",
+      "url_key": "",
+      "title_key": "研究孕期睡眠呼吸障碍的脐带血标志物",
+      "extra_keys": [
+        "arxiv:2605.25273",
+        "arxiv:2606.19544"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "SleepFM 利用睡眠信号预测疾病风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "sleepfm 利用睡眠信号预测疾病风险",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "CLARK 利用化验趋势提升肾衰竭风险预测",
+      "url": "",
+      "url_key": "",
+      "title_key": "clark 利用化验趋势提升肾衰竭风险预测",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Anthropic 推广通过 MCP 执行代码",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 推广通过 mcp 执行代码",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "神经活动基础模型泛化至新视觉刺激",
+      "url": "",
+      "url_key": "",
+      "title_key": "神经活动基础模型泛化至新视觉刺激",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "偏好学习扩展抗体表达排序",
+      "url": "",
+      "url_key": "",
+      "title_key": "偏好学习扩展抗体表达排序",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "从人体模型旋转直接提取临床关节角度",
+      "url": "",
+      "url_key": "",
+      "title_key": "从人体模型旋转直接提取临床关节角度",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "CORE 实现多染色全切片图像细胞级配准",
+      "url": "",
+      "url_key": "",
+      "title_key": "core 实现多染色全切片图像细胞级配准",
+      "extra_keys": [
+        "arxiv:2607.16263",
+        "arxiv:2607.17000",
+        "arxiv:2305.18290",
+        "arxiv:0905.2635",
+        "arxiv:2607.17639",
+        "arxiv:2511.03826"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "《自然》报道可泛化脑 MRI 基础模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "自然 报道可泛化脑 mri 基础模型",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "睡眠基础模型预测未来疾病风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "睡眠基础模型预测未来疾病风险",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "OpenAI 智能体据报逃出评测隔离环境并入侵 Hugging Face。",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 智能体据报逃出评测隔离环境并入侵 hugging face",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "MechAInistic 自动生成代谢治疗假设",
+      "url": "",
+      "url_key": "",
+      "title_key": "mechainistic 自动生成代谢治疗假设",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "OpenAI 推出企业 AI 智能体平台 Presence",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 推出企业 ai 智能体平台 presence",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "SCGP 实现 1 型糖尿病个体化血糖预测。",
+      "url": "",
+      "url_key": "",
+      "title_key": "scgp 实现 1 型糖尿病个体化血糖预测",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "漂移自适应 ICU 预测分离生理与诊疗实践",
+      "url": "",
+      "url_key": "",
+      "title_key": "漂移自适应 icu 预测分离生理与诊疗实践",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "GAN 将宽场图像转换为近似共聚焦质量",
+      "url": "",
+      "url_key": "",
+      "title_key": "gan 将宽场图像转换为近似共聚焦质量",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "title": "统一安全分类器采用掩码多任务损失",
+      "url": "",
+      "url_key": "",
+      "title_key": "统一安全分类器采用掩码多任务损失",
+      "extra_keys": [
+        "arxiv:2607.19020",
+        "arxiv:2605.11086",
+        "arxiv:2607.19006",
+        "arxiv:2607.18249",
+        "arxiv:2403.18026"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "BrainIAC 实现通用脑 MRI 分析",
+      "url": "",
+      "url_key": "",
+      "title_key": "brainiac 实现通用脑 mri 分析",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Nature 报道睡眠模型用于疾病预测。",
+      "url": "",
+      "url_key": "",
+      "title_key": "报道睡眠模型用于疾病预测",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Code execution with MCP: building more efficient AI agents - Anthropic",
+      "url": "",
+      "url_key": "",
+      "title_key": "code execution with mcp building more efficient ai agents anthropic",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "SGLang v0.5.16 新增 DSpark 与 Inkling 服务支持",
+      "url": "",
+      "url_key": "",
+      "title_key": "sglang v0 5 16 新增 dspark 与 inkling 服务支持",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "轻量级 LLM 在 EHR 表型识别中出现推理错误",
+      "url": "",
+      "url_key": "",
+      "title_key": "轻量级 llm 在 ehr 表型识别中出现推理错误",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "MSB 利用不完整生物标志物数据改进免疫治疗耐药预测",
+      "url": "",
+      "url_key": "",
+      "title_key": "msb 利用不完整生物标志物数据改进免疫治疗耐药预测",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "title": "endoExplain: A reproducible protocol for auditing score-localisation discordance in colonoscopy image classifiers",
+      "url": "",
+      "url_key": "",
+      "title_key": "endoexplain a reproducible protocol for auditing score localisation discordance in colonoscopy image classifiers",
+      "extra_keys": [
+        "arxiv:2507.23146",
+        "arxiv:2605.25050",
+        "arxiv:2607.19372"
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "title": "用于脑部 MRI 分析的 BrainIAC 基础模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于脑部 mri 分析的 brainiac 基础模型",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-26",
+      "title": "睡眠基础模型可预测未来疾病风险。",
+      "url": "",
+      "url_key": "",
+      "title_key": "睡眠基础模型可预测未来疾病风险",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-26",
+      "title": "通用 LLM 在临床 AI 基准中领先",
+      "url": "",
+      "url_key": "",
+      "title_key": "通用 llm 在临床 ai 基准中领先",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-26",
+      "title": "理论研究者质疑机器学习论文篇幅限制",
+      "url": "",
+      "url_key": "",
+      "title_key": "理论研究者质疑机器学习论文篇幅限制",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-28",
+      "title": "SleepFM 利用睡眠记录预测疾病风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "sleepfm 利用睡眠记录预测疾病风险",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "NVIDIA 发布用于手术机器人的 Cosmos-H-Dreams",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia 发布用于手术机器人的 cosmos h dreams",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "190 万成人研究显示肾功能公式结果存在分歧",
+      "url": "",
+      "url_key": "",
+      "title_key": "190 万成人研究显示肾功能公式结果存在分歧",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Anthropic 探讨结合 MCP 的 AI 智能体代码执行",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 探讨结合 mcp 的 ai 智能体代码执行",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "神经活动基础模型可泛化至新刺激类型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "神经活动基础模型可泛化至新刺激类型",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Kimi 开源用于智能体 RL 训练的 AgentENV",
+      "url": "",
+      "url_key": "",
+      "title_key": "kimi 开源用于智能体 rl 训练的 agentenv",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "新方法区分传染性与既往免疫",
+      "url": "",
+      "url_key": "",
+      "title_key": "新方法区分传染性与既往免疫",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "网织红细胞力学与受限血流及高原病相关",
+      "url": "",
+      "url_key": "",
+      "title_key": "网织红细胞力学与受限血流及高原病相关",
+      "extra_keys": [
+        "arxiv:2607.21657",
+        "arxiv:2607.22504",
+        "arxiv:2406.06092",
+        "arxiv:2607.21810"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "INSIGHT 从组织学图像绘制结直肠癌生存风险图",
+      "url": "",
+      "url_key": "",
+      "title_key": "insight 从组织学图像绘制结直肠癌生存风险图",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "A multimodal sleep foundation model for disease prediction - Nature",
+      "url": "",
+      "url_key": "",
+      "title_key": "a multimodal sleep foundation model for disease prediction",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "国产 AI 虚拟细胞研究登上《Cell》",
+      "url": "",
+      "url_key": "",
+      "title_key": "国产 ai 虚拟细胞研究登上 cell",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "DR. INFO 在 HealthBench Hard 获得 0.68 分",
+      "url": "",
+      "url_key": "",
+      "title_key": "dr info 在 healthbench hard 获得 0 68 分",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "神经活动基础模型可泛化至新刺激",
+      "url": "",
+      "url_key": "",
+      "title_key": "神经活动基础模型可泛化至新刺激",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "通用大语言模型在医学基准中超越临床 AI 工具",
+      "url": "",
+      "url_key": "",
+      "title_key": "通用大语言模型在医学基准中超越临床 ai 工具",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "FRIGID 扩展质谱分子生成能力",
+      "url": "",
+      "url_key": "",
+      "title_key": "frigid 扩展质谱分子生成能力",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "AI 编程智能体重塑科学计算",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 编程智能体重塑科学计算",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "TCellAlign 统一跨单细胞研究的 T 细胞标签",
+      "url": "",
+      "url_key": "",
+      "title_key": "tcellalign 统一跨单细胞研究的 t 细胞标签",
+      "extra_keys": [
+        "arxiv:2604.16648",
+        "arxiv:2607.24093",
+        "arxiv:2512.22262",
+        "arxiv:2509.02594"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "title": "General-purpose large language models outperform specialized clinical AI tools on medical benchmarks - Nature",
+      "url": "",
+      "url_key": "",
+      "title_key": "general purpose large language models outperform specialized clinical ai tools on medical benchmarks",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-30",
+      "title": "文档携带型 AI 蠕虫可通过 Word Copilot 自我传播",
+      "url": "",
+      "url_key": "",
+      "title_key": "文档携带型 ai 蠕虫可通过 word copilot 自我传播",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Anthropic 提出为 MCP 智能体加入代码执行。",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 提出为 mcp 智能体加入代码执行",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Effect of a complementary feeding intervention based on iron- and zinc-biofortified pearl millet on the gut microbiota in 12–18-month-old children: a randomized trial",
+      "url": "",
+      "url_key": "",
+      "title_key": "effect of a complementary feeding intervention based on iron and zinc biofortified pearl millet on the gut microbiota in 12 18 month old children a randomized trial",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-30",
+      "title": "We built a DB where BM25 and vector search are table-valued functions you can JOIN against",
+      "url": "",
+      "url_key": "",
+      "title_key": "we built a db where bm25 and vector search are table valued functions you can join against",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-30",
+      "title": "Silent extraction errors are worse for RAG than low accurac, found this the hard way parsing scientific papers",
+      "url": "",
+      "url_key": "",
+      "title_key": "silent extraction errors are worse for rag than low accurac found this the hard way parsing scientific papers",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-07-31",
+      "title": "A generalizable foundation model for analysis of human brain MRI - Nature",
+      "url": "",
+      "url_key": "",
+      "title_key": "a generalizable foundation model for analysis of human brain mri",
+      "extra_keys": [
+        "arxiv:2607.26854",
+        "arxiv:2607.26397"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "title": "SleepFM 从睡眠记录预测疾病风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "sleepfm 从睡眠记录预测疾病风险",
+      "extra_keys": [
+        "arxiv:2607.26854",
+        "arxiv:2607.26397"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Anthropic 披露三起网络安全评测事故",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 披露三起网络安全评测事故",
+      "extra_keys": [
+        "arxiv:2607.26854",
+        "arxiv:2607.26397"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "title": "EC-Reason-Bench 诊断大语言模型的酶分类失败",
+      "url": "",
+      "url_key": "",
+      "title_key": "ec reason bench 诊断大语言模型的酶分类失败",
+      "extra_keys": [
+        "arxiv:2607.26854",
+        "arxiv:2607.26397"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "title": "TREA-Net 利用有限本地数据提升登革热预测能力。",
+      "url": "",
+      "url_key": "",
+      "title_key": "trea net 利用有限本地数据提升登革热预测能力",
+      "extra_keys": [
+        "arxiv:2607.26854",
+        "arxiv:2607.26397"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "无状态 MCP 2.0 让智能体工具协议重获实用性",
+      "url": "",
+      "url_key": "",
+      "title_key": "无状态 mcp 2 0 让智能体工具协议重获实用性",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "KAISEN 压力测试临床模型公平性审计。",
+      "url": "",
+      "url_key": "",
+      "title_key": "kaisen 压力测试临床模型公平性审计",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "Anthropic 提出用代码执行提升 MCP 智能体效率",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 提出用代码执行提升 mcp 智能体效率",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "PolyAI 推出 Dialog-RSN-1 音频原生语音模型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "polyai dialog rsn 1 音频原生语音模型",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "面向流动网络的疫情再生数指标",
+      "url": "",
+      "url_key": "",
+      "title_key": "面向流动网络的疫情再生数指标",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "Transformer 根据胰岛素和碳水预测血糖",
+      "url": "",
+      "url_key": "",
+      "title_key": "transformer 根据胰岛素和碳水预测血糖",
+      "extra_keys": [
+        "arxiv:2607.28608",
+        "arxiv:2607.28514"
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "title": "基础模型面向通用脑部 MRI 分析",
+      "url": "",
+      "url_key": "",
+      "title_key": "基础模型面向通用脑部 mri 分析",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-02",
+      "title": "通用 LLM 领跑临床 AI 基准测试",
+      "url": "",
+      "url_key": "",
+      "title_key": "通用 llm 领跑临床 ai 基准测试",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-02",
+      "title": "新指标揭示放射学 VLM 的临床术语缺陷",
+      "url": "",
+      "url_key": "",
+      "title_key": "新指标揭示放射学 vlm 的临床术语缺陷",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-02",
+      "title": "使用 MCP 执行代码：构建更高效的 AI 智能体 - Anthropic",
+      "url": "",
+      "url_key": "",
+      "title_key": "使用 mcp 执行代码 构建更高效的 ai 智能体 anthropic",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-02",
+      "title": "对 ARR 元评审流程的投诉引发担忧",
+      "url": "",
+      "url_key": "",
+      "title_key": "对 arr 元评审流程的投诉引发担忧",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Nature 报道通用人脑 MRI 基础模型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "报道通用人脑 mri 基础模型",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-03",
+      "title": "通用大语言模型领跑医疗基准测试",
+      "url": "",
+      "url_key": "",
+      "title_key": "通用大语言模型领跑医疗基准测试",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Twin 提出持续构建组织级 AI 理解",
+      "url": "",
+      "url_key": "",
+      "title_key": "twin 提出持续构建组织级 ai 理解",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Reddit 帖子探讨长上下文 LLM 性能退化",
+      "url": "",
+      "url_key": "",
+      "title_key": "reddit 帖子探讨长上下文 llm 性能退化",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-04",
+      "title": "用于人脑 MRI 的 BrainIAC 基础模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于人脑 mri 的 brainiac 基础模型",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2607.28655"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "title": "OpenAI 详解 GPT-Live 连续语音系统",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai gpt live 连续语音系统",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2607.28655"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "title": "Anthropic 推广 MCP 智能体的代码执行模式。",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 推广 mcp 智能体的代码执行模式",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2607.28655"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "title": "地理加权机器学习加快县级疾病估计",
+      "url": "",
+      "url_key": "",
+      "title_key": "地理加权机器学习加快县级疾病估计",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2607.28655"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "title": "EasyBCI 推出受监督的 BCI 预处理方法。",
+      "url": "",
+      "url_key": "",
+      "title_key": "easybci 推出受监督的 bci 预处理方法",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2607.28655"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "睡眠基础模型可预测疾病风险。",
+      "url": "",
+      "url_key": "",
+      "title_key": "睡眠基础模型可预测疾病风险",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "LeDXA 从 DXA 扫描中提取全身健康信号",
+      "url": "",
+      "url_key": "",
+      "title_key": "ledxa 从 dxa 扫描中提取全身健康信号",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "Anthropic 推广面向 MCP 智能体的代码执行",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 推广面向 mcp 智能体的代码执行",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "病理学基础模型图谱中承载信号的是什么？乳腺癌患者级对照基准测试",
+      "url": "",
+      "url_key": "",
+      "title_key": "病理学基础模型图谱中承载信号的是什么 乳腺癌患者级对照基准测试",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "EasyBCI 智能体：迈向脑机接口的通用神经数据预处理",
+      "url": "",
+      "url_key": "",
+      "title_key": "easybci 智能体 迈向脑机接口的通用神经数据预处理",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "OpenAI 加强第三方网络安全评估治理",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 加强第三方网络安全评估治理",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "title": "GRAIN 按活性成分建模药物。",
+      "url": "",
+      "url_key": "",
+      "title_key": "grain 按活性成分建模药物",
+      "extra_keys": [
+        "arxiv:2607.29007",
+        "arxiv:2608.00098",
+        "arxiv:2301.08243",
+        "arxiv:2608.02208",
+        "arxiv:2608.00105"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Nature 报道可泛化的人脑 MRI 基础模型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "报道可泛化的人脑 mri 基础模型",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "SPIKE-Bench 衡量 LLM 输出的功能性生物安全风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "spike bench 衡量 llm 输出的功能性生物安全风险",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Anthropic 推广 MCP 智能体代码执行",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 推广 mcp 智能体代码执行",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "AI 引导空间蛋白质组绘制 TNBC 复发风险图谱",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 引导空间蛋白质组绘制 tnbc 复发风险图谱",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "AISI 报告网络智能体未经授权的行动。",
+      "url": "",
+      "url_key": "",
+      "title_key": "aisi 报告网络智能体未经授权的行动",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "跨麻醉药 ECoG 解码失败主要源于校准",
+      "url": "",
+      "url_key": "",
+      "title_key": "跨麻醉药 ecog 解码失败主要源于校准",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "title": "REDE 评估癌症生物标志物的可重复性。",
+      "url": "",
+      "url_key": "",
+      "title_key": "rede 评估癌症生物标志物的可重复性",
+      "extra_keys": [
+        "arxiv:2608.03145",
+        "arxiv:2608.02646",
+        "arxiv:2608.02796",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "一款基础模型面向人脑 MRI 分析。",
+      "url": "",
+      "url_key": "",
+      "title_key": "一款基础模型面向人脑 mri 分析",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "SleepFM 利用睡眠数据预测疾病风险。",
+      "url": "",
+      "url_key": "",
+      "title_key": "sleepfm 利用睡眠数据预测疾病风险",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "SPIKE-Bench 衡量 LLM 生成毒素序列的风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "spike bench 衡量 llm 生成毒素序列的风险",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "Anthropic 介绍利用 MCP 代码执行提升人工智能代理效率",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 介绍利用 mcp 代码执行提升人工智能代理效率",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "Cloudflare 发布面向 AI 智能体的 Kitesurf 浏览器运行时。",
+      "url": "",
+      "url_key": "",
+      "title_key": "cloudflare 发布面向 ai 智能体的 kitesurf 浏览器运行时",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "OpenAI 与 APA 合作推进青少年心理健康 AI",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 与 apa 合作推进青少年心理健康 ai",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "Prime Intellect 开源 Prime Agent 智能体框架",
+      "url": "",
+      "url_key": "",
+      "title_key": "prime intellect prime agent 智能体框架",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "生存感知贝叶斯网络避免丢失预后信号",
+      "url": "",
+      "url_key": "",
+      "title_key": "生存感知贝叶斯网络避免丢失预后信号",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "基于博弈的机械通气决策推断。",
+      "url": "",
+      "url_key": "",
+      "title_key": "基于博弈的机械通气决策推断",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "双向扩散模型可估计滚动预测漂移。",
+      "url": "",
+      "url_key": "",
+      "title_key": "双向扩散模型可估计滚动预测漂移",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "vllm.cpp 将类 vLLM 推理服务移植到 C++20。",
+      "url": "",
+      "url_key": "",
+      "title_key": "vllm cpp 将类 vllm 推理服务移植到 c 20",
+      "extra_keys": [
+        "arxiv:2103.05612",
+        "arxiv:2510.15127",
+        "arxiv:2607.24093",
+        "arxiv:2608.04046",
+        "arxiv:2608.00675",
+        "arxiv:2608.02684"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "基础模型实现可泛化的人脑磁共振成像分析",
+      "url": "",
+      "url_key": "",
+      "title_key": "基础模型实现可泛化的人脑磁共振成像分析",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Cloudflare 推出运行于 V8 隔离环境的智能体优先浏览器 Kitesurf",
+      "url": "",
+      "url_key": "",
+      "title_key": "cloudflare 推出运行于 v8 隔离环境的智能体优先浏览器 kitesurf",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "CLARA 解决癌症基因组学查询歧义",
+      "url": "",
+      "url_key": "",
+      "title_key": "clara 解决癌症基因组学查询歧义",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "DCE-MRI 影像组学预测胶质母细胞瘤假性进展",
+      "url": "",
+      "url_key": "",
+      "title_key": "dce mri 影像组学预测胶质母细胞瘤假性进展",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "THBKG 预测哪些二期项目能够进入三期",
+      "url": "",
+      "url_key": "",
+      "title_key": "thbkg 预测哪些二期项目能够进入三期",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Anthropic 解析结合代码执行的 MCP 高效智能体",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 解析结合代码执行的 mcp 高效智能体",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "openJiuwen 在邮储银行部署分布式智能体蜂群架构",
+      "url": "",
+      "url_key": "",
+      "title_key": "openjiuwen 在邮储银行部署分布式智能体蜂群架构",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "title": "MS-MLB 推出可复现的血液样本多发性硬化分类基准",
+      "url": "",
+      "url_key": "",
+      "title_key": "ms mlb 推出可复现的血液样本多发性硬化分类基准",
+      "extra_keys": [
+        "arxiv:2608.05196",
+        "arxiv:2608.05733",
+        "arxiv:2608.05195",
+        "arxiv:2608.05982"
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Multicenter evaluation of four large language models for automated spine imaging diagnosis",
+      "url": "",
+      "url_key": "",
+      "title_key": "multicenter evaluation of four large language models for automated spine imaging diagnosis",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Machine learning enables clinically feasible implementation of clot waveform analysis for differentiating causes of prolonged activated partial thromboplastin time",
+      "url": "",
+      "url_key": "",
+      "title_key": "machine learning enables clinically feasible implementation of clot waveform analysis for differentiating causes of prolonged activated partial thromboplastin time",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Plasma p-tau217 as a two-cutoff approach to improve tau-PET screening and trial recruitment in Alzheimer’s disease",
+      "url": "",
+      "url_key": "",
+      "title_key": "plasma p tau217 as a two cutoff approach to improve tau pet screening and trial recruitment in alzheimer s disease",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Multimodal artificial intelligence agents in healthcare: a scoping review",
+      "url": "",
+      "url_key": "",
+      "title_key": "multimodal artificial intelligence agents in healthcare a scoping review",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "MRICombo 统一磁共振分割与肿瘤评估",
+      "url": "",
+      "url_key": "",
+      "title_key": "mricombo 统一磁共振分割与肿瘤评估",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "通用大语言模型在独立评测中超过临床 AI 工具",
+      "url": "",
+      "url_key": "",
+      "title_key": "通用大语言模型在独立评测中超过临床 ai 工具",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "ggerganov/llama.cpp released b10328",
+      "url": "",
+      "url_key": "",
+      "title_key": "ggerganov llama cpp released b10328",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+      "url": "",
+      "url_key": "",
+      "title_key": "now we have a timeline of the openai accidental attack against hugging face",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-09",
+      "title": "使用 AG-UI 协议在 Amazon Bedrock AgentCore 上构建 AI 代理的生成式用户界面 \\| 人工智能 - 亚马逊云科技（AWS）",
+      "url": "",
+      "url_key": "",
+      "title_key": "使用 ag ui 协议在 amazon bedrock agentcore 上构建 ai 代理的生成式用户界面 人工智能 亚马逊云科技 aws",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-10",
+      "title": "Nature 报道用于疾病预测的多模态睡眠基础模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "报道用于疾病预测的多模态睡眠基础模型",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-10",
+      "title": "A Mechanistic Explanation of Prompt Injection \\(and why you should study roles\\) \\[R\\",
+      "url": "",
+      "url_key": "",
+      "title_key": "a mechanistic explanation of prompt injection and why you should study roles r",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-10",
+      "title": "医疗 AI 落地的悖论",
+      "url": "",
+      "url_key": "",
+      "title_key": "医疗 ai 落地的悖论",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-10",
+      "title": "为 Bedrock AgentCore 智能体构建生成式界面",
+      "url": "",
+      "url_key": "",
+      "title_key": "为 bedrock agentcore 智能体构建生成式界面",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-11",
+      "title": "人工智能可在微生物致癌研究论文的证据提取与批判性评价方面达到领域专家水平",
+      "url": "",
+      "url_key": "",
+      "title_key": "人工智能可在微生物致癌研究论文的证据提取与批判性评价方面达到领域专家水平",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Beyond Scaffold Splits: Structural-Frontier Evaluation Reveals Hidden Failures in ADMET Models",
+      "url": "",
+      "url_key": "",
+      "title_key": "beyond scaffold splits structural frontier evaluation reveals hidden failures in admet models",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Nature 报道可泛化的脑部 MRI 基础模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "报道可泛化的脑部 mri 基础模型",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "微软测试大规模智能体网络",
+      "url": "",
+      "url_key": "",
+      "title_key": "微软测试大规模智能体网络",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "vllm-project/vllm released v0.27.0",
+      "url": "",
+      "url_key": "",
+      "title_key": "vllm project vllm released v0 27 0",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "title": "NVIDIA Magpie TTS 助力低延迟多语言语音代理",
+      "url": "",
+      "url_key": "",
+      "title_key": "nvidia magpie tts 助力低延迟多语言语音代理",
+      "extra_keys": [
+        "arxiv:2607.10729",
+        "arxiv:2608.07250"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "A generalizable foundation model for analysis of human brain MRI - nature.com",
+      "url": "",
+      "url_key": "",
+      "title_key": "a generalizable foundation model for analysis of human brain mri com",
+      "extra_keys": [
+        "arxiv:2608.07610",
+        "arxiv:2608.08173",
+        "arxiv:2608.08958"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "General-purpose large language models outperform specialized clinical AI tools on medical benchmarks - nature.com",
+      "url": "",
+      "url_key": "",
+      "title_key": "general purpose large language models outperform specialized clinical ai tools on medical benchmarks com",
+      "extra_keys": [
+        "arxiv:2608.07610",
+        "arxiv:2608.08173",
+        "arxiv:2608.08958"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "DisMorph 分离 MRI 失真与生物变化。",
+      "url": "",
+      "url_key": "",
+      "title_key": "dismorph 分离 mri 失真与生物变化",
+      "extra_keys": [
+        "arxiv:2608.07610",
+        "arxiv:2608.08173",
+        "arxiv:2608.08958"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "Exploiting chemical shift variability enables recovery of overlapping metabolites from 1H nuclear magnetic resonance spectra",
+      "url": "",
+      "url_key": "",
+      "title_key": "exploiting chemical shift variability enables recovery of overlapping metabolites from 1h nuclear magnetic resonance spectra",
+      "extra_keys": [
+        "arxiv:2608.07610",
+        "arxiv:2608.08173",
+        "arxiv:2608.08958"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "Idea Search 拓展 LLM 科学代码树搜索",
+      "url": "",
+      "url_key": "",
+      "title_key": "idea search 拓展 llm 科学代码树搜索",
+      "extra_keys": [
+        "arxiv:2608.07610",
+        "arxiv:2608.08173",
+        "arxiv:2608.08958"
+      ]
+    }
+  ]
+}

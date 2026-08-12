@@ -4,10 +4,16 @@ from types import SimpleNamespace
 from rich.console import Console
 
 from src.models import ContentItem, FilteringConfig, SourceType
-from src.orchestrator import HorizonOrchestrator
+from src.orchestrator import HorizonOrchestrator, _deduplication_url_key
+from src.storage.manager import StorageManager
 
 
-def make_item(item_id: str, score: float, category: str | None = None, url: str | None = None) -> ContentItem:
+def make_item(
+    item_id: str,
+    score: float,
+    category: str | None = None,
+    url: str | None = None,
+) -> ContentItem:
     metadata = {"category": category} if category is not None else {}
     return ContentItem(
         id=item_id,
@@ -53,24 +59,64 @@ def test_is_paper_like_detects_arxiv() -> None:
     assert HorizonOrchestrator._is_paper_like(item)
 
 
-def test_cross_day_dedup_filters_recent_titles(tmp_path, monkeypatch) -> None:
-    summaries = tmp_path / "summaries"
-    summaries.mkdir()
-    # yesterday digest
-    (summaries / "horizon-2026-07-20-zh.md").write_text(
-        "# Horizon\n\n1. [Google 发布 Med-Gemini 医疗 AI](https://example.com/med-gemini)\n",
-        encoding="utf-8",
+def test_titles_near_duplicate_chinese_rewrites() -> None:
+    assert HorizonOrchestrator._titles_are_near_duplicate(
+        "Nature 报道可泛化的脑部 MRI 基础模型",
+        "可泛化脑部 MRI 基础模型",
     )
-    filtering = FilteringConfig(recent_digest_days=3)
+    assert HorizonOrchestrator._titles_are_near_duplicate(
+        "使用 MCP 执行代码：构建更高效的 AI 智能体 - Anthropic",
+        "Anthropic：用 MCP 执行代码构建更高效 AI 智能体",
+    )
+
+
+def test_cross_day_dedup_filters_recent_titles(tmp_path, monkeypatch) -> None:
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    storage = StorageManager(data_dir=str(data_dir))
+    storage.save_seen_items(
+        [
+            {
+                "date": "2026-07-20",
+                "title": "Google 发布 Med-Gemini 医疗 AI",
+                "url": "https://example.com/med-gemini",
+                "url_key": str(
+                    _deduplication_url_key("https://example.com/med-gemini")
+                ),
+                "title_key": HorizonOrchestrator._normalize_title_key(
+                    "Google 发布 Med-Gemini 医疗 AI"
+                ),
+                "extra_keys": [],
+            },
+            {
+                "date": "2026-07-21",
+                "title": "使用 MCP 执行代码：构建更高效的 AI 智能体 - Anthropic",
+                "url": "https://www.anthropic.com/engineering/mcp",
+                "url_key": str(
+                    _deduplication_url_key(
+                        "https://www.anthropic.com/engineering/mcp"
+                    )
+                ),
+                "title_key": HorizonOrchestrator._normalize_title_key(
+                    "使用 MCP 执行代码：构建更高效的 AI 智能体 - Anthropic"
+                ),
+                "extra_keys": [],
+            },
+        ]
+    )
+
+    filtering = FilteringConfig(recent_digest_days=21)
     orch = make_orch(filtering)
-    orch.storage = SimpleNamespace(summaries_dir=summaries)
+    orch.storage = storage
     monkeypatch.chdir(tmp_path)
 
     items = [
         make_item("dup", 8.0, url="https://example.com/med-gemini"),
+        make_item("mcp", 8.0, url="https://news.google.com/rss/articles/abc"),
         make_item("fresh", 7.5, url="https://example.com/new"),
     ]
     items[0].title = "Google 发布 Med-Gemini 医疗 AI"
-    items[1].title = "Brand new GraphRAG framework"
+    items[1].title = "Anthropic：用 MCP 执行代码构建更高效 AI 智能体"
+    items[2].title = "Brand new Graph engineering practice"
     kept = orch.filter_recently_covered_items(items, log_label="test")
-    assert [i.id for i in kept] == ["fresh"]
+    assert [item.id for item in kept] == ["fresh"]

@@ -63,10 +63,15 @@ class ConfigError(ValueError):
 class StorageManager:
     """Manages file-based storage for configuration and state."""
 
+    # Durable cross-day dedup ledger (tracked in git so CI has history).
+    SEEN_ITEMS_FILENAME = "seen_items.json"
+    SEEN_ITEMS_MAX = 500
+
     def __init__(self, data_dir: str = "data"):
         self.data_dir = Path(data_dir)
         self.config_path = self.data_dir / "config.json"
         self.summaries_dir = self.data_dir / "summaries"
+        self.seen_items_path = self.data_dir / self.SEEN_ITEMS_FILENAME
 
         self.data_dir.mkdir(parents=True, exist_ok=True)
         self.summaries_dir.mkdir(parents=True, exist_ok=True)
@@ -126,6 +131,78 @@ class StorageManager:
         _atomic_write_text(filepath, markdown)
 
         return filepath
+
+    def load_seen_items(self) -> list[dict]:
+        """Load durable seen-item records used for cross-day digest dedup."""
+        if not self.seen_items_path.exists():
+            return []
+        try:
+            with open(self.seen_items_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            return []
+        if isinstance(data, dict):
+            items = data.get("items", [])
+        elif isinstance(data, list):
+            items = data
+        else:
+            items = []
+        return [item for item in items if isinstance(item, dict)]
+
+    def save_seen_items(self, items: list[dict]) -> Path:
+        """Persist seen-item records (newest last; keep only SEEN_ITEMS_MAX)."""
+        trimmed = items[-self.SEEN_ITEMS_MAX :]
+        payload = {
+            "version": 1,
+            "updated_at": __import__("datetime").datetime.now(
+                __import__("datetime").timezone.utc
+            ).isoformat(),
+            "items": trimmed,
+        }
+        _atomic_write_text(
+            self.seen_items_path,
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        )
+        return self.seen_items_path
+
+    def record_seen_digest_items(
+        self,
+        items: list,
+        *,
+        date: str,
+        url_key_fn,
+        title_key_fn,
+        extra_keys_fn=None,
+    ) -> Path:
+        """Append selected digest items into the durable seen ledger."""
+        existing = self.load_seen_items()
+        known = {
+            (rec.get("url_key"), rec.get("title_key"))
+            for rec in existing
+            if rec.get("url_key") or rec.get("title_key")
+        }
+        for item in items:
+            title = getattr(item, "title", "") or ""
+            url = str(getattr(item, "url", "") or "")
+            url_key = url_key_fn(url) if url else ""
+            title_key = title_key_fn(title) if title else ""
+            pair = (url_key, title_key)
+            if pair in known:
+                continue
+            rec = {
+                "date": date,
+                "title": title,
+                "url": url,
+                "url_key": url_key,
+                "title_key": title_key,
+                "id": getattr(item, "id", None),
+            }
+            if extra_keys_fn is not None:
+                extras = extra_keys_fn(item) or []
+                rec["extra_keys"] = list(extras)
+            existing.append(rec)
+            known.add(pair)
+        return self.save_seen_items(existing)
 
     def load_subscribers(self) -> list:
         """Loads the list of email subscribers."""
