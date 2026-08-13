@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T07:03:31.085636+00:00",
+  "updated_at": "2026-08-13T00:34:16.525102+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -2974,6 +2974,56 @@
         "arxiv:2608.07610",
         "arxiv:2608.08173",
         "arxiv:2608.08958"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Validated Synthetic Patient Generation for Small Longitudinal Cohorts: Coagulation Dynamics Across Pregnancy",
+      "url": "https://arxiv.org/abs/2604.07557",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2604.07557', '')",
+      "title_key": "validated synthetic patient generation for small longitudinal cohorts coagulation dynamics across pregnancy",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:d467fb7d87bdaeab",
+      "extra_keys": [
+        "arxiv:2604.07557",
+        "title:validated synthetic patient generation for small longitudinal cohorts coagulation dynamics across pregnancy",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2604.07557', '')"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "AI agents create virtual playgrounds to help robots get crucial training data - MIT News",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPU1d5RERIVmlzempEVHVzZGVER2JGMEVRcGdIUDZtZGppWFF0SEFfaEluYm5SZzZkeWFMOUxXcWkwb3NraDdYVUxKaG92UFFVZ0hfTDkxdnJ5LWl4bkx2eTdaNFNmTDJQLW9lay1oQ3Iyb0tfakVRQmVPQUlKTnNwOWVxOTNjVVJzVTh3RHhxLXRJRFJwYVIyZ3FGRTlNWHQyU095c3pDUHJpNGQ4?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMirAFBVV95cUxPU1d5RERIVmlzempEVHVzZGVER2JGMEVRcGdIUDZtZGppWFF0SEFfaEluYm5SZzZkeWFMOUxXcWkwb3NraDdYVUxKaG92UFFVZ0hfTDkxdnJ5LWl4bkx2eTdaNFNmTDJQLW9lay1oQ3Iyb0tfakVRQmVPQUlKTnNwOWVxOTNjVVJzVTh3RHhxLXRJRFJwYVIyZ3FGRTlNWHQyU095c3pDUHJpNGQ4', 'oc=5')",
+      "title_key": "ai agents create virtual playgrounds to help robots get crucial training data mit news",
+      "id": "google_news:article:6539714ef2b430d2",
+      "extra_keys": [
+        "title:ai agents create virtual playgrounds to help robots get crucial training data mit news",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMirAFBVV95cUxPU1d5RERIVmlzempEVHVzZGVER2JGMEVRcGdIUDZtZGppWFF0SEFfaEluYm5SZzZkeWFMOUxXcWkwb3NraDdYVUxKaG92UFFVZ0hfTDkxdnJ5LWl4bkx2eTdaNFNmTDJQLW9lay1oQ3Iyb0tfakVRQmVPQUlKTnNwOWVxOTNjVVJzVTh3RHhxLXRJRFJwYVIyZ3FGRTlNWHQyU095c3pDUHJpNGQ4', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "More than 80% of physicians use AI professionally: AMA survey - American Medical Association | AMA",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUzcwX0JUdXdWQW41YTlOazdzMTFTVnd1WmRHYTdBSDdlOWhhSFBWelRmM19UanpMaDBKOVU3MnR2bW1XMzE2TnlhX1U2Q0lzVjZQbUFKWWdWcjEtRE0wemhLVkQwTzJyNktBWlNRX3BoalA1SUk1TlJuSS1TVm51UXR2QW43OXAwRzFqWk5kUU1NZ192N0tnZlV5WjFDOGdSVmhHWmFKeG5yUExZbGFtWQ?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMisAFBVV95cUxNUzcwX0JUdXdWQW41YTlOazdzMTFTVnd1WmRHYTdBSDdlOWhhSFBWelRmM19UanpMaDBKOVU3MnR2bW1XMzE2TnlhX1U2Q0lzVjZQbUFKWWdWcjEtRE0wemhLVkQwTzJyNktBWlNRX3BoalA1SUk1TlJuSS1TVm51UXR2QW43OXAwRzFqWk5kUU1NZ192N0tnZlV5WjFDOGdSVmhHWmFKeG5yUExZbGFtWQ', 'oc=5')",
+      "title_key": "more than 80 of physicians use ai professionally ama survey american medical association ama",
+      "id": "google_news:article:69bc49fb381b9f34",
+      "extra_keys": [
+        "title:more than 80 of physicians use ai professionally ama survey american medical association ama",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMisAFBVV95cUxNUzcwX0JUdXdWQW41YTlOazdzMTFTVnd1WmRHYTdBSDdlOWhhSFBWelRmM19UanpMaDBKOVU3MnR2bW1XMzE2TnlhX1U2Q0lzVjZQbUFKWWdWcjEtRE0wemhLVkQwTzJyNktBWlNRX3BoalA1SUk1TlJuSS1TVm51UXR2QW43OXAwRzFqWk5kUU1NZ192N0tnZlV5WjFDOGdSVmhHWmFKeG5yUExZbGFtWQ', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "A fast diagonalization algorithm to enable singular value decomposition of large matrices for efficient template matching",
+      "url": "https://arxiv.org/abs/2608.10029",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.10029', '')",
+      "title_key": "a fast diagonalization algorithm to enable singular value decomposition of large matrices for efficient template matching",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:df4de730fbc1f397",
+      "extra_keys": [
+        "arxiv:2608.10029",
+        "title:a fast diagonalization algorithm to enable singular value decomposition of large matrices for efficient template matching",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.10029', '')"
       ]
     }
   ]
