@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T00:34:16.525102+00:00",
+  "updated_at": "2026-08-14T00:41:56.042100+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3024,6 +3024,99 @@
         "arxiv:2608.10029",
         "title:a fast diagonalization algorithm to enable singular value decomposition of large matrices for efficient template matching",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2608.10029', '')"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "用于妊娠凝血研究的合成长程患者数据",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于妊娠凝血研究的合成长程患者数据",
+      "extra_keys": [
+        "arxiv:2604.07557",
+        "arxiv:2608.10029"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "AI agents create virtual playgrounds to help robots get crucial training data - MIT News",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai agents create virtual playgrounds to help robots get crucial training data mit news",
+      "extra_keys": [
+        "arxiv:2604.07557",
+        "arxiv:2608.10029"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "AMA 调查显示逾八成医生在工作中使用 AI",
+      "url": "",
+      "url_key": "",
+      "title_key": "ama 调查显示逾八成医生在工作中使用 ai",
+      "extra_keys": [
+        "arxiv:2604.07557",
+        "arxiv:2608.10029"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "用于模板匹配的快速对称感知对角化算法。",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于模板匹配的快速对称感知对角化算法",
+      "extra_keys": [
+        "arxiv:2604.07557",
+        "arxiv:2608.10029"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "The builder’s guide to GPT‑5.6",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+      "url_key": "('https', '', '', 'openai.com', None, '/index/builders-guide-to-gpt-5-6', '')",
+      "title_key": "the builder s guide to gpt 5 6",
+      "id": "rss:openai.com_blog_rss.xml:6f8368ac763b7373",
+      "extra_keys": [
+        "title:the builder s guide to gpt 5 6",
+        "url:('https', '', '', 'openai.com', None, '/index/builders-guide-to-gpt-5-6', '')"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "A Modular Agentic Framework for Synthetically Constrained Multi-Objective Hit-to-Lead Optimization",
+      "url": "https://arxiv.org/abs/2608.11483",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.11483', '')",
+      "title_key": "a modular agentic framework for synthetically constrained multi objective hit to lead optimization",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:30db3e2da52df4a8",
+      "extra_keys": [
+        "arxiv:2608.11483",
+        "title:a modular agentic framework for synthetically constrained multi objective hit to lead optimization",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.11483', '')"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "2026 State of AI Agents: Enterprise Insights on Building AI - Databricks",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE52NXg3M1FlUE1EQmdMTmxhTXdHdHo2NUFkTjljWVVoX185UTl0akFDWWJnSlN2RnJycUxubWtHblRaVURxTVlqWnZobE93eGtfSndkanJDc0tBbjdJMjFVdGhkcWl6RzRqYWtncTdB?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMibkFVX3lxTE52NXg3M1FlUE1EQmdMTmxhTXdHdHo2NUFkTjljWVVoX185UTl0akFDWWJnSlN2RnJycUxubWtHblRaVURxTVlqWnZobE93eGtfSndkanJDc0tBbjdJMjFVdGhkcWl6RzRqYWtncTdB', 'oc=5')",
+      "title_key": "2026 state of ai agents enterprise insights on building ai databricks",
+      "id": "google_news:article:c5708d3d481f7a3a",
+      "extra_keys": [
+        "title:2026 state of ai agents enterprise insights on building ai databricks",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMibkFVX3lxTE52NXg3M1FlUE1EQmdMTmxhTXdHdHo2NUFkTjljWVVoX185UTl0akFDWWJnSlN2RnJycUxubWtHblRaVURxTVlqWnZobE93eGtfSndkanJDc0tBbjdJMjFVdGhkcWl6RzRqYWtncTdB', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "worldproof: diagnosing where world-model predictions break and a measurement of when pixel metrics stop being able to rank models at all [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1vnliv7/worldproof_diagnosing_where_worldmodel/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vnliv7/worldproof_diagnosing_where_worldmodel', '')",
+      "title_key": "worldproof diagnosing where world model predictions break and a measurement of when pixel metrics stop being able to rank models at all p",
+      "id": "reddit:subreddit-rss:t3_1vnliv7",
+      "extra_keys": [
+        "title:worldproof diagnosing where world model predictions break and a measurement of when pixel metrics stop being able to rank models at all p",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vnliv7/worldproof_diagnosing_where_worldmodel', '')"
       ]
     }
   ]
