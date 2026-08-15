@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-14T00:41:56.042100+00:00",
+  "updated_at": "2026-08-15T00:20:17.264084+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3117,6 +3117,154 @@
       "extra_keys": [
         "title:worldproof diagnosing where world model predictions break and a measurement of when pixel metrics stop being able to rank models at all p",
         "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vnliv7/worldproof_diagnosing_where_worldmodel', '')"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "GPT-5.6 构建者指南",
+      "url": "",
+      "url_key": "",
+      "title_key": "gpt 5 6 构建者指南",
+      "extra_keys": [
+        "arxiv:2608.11483"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "A Modular Agentic Framework for Synthetically Constrained Multi-Objective Hit-to-Lead Optimization",
+      "url": "",
+      "url_key": "",
+      "title_key": "a modular agentic framework for synthetically constrained multi objective hit to lead optimization",
+      "extra_keys": [
+        "arxiv:2608.11483"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "2026 年 AI 智能体状况：企业构建 AI 的洞察 - Databricks",
+      "url": "",
+      "url_key": "",
+      "title_key": "2026 年 ai 智能体状况 企业构建 ai 的洞察 databricks",
+      "extra_keys": [
+        "arxiv:2608.11483"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "worldproof: diagnosing where world-model predictions break and a measurement of when pixel metrics stop being able to rank models at all \\[P\\",
+      "url": "",
+      "url_key": "",
+      "title_key": "worldproof diagnosing where world model predictions break and a measurement of when pixel metrics stop being able to rank models at all p",
+      "extra_keys": [
+        "arxiv:2608.11483"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Histological aging signatures for monitoring tissue-specific aging and disease",
+      "url": "https://www.nature.com/articles/s41591-026-04566-5",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04566-5', '')",
+      "title_key": "histological aging signatures for monitoring tissue specific aging and disease",
+      "id": "rss:www.nature.com_nm.rss:baa6dad43c349ad8",
+      "extra_keys": [
+        "title:histological aging signatures for monitoring tissue specific aging and disease",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04566-5', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Foundation model of neural activity predicts response to new stimulus types - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1DWjR3aVhLZHkxVm00elVkQlY0QTZUNzFkcFVLSTFnZHJYODVLdng5VDFpQlZzT2JMeDJrTjlCVlR1WFZ5X1JVUzVIcE4xZXVwN2ZJZ25ONnEzWXNrcUhN?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE1DWjR3aVhLZHkxVm00elVkQlY0QTZUNzFkcFVLSTFnZHJYODVLdng5VDFpQlZzT2JMeDJrTjlCVlR1WFZ5X1JVUzVIcE4xZXVwN2ZJZ25ONnEzWXNrcUhN', 'oc=5')",
+      "title_key": "foundation model of neural activity predicts response to new stimulus types",
+      "id": "google_news:article:c88bf422621a7ae0",
+      "extra_keys": [
+        "title:foundation model of neural activity predicts response to new stimulus types",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE1DWjR3aVhLZHkxVm00elVkQlY0QTZUNzFkcFVLSTFnZHJYODVLdng5VDFpQlZzT2JMeDJrTjlCVlR1WFZ5X1JVUzVIcE4xZXVwN2ZJZ25ONnEzWXNrcUhN', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy for hepatocellular carcinoma",
+      "url": "https://www.nature.com/articles/s41698-026-01652-2",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41698-026-01652-2', '')",
+      "title_key": "multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy for hepatocellular carcinoma",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:58973ca73217bcb4",
+      "extra_keys": [
+        "title:multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy for hepatocellular carcinoma",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41698-026-01652-2', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Weakly supervised artificial intelligence for multi-cancer detection of lymph node metastasis on whole slide images",
+      "url": "https://www.nature.com/articles/s41467-026-76410-w",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76410-w', '')",
+      "title_key": "weakly supervised artificial intelligence for multi cancer detection of lymph node metastasis on whole slide images",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:64c4f8eb3bcc60a5",
+      "extra_keys": [
+        "title:weakly supervised artificial intelligence for multi cancer detection of lymph node metastasis on whole slide images",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76410-w', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Alignment with experimental data improves protein generative modeling",
+      "url": "https://www.nature.com/articles/s41592-026-03138-2",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41592-026-03138-2', '')",
+      "title_key": "alignment with experimental data improves protein generative modeling",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:e407653f65e78ccf",
+      "extra_keys": [
+        "title:alignment with experimental data improves protein generative modeling",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41592-026-03138-2', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Qwen 3.8 27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+      "url_key": "('https', '', '', 'huggingface.co', None, '/Qwen/Qwen3.8-27B-FP8', '')",
+      "title_key": "qwen 3 8 27b",
+      "id": "hackernews:story:49299605",
+      "extra_keys": [
+        "title:qwen 3 8 27b",
+        "url:('https', '', '', 'huggingface.co', None, '/Qwen/Qwen3.8-27B-FP8', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Safety and immunogenicity of inactivated human Rotavirus vaccine in young children and infants: a randomized, placebo-controlled, double-blind, phase I clinical trial",
+      "url": "https://www.nature.com/articles/s41467-026-76607-z",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76607-z', '')",
+      "title_key": "safety and immunogenicity of inactivated human rotavirus vaccine in young children and infants a randomized placebo controlled double blind phase i clinical trial",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:a137a1a3528da806",
+      "extra_keys": [
+        "title:safety and immunogenicity of inactivated human rotavirus vaccine in young children and infants a randomized placebo controlled double blind phase i clinical trial",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76607-z', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "CBEC: a simple retrieval-based framework for population-grounded prediction reliability estimation in chest X-ray diagnosis",
+      "url": "https://www.nature.com/articles/s41598-026-66377-5",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41598-026-66377-5', '')",
+      "title_key": "cbec a simple retrieval based framework for population grounded prediction reliability estimation in chest x ray diagnosis",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:52acb0ad1a65e6ea",
+      "extra_keys": [
+        "title:cbec a simple retrieval based framework for population grounded prediction reliability estimation in chest x ray diagnosis",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41598-026-66377-5', '')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Toyota is deploying AI agents to harness the collective wisdom of engineers and innovate faster - Microsoft Source",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQ0NpZk5GSXVuVmg2QjlRWDJWRnQtVHJGOFVFLVh3Nl9pZmdhTkY0Q1NXaEI1Xy1KZXpEdHFSZDJmNE9FWTNpSFVlNDNvY1JBWi1uUWNjdDZCNU1KaE9TTkZaYXdNVlg3S29PLWZpWnR2U0dsLXVOQ0piaHZvQWF3T3psWlFiZDBvSXlrWlNUMmFVQ0ZJM2lvSWJ3ZWRrT2VJVC1QVlFzSjBpcWNxSERFOUtvdTZUaDVWZDB1OVp4WDBxWk14bmUwSG1rMlJoY3E4NS1jSW8yU2tPQWxo?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMi3AFBVV95cUxPQ0NpZk5GSXVuVmg2QjlRWDJWRnQtVHJGOFVFLVh3Nl9pZmdhTkY0Q1NXaEI1Xy1KZXpEdHFSZDJmNE9FWTNpSFVlNDNvY1JBWi1uUWNjdDZCNU1KaE9TTkZaYXdNVlg3S29PLWZpWnR2U0dsLXVOQ0piaHZvQWF3T3psWlFiZDBvSXlrWlNUMmFVQ0ZJM2lvSWJ3ZWRrT2VJVC1QVlFzSjBpcWNxSERFOUtvdTZUaDVWZDB1OVp4WDBxWk14bmUwSG1rMlJoY3E4NS1jSW8yU2tPQWxo', 'oc=5')",
+      "title_key": "toyota is deploying ai agents to harness the collective wisdom of engineers and innovate faster microsoft source",
+      "id": "google_news:article:559ff83d5bb93ea0",
+      "extra_keys": [
+        "title:toyota is deploying ai agents to harness the collective wisdom of engineers and innovate faster microsoft source",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMi3AFBVV95cUxPQ0NpZk5GSXVuVmg2QjlRWDJWRnQtVHJGOFVFLVh3Nl9pZmdhTkY0Q1NXaEI1Xy1KZXpEdHFSZDJmNE9FWTNpSFVlNDNvY1JBWi1uUWNjdDZCNU1KaE9TTkZaYXdNVlg3S29PLWZpWnR2U0dsLXVOQ0piaHZvQWF3T3psWlFiZDBvSXlrWlNUMmFVQ0ZJM2lvSWJ3ZWRrT2VJVC1QVlFzSjBpcWNxSERFOUtvdTZUaDVWZDB1OVp4WDBxWk14bmUwSG1rMlJoY3E4NS1jSW8yU2tPQWxo', 'oc=5')"
       ]
     }
   ]
