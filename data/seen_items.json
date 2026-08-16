@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-15T00:20:17.264084+00:00",
+  "updated_at": "2026-08-15T23:47:53.186491+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3265,6 +3265,105 @@
       "extra_keys": [
         "title:toyota is deploying ai agents to harness the collective wisdom of engineers and innovate faster microsoft source",
         "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMi3AFBVV95cUxPQ0NpZk5GSXVuVmg2QjlRWDJWRnQtVHJGOFVFLVh3Nl9pZmdhTkY0Q1NXaEI1Xy1KZXpEdHFSZDJmNE9FWTNpSFVlNDNvY1JBWi1uUWNjdDZCNU1KaE9TTkZaYXdNVlg3S29PLWZpWnR2U0dsLXVOQ0piaHZvQWF3T3psWlFiZDBvSXlrWlNUMmFVQ0ZJM2lvSWJ3ZWRrT2VJVC1QVlFzSjBpcWNxSERFOUtvdTZUaDVWZDB1OVp4WDBxWk14bmUwSG1rMlJoY3E4NS1jSW8yU2tPQWxo', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "基于病理和血液的组织特异性衰老时钟",
+      "url": "",
+      "url_key": "",
+      "title_key": "基于病理和血液的组织特异性衰老时钟",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Foundation model of neural activity predicts response to new stimulus types - Nature",
+      "url": "",
+      "url_key": "",
+      "title_key": "foundation model of neural activity predicts response to new stimulus types",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy for hepatocellular carcinoma",
+      "url": "",
+      "url_key": "",
+      "title_key": "multimodal image fusion system based on augmented reality and intraoperative ultrasound in laparoscopic anatomic hepatectomy for hepatocellular carcinoma",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Weakly supervised artificial intelligence for multi-cancer detection of lymph node metastasis on whole slide images",
+      "url": "",
+      "url_key": "",
+      "title_key": "weakly supervised artificial intelligence for multi cancer detection of lymph node metastasis on whole slide images",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "实验对齐提升蛋白质生成模型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "实验对齐提升蛋白质生成模型",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Qwen 3.8 27B 将强推理带入本地 FP8 推理",
+      "url": "",
+      "url_key": "",
+      "title_key": "qwen 3 8 27b 将强推理带入本地 fp8 推理",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "灭活人轮状病毒疫苗在幼儿和婴儿中的安全性与免疫原性：一项随机、安慰剂对照、双盲 I 期临床试验",
+      "url": "",
+      "url_key": "",
+      "title_key": "灭活人轮状病毒疫苗在幼儿和婴儿中的安全性与免疫原性 一项随机 安慰剂对照 双盲 i 期临床试验",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "CBEC 通过检索估计胸部 X 光诊断预测可靠性",
+      "url": "",
+      "url_key": "",
+      "title_key": "cbec 通过检索估计胸部 x 光诊断预测可靠性",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "title": "丰田部署 AI 智能体复用工程知识",
+      "url": "",
+      "url_key": "",
+      "title_key": "丰田部署 ai 智能体复用工程知识",
+      "extra_keys": [
+        "arxiv:2310.18313",
+        "arxiv:2201.11903"
       ]
     }
   ]
