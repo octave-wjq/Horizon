@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-15T23:47:53.186491+00:00",
+  "updated_at": "2026-08-17T00:06:52.698884+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3364,6 +3364,54 @@
       "extra_keys": [
         "arxiv:2310.18313",
         "arxiv:2201.11903"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "title": "The AI Credit Resale Economy",
+      "url": "https://vectoral.com/blog/who-are-the-token-brokers",
+      "url_key": "('https', '', '', 'vectoral.com', None, '/blog/who-are-the-token-brokers', '')",
+      "title_key": "the ai credit resale economy",
+      "id": "hackernews:story:49320611",
+      "extra_keys": [
+        "title:the ai credit resale economy",
+        "url:('https', '', '', 'vectoral.com', None, '/blog/who-are-the-token-brokers', '')"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "title": "NIH is ending a key grant for budding clinical researchers",
+      "url": "https://www.science.org/content/article/nih-ending-key-grant-budding-clinical-researchers",
+      "url_key": "('https', '', '', 'www.science.org', None, '/content/article/nih-ending-key-grant-budding-clinical-researchers', '')",
+      "title_key": "nih is ending a key grant for budding clinical researchers",
+      "id": "hackernews:story:49321353",
+      "extra_keys": [
+        "title:nih is ending a key grant for budding clinical researchers",
+        "url:('https', '', '', 'www.science.org', None, '/content/article/nih-ending-key-grant-budding-clinical-researchers', '')"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "title": "How can we solve long-range recall in linear attention? [D]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1vpqwdc/how_can_we_solve_longrange_recall_in_linear/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vpqwdc/how_can_we_solve_longrange_recall_in_linear', '')",
+      "title_key": "how can we solve long range recall in linear attention d",
+      "id": "reddit:subreddit-rss:t3_1vpqwdc",
+      "extra_keys": [
+        "title:how can we solve long range recall in linear attention d",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vpqwdc/how_can_we_solve_longrange_recall_in_linear', '')"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "title": "SSOG-Attention: Sum Of Separable Gaussians as a sub-quadratic and scalable alternative to SDPA. [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a', '')",
+      "title_key": "ssog attention sum of separable gaussians as a sub quadratic and scalable alternative to sdpa r",
+      "id": "reddit:subreddit-rss:t3_1vpt6ay",
+      "extra_keys": [
+        "title:ssog attention sum of separable gaussians as a sub quadratic and scalable alternative to sdpa r",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a', '')"
       ]
     }
   ]
