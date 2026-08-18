@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-17T00:06:52.698884+00:00",
+  "updated_at": "2026-08-18T00:04:10.267794+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3412,6 +3412,171 @@
       "extra_keys": [
         "title:ssog attention sum of separable gaussians as a sub quadratic and scalable alternative to sdpa r",
         "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a', '')"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "title": "The AI Credit Resale Economy",
+      "url": "",
+      "url_key": "",
+      "title_key": "the ai credit resale economy",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-17",
+      "title": "NIH 终止支持临床研究新人的资助项目",
+      "url": "",
+      "url_key": "",
+      "title_key": "nih 终止支持临床研究新人的资助项目",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-17",
+      "title": "如何解决线性注意力中的长程召回问题？\\[D\\",
+      "url": "",
+      "url_key": "",
+      "title_key": "如何解决线性注意力中的长程召回问题 d",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-17",
+      "title": "SSOG-Attention: Sum Of Separable Gaussians as a sub-quadratic and scalable alternative to SDPA. \\[R\\",
+      "url": "",
+      "url_key": "",
+      "title_key": "ssog attention sum of separable gaussians as a sub quadratic and scalable alternative to sdpa r",
+      "extra_keys": []
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Evaluating retrieval-augmented large language models for pediatric cardiology knowledge using standardized questions",
+      "url": "https://www.nature.com/articles/s41746-026-03153-9",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41746-026-03153-9', '')",
+      "title_key": "evaluating retrieval augmented large language models for pediatric cardiology knowledge using standardized questions",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:5a71db0201ca00ca",
+      "extra_keys": [
+        "title:evaluating retrieval augmented large language models for pediatric cardiology knowledge using standardized questions",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41746-026-03153-9', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "MultiMed-RAG: leveraging multi-source knowledge and agent collaboration for medical tasks",
+      "url": "https://www.nature.com/articles/s41746-026-02962-2",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41746-026-02962-2', '')",
+      "title_key": "multimed rag leveraging multi source knowledge and agent collaboration for medical tasks",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:54bee822c96bc575",
+      "extra_keys": [
+        "title:multimed rag leveraging multi source knowledge and agent collaboration for medical tasks",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41746-026-02962-2', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Lightweight non-contrast CT-based multimodal artificial intelligence for subtype classification of hepatic cystic echinococcosis in resource-limited clinical settings",
+      "url": "https://www.nature.com/articles/s41746-026-03150-y",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41746-026-03150-y', '')",
+      "title_key": "lightweight non contrast ct based multimodal artificial intelligence for subtype classification of hepatic cystic echinococcosis in resource limited clinical settings",
+      "id": "rss:www.nature.com_subjects_medical-research.rss:c92c769a2ddbc7b1",
+      "extra_keys": [
+        "title:lightweight non contrast ct based multimodal artificial intelligence for subtype classification of hepatic cystic echinococcosis in resource limited clinical settings",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41746-026-03150-y', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "An explainable biomedical foundation model via large-scale concept-enhanced vision–language pretraining",
+      "url": "https://www.nature.com/articles/s41551-026-01764-x",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41551-026-01764-x', '')",
+      "title_key": "an explainable biomedical foundation model via large scale concept enhanced vision language pretraining",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:32b2c4b3d84d504d",
+      "extra_keys": [
+        "title:an explainable biomedical foundation model via large scale concept enhanced vision language pretraining",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41551-026-01764-x', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "A Preview of DuckDB v2.0",
+      "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+      "url_key": "('https', '', '', 'duckdb.org', None, '/2026/08/17/duckdb-20-highlights', '')",
+      "title_key": "a preview of duckdb v2 0",
+      "id": "hackernews:story:49330781",
+      "extra_keys": [
+        "title:a preview of duckdb v2 0",
+        "url:('https', '', '', 'duckdb.org', None, '/2026/08/17/duckdb-20-highlights', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+      "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+      "url_key": "('https', '', '', 'huggingface.co', None, '/blog/Dharma-AI/gpu-management-pt2', '')",
+      "title_key": "same cluster 33 points more utilization what changed was the order",
+      "id": "rss:huggingface.co_blog_feed.xml:bf50ec5ce617ac83",
+      "extra_keys": [
+        "title:same cluster 33 points more utilization what changed was the order",
+        "url:('https', '', '', 'huggingface.co', None, '/blog/Dharma-AI/gpu-management-pt2', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "OCOO-T : A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction",
+      "url": "https://arxiv.org/abs/2606.12838",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2606.12838', '')",
+      "title_key": "ocoo t a simple and scalable virtual cell model for transcriptional perturbation response prediction",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:0aec7327b235889c",
+      "extra_keys": [
+        "arxiv:2606.12838",
+        "title:ocoo t a simple and scalable virtual cell model for transcriptional perturbation response prediction",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2606.12838', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "url_key": "('https', '', '', 'www.wiz.io', None, '/blog/red-agent-snowflake-copilot-cicd-bug', '')",
+      "title_key": "ai generated github copilot autofix allowed compromise of snowflake s jira",
+      "id": "hackernews:story:49331423",
+      "extra_keys": [
+        "title:ai generated github copilot autofix allowed compromise of snowflake s jira",
+        "url:('https', '', '', 'www.wiz.io', None, '/blog/red-agent-snowflake-copilot-cicd-bug', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "[AINews] Stripe buys OpenRouter for $7B",
+      "url": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
+      "url_key": "('https', '', '', 'www.latent.space', None, '/p/ainews-stripe-buys-openrouter-for', '')",
+      "title_key": "ainews stripe buys openrouter for 7b",
+      "id": "rss:www.latent.space_feed:d68239847d75e067",
+      "extra_keys": [
+        "title:ainews stripe buys openrouter for 7b",
+        "url:('https', '', '', 'www.latent.space', None, '/p/ainews-stripe-buys-openrouter-for', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "scE2TM improves single-cell embedding interpretability and reveals cellular perturbation signatures",
+      "url": "https://www.nature.com/articles/s41467-026-76825-5",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76825-5', '')",
+      "title_key": "sce2tm improves single cell embedding interpretability and reveals cellular perturbation signatures",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:0e55f43c69e7fde4",
+      "extra_keys": [
+        "title:sce2tm improves single cell embedding interpretability and reveals cellular perturbation signatures",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41467-026-76825-5', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "we benchmark models nobody actually runs",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs', '')",
+      "title_key": "we benchmark models nobody actually runs",
+      "id": "reddit:subreddit-rss:t3_1vr643w",
+      "extra_keys": [
+        "title:we benchmark models nobody actually runs",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs', '')"
       ]
     }
   ]
