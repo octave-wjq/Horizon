@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T00:04:10.267794+00:00",
+  "updated_at": "2026-08-19T00:59:46.305836+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3577,6 +3577,236 @@
       "extra_keys": [
         "title:we benchmark models nobody actually runs",
         "url:('https', '', '', 'www.reddit.com', None, '/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs', '')"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "RAG 大语言模型接受小儿心脏病学问题评测",
+      "url": "",
+      "url_key": "",
+      "title_key": "rag 大语言模型接受小儿心脏病学问题评测",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "MultiMed-RAG 整合多源医学知识与智能体",
+      "url": "",
+      "url_key": "",
+      "title_key": "multimed rag 整合多源医学知识与智能体",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "轻量级 AI 可分类肝包虫病亚型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "轻量级 ai 可分类肝包虫病亚型",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "ConceptCLIP 为生物医学视觉语言模型带来可解释性",
+      "url": "",
+      "url_key": "",
+      "title_key": "conceptclip 为生物医学视觉语言模型带来可解释性",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "DuckDB v2.0 预览引发分析部署讨论",
+      "url": "",
+      "url_key": "",
+      "title_key": "duckdb v2 0 预览引发分析部署讨论",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "调整任务顺序让 GPU 利用率提升 33 个百分点",
+      "url": "",
+      "url_key": "",
+      "title_key": "调整任务顺序让 gpu 利用率提升 33 个百分点",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "OCOO-T 推出可扩展的流匹配虚拟细胞模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "ocoo t 推出可扩展的流匹配虚拟细胞模型",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "人工智能辅助的 GitHub Actions 工作流暴露了 Snowflake 的 Jira",
+      "url": "",
+      "url_key": "",
+      "title_key": "人工智能辅助的 github actions 工作流暴露了 snowflake 的 jira",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "据报道 Stripe 以 70 亿美元收购 OpenRouter",
+      "url": "",
+      "url_key": "",
+      "title_key": "据报道 stripe 以 70 亿美元收购 openrouter",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "scE2TM 提升单细胞嵌入可解释性",
+      "url": "",
+      "url_key": "",
+      "title_key": "sce2tm 提升单细胞嵌入可解释性",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "title": "评测用户真正运行的量化模型",
+      "url": "",
+      "url_key": "",
+      "title_key": "评测用户真正运行的量化模型",
+      "extra_keys": [
+        "arxiv:2210.02747",
+        "arxiv:2501.15579",
+        "arxiv:2606.12838"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "PertMind: Eliciting Emergent Biological Reasoning in LLM via Reinforcement Learning on Cellular Perturbation Data",
+      "url": "https://arxiv.org/abs/2608.16419",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.16419', '')",
+      "title_key": "pertmind eliciting emergent biological reasoning in llm via reinforcement learning on cellular perturbation data",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:8a747c0a9166aa3b",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "title:pertmind eliciting emergent biological reasoning in llm via reinforcement learning on cellular perturbation data",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.16419', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "A Hierarchical Validity-Audit Framework for Neural Mass Models in Simulation-Based Inference: From Observational Coverage to Mechanistic Interpretation",
+      "url": "https://arxiv.org/abs/2607.24874",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2607.24874', '')",
+      "title_key": "a hierarchical validity audit framework for neural mass models in simulation based inference from observational coverage to mechanistic interpretation",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:c60dbafeb77e7937",
+      "extra_keys": [
+        "arxiv:2607.24874",
+        "title:a hierarchical validity audit framework for neural mass models in simulation based inference from observational coverage to mechanistic interpretation",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2607.24874', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Frontier Model Cost and Open-Weights Popularity is Driving Demand for Model Routing",
+      "url": "https://www.latent.space/p/glean-model-routing",
+      "url_key": "('https', '', '', 'www.latent.space', None, '/p/glean-model-routing', '')",
+      "title_key": "frontier model cost and open weights popularity is driving demand for model routing",
+      "id": "rss:www.latent.space_feed:b6461cff58b0d468",
+      "extra_keys": [
+        "title:frontier model cost and open weights popularity is driving demand for model routing",
+        "url:('https', '', '', 'www.latent.space', None, '/p/glean-model-routing', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "How Much Memory Does Your Agent Actually Need?",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+      "url_key": "('https', '', '', 'huggingface.co', None, '/blog/ibm-research/altk-evolve-hmm', '')",
+      "title_key": "how much memory does your agent actually need",
+      "id": "rss:huggingface.co_blog_feed.xml:5ba78b757300e8cc",
+      "extra_keys": [
+        "title:how much memory does your agent actually need",
+        "url:('https', '', '', 'huggingface.co', None, '/blog/ibm-research/altk-evolve-hmm', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
+      "url": "https://huggingface.co/blog/multi-vector-encoder",
+      "url_key": "('https', '', '', 'huggingface.co', None, '/blog/multi-vector-encoder', '')",
+      "title_key": "multi vector late interaction embedding models with sentence transformers",
+      "id": "rss:huggingface.co_blog_feed.xml:d9524ab76177d5be",
+      "extra_keys": [
+        "title:multi vector late interaction embedding models with sentence transformers",
+        "url:('https', '', '', 'huggingface.co', None, '/blog/multi-vector-encoder', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Transfer learning with deployment-covariate recalibration for survival prediction under covariate shift",
+      "url": "https://www.nature.com/articles/s42256-026-01285-x",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s42256-026-01285-x', '')",
+      "title_key": "transfer learning with deployment covariate recalibration for survival prediction under covariate shift",
+      "id": "rss:www.nature.com_natmachintell.rss:fb21149491d2e7f4",
+      "extra_keys": [
+        "title:transfer learning with deployment covariate recalibration for survival prediction under covariate shift",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s42256-026-01285-x', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "County, district and community-level measles transmission in the United States in 2013−2025",
+      "url": "https://www.nature.com/articles/s41591-026-04561-w",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04561-w', '')",
+      "title_key": "county district and community level measles transmission in the united states in 2013 2025",
+      "id": "rss:www.nature.com_nm.rss:2cfabfaea545657a",
+      "extra_keys": [
+        "title:county district and community level measles transmission in the united states in 2013 2025",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04561-w', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Deploy AI agents on Amazon Bedrock AgentCore using GitHub Actions | Artificial Intelligence - Amazon Web Services (AWS)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQzFXSFUxb0NJSzNWbGRPY25mZE5FQUNEMjMxNzBnbFhvTjlxMThKUG9MLXNoOTRoblJtdlVoZlJGb3JIR2pTS2JkeUZjd0pVWUNydVRGc3JoWDRlRXdHcDlCaXQwSjYwR1h2VURmeXRZVE5NVmNITkVjc3ZGWmdiTlNGTW1rMW1EM2pXYnc0aXBKOEhTZUtYVmFETFNKUFYyTkRHejhLNDFBMmo3R0h6S1JR?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMisgFBVV95cUxOQzFXSFUxb0NJSzNWbGRPY25mZE5FQUNEMjMxNzBnbFhvTjlxMThKUG9MLXNoOTRoblJtdlVoZlJGb3JIR2pTS2JkeUZjd0pVWUNydVRGc3JoWDRlRXdHcDlCaXQwSjYwR1h2VURmeXRZVE5NVmNITkVjc3ZGWmdiTlNGTW1rMW1EM2pXYnc0aXBKOEhTZUtYVmFETFNKUFYyTkRHejhLNDFBMmo3R0h6S1JR', 'oc=5')",
+      "title_key": "deploy ai agents on amazon bedrock agentcore using github actions artificial intelligence amazon web services aws",
+      "id": "google_news:article:ca3e6d19ff461fa2",
+      "extra_keys": [
+        "title:deploy ai agents on amazon bedrock agentcore using github actions artificial intelligence amazon web services aws",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMisgFBVV95cUxOQzFXSFUxb0NJSzNWbGRPY25mZE5FQUNEMjMxNzBnbFhvTjlxMThKUG9MLXNoOTRoblJtdlVoZlJGb3JIR2pTS2JkeUZjd0pVWUNydVRGc3JoWDRlRXdHcDlCaXQwSjYwR1h2VURmeXRZVE5NVmNITkVjc3ZGWmdiTlNGTW1rMW1EM2pXYnc0aXBKOEhTZUtYVmFETFNKUFYyTkRHejhLNDFBMmo3R0h6S1JR', 'oc=5')"
       ]
     }
   ]
