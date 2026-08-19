@@ -5,190 +5,147 @@ date: 2026-08-19
 lang: zh
 ---
 
-> 从 95 条内容中筛选出 8 条重要资讯。
+> 从 87 条内容中筛选出 6 条重要资讯。
 
 ---
 
-1. [PertMind 利用细胞扰动训练生物学推理](#item-1) ⭐️ 8.0/10
-2. [框架审查神经群体模型的机制推断可靠性](#item-2) ⭐️ 8.0/10
-3. [模型路由平衡前沿模型成本与能力](#item-3) ⭐️ 7.0/10
-4. [测量人工智能代理的记忆需求](#item-4) ⭐️ 7.0/10
-5. [Sentence Transformers 支持多向量晚交互检索](#item-5) ⭐️ 7.0/10
-6. [CoxRTL 应对人群变化下的生存预测](#item-6) ⭐️ 7.0/10
-7. [2022 至 2023 年后学校层面麻疹传播越过流行阈值](#item-7) ⭐️ 7.0/10
-8. [AWS 展示使用 GitHub Actions 部署 Bedrock AgentCore 智能体](#item-8) ⭐️ 7.0/10
+1. [盲法基准测试计算抗体发现方法](#item-1) ⭐️ 9.0/10
+2. [多中心 AI 引导肝恶性肿瘤诊断研究](#item-2) ⭐️ 9.0/10
+3. [西西里完成风湿病处方平台全区域部署](#item-3) ⭐️ 8.0/10
+4. [心血管试点以因果方式约束医疗 LLM。](#item-4) ⭐️ 8.0/10
+5. [IMPROVE 获得大规模药物反应数据。](#item-5) ⭐️ 8.0/10
+6. [用于蛋白质 MLM 工程的随机束搜索](#item-6) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [PertMind 利用细胞扰动训练生物学推理](https://arxiv.org/abs/2608.16419) ⭐️ 8.0/10
+## [盲法基准测试计算抗体发现方法](https://www.nature.com/articles/s41587-026-03238-6) ⭐️ 9.0/10
 
-PertMind 预印本提出了一种强化学习框架，利用细胞扰动图谱中测得的基因响应，为训练大语言模型提供可计算的奖励。该方法先通过可信轨迹监督学习进行初始化，再使用基因、通路和格式层面的奖励信号，并且仅针对正向扰动响应预测进行训练。 该方法有望减少对昂贵且需要人工整理的生物学推理轨迹的依赖，并将不断扩大的实验图谱转化为可扩展的训练环境。其据称能够迁移到反向扰动识别、双重扰动推理、筛选优先级排序和生物学解释等任务，可能为生物医学研究和药物发现带来价值。 PertMind 接受的是正向扰动响应预测训练，但据报道能够改善对未见细胞环境的响应推断，并在没有针对下游任务额外训练的情况下迁移到多个任务。它还生成了可用于构建具有竞争力的基因、细胞和供体表示的生物学特征，不过这些结果来自预印本，仍需要独立验证和更完整的实验细节。
+《Nature Biotechnology》报道了一项针对计算抗体发现方法的盲法前瞻性基准测试，并以实验测得的抗体亲和力和可开发性结果进行评估。该研究在相关湿实验结果揭晓前测试预测结果，而不是在已知数据上进行回顾性比较。 前瞻性盲法评估能够直接检验 AI 和计算抗体设计的主张是否能转化为实验室表现，从而弥合 AI 药物发现领域的重要可信度缺口。严格且可复用的基准可帮助研究者和开发者区分真正能预测具有治疗价值抗体的模型，与主要只在历史数据集上表现良好的模型。 该基准同时评估亲和力和可开发性，因此成功并不只是产出能够结合靶标的抗体。可开发性涵盖稳定性、抗聚集能力、表达和纯度等类药物属性；所提供材料未说明参与方法数量、抗体候选物数量或具体检测结果。
 
-rss · arXiv q-bio.QM · 8月18日 04:00
+rss · Nature ML Subject · 8月19日 00:00
 
-**背景**: 细胞扰动实验会改变某个基因或其他细胞因素，并测量由此产生的响应，通常包括基因表达变化。Perturb-seq 将遗传扰动与单细胞 RNA 测序结合起来，可以在单细胞分辨率下测量响应，而不是只观察混合细胞群体的平均值。在 PertMind 中，这些测得的响应被用作奖励，用来判断模型的生物学推理是否与实验结果一致。
+**背景**: 计算抗体发现利用计算分析来表征抗体序列和结构、模拟抗体与抗原的相互作用，并在实验室测试前识别潜在风险。抗体亲和力描述其与预定靶标结合的强度，而可开发性指将抗体制备、配制并推进为药物所需的属性。仅有高亲和力并不足够，因为候选抗体若发生聚集、表达不佳、展开或纯度和稳定性不足，仍可能开发失败。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10635009/">Decoding Heterogenous Single- cell Perturbation Responses - PMC</a></li>
-<li><a href="https://grokipedia.com/page/Perturb-seq">Perturb - seq</a></li>
+<li><a href="https://www.intechopen.com/chapters/73768">In silico Techniques for Prospecting and Characterizing... | IntechOpen</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8654478/">Drug-like antibodies with high affinity, diversity and developability directly from next-generation antibody libraries - PMC</a></li>
+<li><a href="https://academic.oup.com/abt/article/6/1/13/6823522">Developability assessment at early-stage discovery to enable development of antibody-derived therapeutics | Antibody Therapeutics | Oxford Academic</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Biomedical LLMs`, `#Reinforcement Learning`, `#Cellular Perturbation`, `#Biological Reasoning`, `#Drug Discovery`
+**标签**: `#AI drug discovery`, `#antibody design`, `#protein engineering`, `#prospective validation`, `#biomedical benchmarks`
 
 ---
 
 <a id="item-2"></a>
-## [框架审查神经群体模型的机制推断可靠性](https://arxiv.org/abs/2607.24874) ⭐️ 8.0/10
+## [多中心 AI 引导肝恶性肿瘤诊断研究](https://www.nature.com/articles/s41591-026-04589-y) ⭐️ 9.0/10
 
-论文提出了 NMM-SBI Audit 分层框架，在进行基于模拟的推断之前，检查神经群体模型对观测数据的覆盖能力、参数可恢复性、参数补偿以及跨表示一致性。实验显示，单源 Epileptor 模型无法覆盖癫痫发作 iEEG 的核心统计特征，而受 CMC 启发的听觉网络模型能够有条件地恢复部分参数，但仍存在参数补偿和活动结构不稳定等问题。 这项工作将经验拟合、推断可恢复性和联合机制可解释性区分开来，避免在患者特异性神经科学中把这些不同层次的证据混为一谈。它有助于减少缺乏支持的生理学结论，并判断神经群体模型是否适合临床癫痫建模及其他基于模拟的应用。 在已知真实值的实验中，该审查框架控制了经验错误率并检测出预先设定的失败；在真实数据上，它表明即使目标能够通过模拟恢复，也可能不适合机制解释。听觉模型没有显示系统性的表示层面失配，但只有部分浅层和抑制增益参数能够有条件地恢复，同时存在参数补偿、摘要信息损失和活动结构不稳定。
+一项发表于《Nature Medicine》的研究报告了对 AI 引导肝恶性肿瘤诊断系统的大规模评估，覆盖多个中心，并开展了一项前瞻性单臂临床试验。现有元数据未披露该系统的性能指标、患者数量、影像模态或临床终点。 多中心和前瞻性证据能够检验影像 AI 系统是否不仅适用于单一回顾性数据集，也能在不同临床机构中保持实用性。这类验证对于将医疗 AI 从基准测试表现转化为肿瘤诊疗中的真实诊断工作流程至关重要。 该试验采用单臂设计，即在没有随机同期对照组的情况下评估 AI 引导方法，因此其与标准实践之间的直接因果比较存在局限。现有材料尚不能说明模型架构、临床医生如何使用其引导信息，或它是否改变了准确率、假阴性率或患者结局。
 
-rss · arXiv q-bio.QM · 8月18日 04:00
+rss · Nature ML Subject · 8月19日 00:00
 
-**背景**: 神经群体模型使用低维动力系统表示神经群体的集体活动，而不是逐个模拟所有神经元。基于模拟的推断在模拟器生成的数据上训练统计模型或神经网络，因此无需计算显式似然也能推断参数。Epileptor 是一种能够复现类似癫痫发作动力学的现象学模型，已用于癫痫研究和患者特异性建模，但复现观测到的动力学本身并不能证明存在唯一的生理学解释。
+**背景**: 肝恶性肿瘤是发生于肝脏的癌症，影像检查可用于判定病灶特征、评估其大小和位置，以及观察其与周围结构的关系。统一的影像技术与判读方式十分重要，因为诊断差异可能影响病灶定性。单臂临床试验对接受同一种受评估方法的参与者进行随访；当随机试验难以实施时它可能有用，但随机对照试验通常能提供更强的比较证据。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/pdf/2508.12939">Simulation-Based Inference: A Practical Guide - arXiv.org</a></li>
-<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7096539/">The Epileptor Model : A Systematic Mathematical Analysis Linked to...</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11229941/">Imaging features and management of focal liver lesions - PMC</a></li>
+<li><a href="https://spcare.bmj.com/content/15/1/46">Single-arm clinical trials: design, ethics, principles</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3059315/">Clinical trial structures - PMC</a></li>
 
 </ul>
 </details>
 
-**标签**: `#medical AI`, `#neural mass models`, `#simulation-based inference`, `#epilepsy`, `#model validation`
+**标签**: `#medical-ai`, `#clinical-validation`, `#medical-imaging`, `#oncology`, `#multicenter-study`
 
 ---
 
 <a id="item-3"></a>
-## [模型路由平衡前沿模型成本与能力](https://www.latent.space/p/glean-model-routing) ⭐️ 7.0/10
+## [西西里完成风湿病处方平台全区域部署](https://www.frontiersin.org/articles/10.3389/fdgth.2026.1808227) ⭐️ 8.0/10
 
-Glean 首席执行官 Arvind Jain 介绍了企业如何根据请求的能力需求和成本要求，在前沿模型与开放权重模型之间进行路由。他还解释了大规模人工反馈循环如何提升路由决策的质量。 模型路由可以降低前沿模型带来的成本负担：将复杂任务交给昂贵模型，同时把简单工作负载分配给成本更低的替代模型。这样，企业就能避免让所有请求都承担同一种模型的质量和价格，从而更实际地控制推理支出。 路由系统可以依据请求复杂度、延迟、内容类型、能力和成本等信号进行选择，但生产环境还必须同时衡量路由准确性和端到端质量。现有讨论没有提供具体性能指标、详细架构或对 Glean 方法的独立评估。
+用于风湿病处方和配药管理的安全网络平台 SWaNetwork 于 2022 年 10 月上线后，已在西西里全部 14 家获授权处方中心完成部署。平台首年有 71 名医疗专业人员登记了 8,243 名患者，并记录 41,451 张处方，其中包括 1,426 张初始处方和 40,025 张随访处方。 该部署建立了覆盖全区域的标准化用药治理流程，同时持续生成真实世界处方数据。它为未来研究风湿病治疗持续性、换药、安全性、医疗服务利用和药物经济学结局提供了实用基础。 该系统与 CINECA 合作开发，提供实时仪表板、自动提醒和结构化报告；首年用药以生物制剂为主，Adalimumab 占 33.4%，Etanercept 占 24.3%。这是一项描述性的实施与药物利用报告，未设置对照组，也未分析临床有效性结局；98%的随访完成率由平台定义。
 
-rss · Latent Space · 8月18日 21:41
+rss · Frontiers Digital Health · 8月19日 00:00
 
-**背景**: 模型路由会为每个请求动态选择一个大语言模型，而不是把所有请求都发送给同一个模型。前沿模型通常面向要求最高的推理和智能体任务，而开放权重模型则能在适合的工作负载中提供更灵活的部署方式和更低的成本。人工反馈循环利用人们对回答质量的判断，帮助路由系统学习不同请求更适合使用哪种模型。
+**背景**: 风湿病属于常需长期药物治疗的慢性疾病，其中包括生物制剂，因此纵向处方记录对临床治理很有价值。真实世界数据来自日常医疗服务而非受控试验，可用于研究治疗方案随时间推移的实际使用情况。SWaNetwork 以较早的 HCV Sicily Network 为基础，后者是用于支持慢性丙型肝炎和肝硬化管理的网络化模式。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://xinference.co/xinference/blog/llm-model-routing-xrouter.html">LLM Model Routing With xrouter- llm · Xinference</a></li>
-<li><a href="https://higress.io/en/glossary/model-routing/">What is Model Routing ? - Higress Technical Glossary</a></li>
-<li><a href="https://intuitionlabs.ai/articles/active-learning-hitl-llms">Active Learning and Human Feedback for Large Language Models</a></li>
+<li><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1808227/full">Frontiers | The Sicilian Web plAtform for Rheumatology Network: complete regional implementation and first-year real-world drug utilisation</a></li>
+<li><a href="https://catalogues.ema.europa.eu/institution/45967">Fondazione ReS (Ricerca e Salute), CINECA partner | HMA-EMA Catalogues of real-world data sources and studies</a></li>
+<li><a href="https://www.ispor.org/publications/journals/value-in-health/abstract/Volume-20--Issue-9/A-Web-Based-Hub--Spoke-Model-For-The-Management-Of-HCV-Patients-And-Innovative-Treatments--The-Resist---HCV-Sicily-Network-Experience">ISPOR - A Web-Based Hub Spoke Model For The Management Of HCV Patients And Innovative Treatments- The Resist - HCV Sicily Network Experience</a></li>
 
 </ul>
 </details>
 
-**标签**: `#model routing`, `#enterprise LLMs`, `#AI cost optimization`, `#human feedback`, `#LLM production`
+**标签**: `#digital health`, `#rheumatology`, `#real-world evidence`, `#clinical data platform`, `#medication management`
 
 ---
 
 <a id="item-4"></a>
-## [测量人工智能代理的记忆需求](https://huggingface.co/blog/ibm-research/altk-evolve-hmm) ⭐️ 7.0/10
+## [心血管试点以因果方式约束医疗 LLM。](https://arxiv.org/abs/2608.15382) ⭐️ 8.0/10
 
-IBM Research 提出了 ALTK 和 Evolve-HMM 方法，用于研究代理在不同任务中需要多少记忆，以及记忆机制如何演化。该工作将代理记忆视为需要通过实验确定的设计变量，而不是默认存储越多信息越好。 这种方法可以为开发者选择大语言模型代理的记忆容量、结构和检索策略提供更严谨的依据。更好的校准有望在避免不必要的记忆存储和上下文使用的同时，提高代理的可靠性与效率。 ALTK 被描述为一个用于提升代理稳健性和可靠性的开源工具包，而 Evolve-HMM 关注跨任务演化和检索记忆。需要注意的是，有效的记忆“剂量”可能取决于代理模型和具体任务，因此单一记忆配置未必能够普遍适用。
+这篇 arXiv 预印本提出了一套可复现框架，利用保留来源信息的因果知识图谱和按临床情境检索来评估面向干预的医疗 LLM。心血管试点中，集成式 C4 条件取得最高的因果边 F1（0.838）、不良反应 F1（0.833）、证据准确率（0.738），以及最低的无依据主张率（0.114）。 医疗决策支持不能只给出看似合理的治疗建议，还必须说明干预与机制、危害、支持证据及不确定性之间的关联。该框架能在受控上下文条件下量化这些维度，从而帮助区分原始答案准确率与具有临床意义的事实依据。 该图谱将每条生物医学主张表示为带稳定标识符和来源信息的具象化断言节点，因此自动评分可以对应到具体断言。研究比较了无依据的 C1、知识图谱 C2、因果图 C3 和集成式 C4；值得注意的是，C1 的原始干预准确率最高（0.948），但没有可测量的因果或证据依据。
 
-rss · Hugging Face Blog · 8月18日 18:09
+rss · arXiv q-bio.QM · 8月19日 04:00
 
-**背景**: 大语言模型代理会结合语言模型、工具、任务状态和已存储的信息来完成多步骤工作。代理记忆可以保留此前的观察结果或对其进行总结，使后续决策不必完全依赖当前上下文窗口。ALTK 旨在支持更广泛的代理生命周期，包括评估和可靠性工作；演化型记忆方法则负责决定已存信息如何更新和检索。
+**背景**: 医疗知识图谱以结构化且可解释的形式组织医学实体及其关系；当系统需要推理临床行动的效果时，因果知识尤其重要。具象化并非只把关系存为一条边，而是把断言本身存为图谱对象，因此可以为主张附加来源和其他元数据。LLM 的依据约束会将选定的外部知识放入模型上下文，使输出能够按是否有支持依据来评估，而不只看最终答案是否表面正确。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://research.ibm.com/blog/altk-agent-toolkit">Boost your agents: Introducing ALTK, the open-source agent ...</a></li>
-<li><a href="https://www.llms.blog/posts/ibm-research-evaluates-agentic-memory-sizing-across-8-models-dosage-calibrations-ceiling-effects-and-token-efficiency">IBM Research Evaluates Agentic Memory Sizing Across 8 Models ...</a></li>
-<li><a href="https://arxiv.org/html/2605.15701v1">H-Mem: A Novel Memory Mechanism for Evolving and Retrieving Agent Memory via a Hybrid Structure</a></li>
+<li><a href="https://arxiv.org/abs/2608.15382">[2608.15382] Grounding Healthcare LLMs in a Causal Knowledge Graph: Framework, Metrics, and a Cardiovascular Pilot</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12995551/">A Review on Knowledge Graphs for Healthcare: Resources, Applications ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reification">Reification - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Agent memory`, `#Agent evaluation`, `#LLM agents`, `#Memory architectures`, `#IBM Research`
+**标签**: `#clinical-LLMs`, `#causal-knowledge-graphs`, `#healthcare-RAG`, `#LLM-evaluation`, `#cardiovascular-AI`
 
 ---
 
 <a id="item-5"></a>
-## [Sentence Transformers 支持多向量晚交互检索](https://huggingface.co/blog/multi-vector-encoder) ⭐️ 7.0/10
+## [IMPROVE 获得大规模药物反应数据。](https://arxiv.org/abs/2608.11444) ⭐️ 8.0/10
 
-Hugging Face 教程介绍了 Sentence Transformers 对多向量晚交互检索模型的支持，包括 ColBERT 风格编码器。该方法不再把文本压缩成单个嵌入，而是保留经过投影的词元级向量，并在检索时使用 MaxSim 进行评分。 保留词元级表示能够捕捉比单向量嵌入更细粒度的匹配，从而提升检索精度。Sentence Transformers 的实现降低了该架构在生产级 RAG 和搜索系统中评估的门槛，但也会增加索引、存储和查询延迟成本。 该模型会把每个词元嵌入投影到更小的维度，经典设置为 128 维，同时保留所有词元向量；查询和文档彼此独立编码，并通过 MaxSim 操作进行比较。实际部署可以先用快速双编码器缩小候选范围，再对少量候选使用多向量模型重新评分。
+作者主要整合 PharmacoDB 的大规模药物基因组学药物反应数据，并补充较小数据源，从而扩展了 IMPROVE 基准。该资源新增数百万条反应测量、更广泛的多组学覆盖和超过 5 万种化合物；在药物盲测和互斥数据划分评估中，基于扩展数据训练的模型表现出持续改进。 药物反应预测模型需要覆盖更多癌症模型和化合物的训练数据，才能泛化到此前未见过的治疗方案。更大且标准化的基准可使模型比较更可靠，并可能提升 AI 辅助发现新型抗癌药物的能力。 研究使用统一测试集，并采用药物盲测、癌症盲测和互斥划分等多种策略进行比较。癌症盲测表现与原始 IMPROVE 数据集相当，因此报告的优势主要体现在对未见化合物的泛化，而非对未见癌症场景的提升。
 
-rss · Hugging Face Blog · 8月18日 00:00
+rss · arXiv q-bio.QM · 8月19日 04:00
 
-**背景**: 单向量嵌入会把整段文本汇聚成一个向量，因此索引和相似度搜索通常更加紧凑高效。晚交互不进行这种压缩，而是保存每个词元的上下文向量，并把细粒度匹配推迟到检索阶段。MaxSim 通常会为每个查询词元寻找最匹配的文档词元，再把这些匹配结果汇总为相关性分数。
+**背景**: 药物反应预测利用分子数据和药理数据来估计癌症模型对治疗的反应。药物基因组学研究基因组特征与药物效应之间的关系，而多组学则整合多种分子数据类型。IMPROVE 是一个预测肿瘤学评估项目，旨在提供统一的数据模式和评估协议，从而减少模型基准测试中的不一致性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://huggingface.co/blog/multi-vector-encoder">Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers</a></li>
-<li><a href="https://weaviate.io/blog/late-interaction-overview">An Overview of Late Interaction Retrieval Models: ColBERT, ColPali, and ColQwen | Weaviate</a></li>
-<li><a href="https://www.sbert.net/examples/multi_vector_encoder/applications/README.html">Applications — Sentence Transformers documentation</a></li>
+<li><a href="https://arxiv.org/html/2608.11444">Large-scale AI-Ready Data for Anti-Cancer Drug Response Modeling</a></li>
+<li><a href="https://www.alcf.anl.gov/news/using-ai-improve-cancer-research-and-treatments">Using AI to IMPROVE cancer research and treatments</a></li>
+<li><a href="https://bio.tools/pharmacodb#!">PharmacoDB · bio.tools</a></li>
 
 </ul>
 </details>
 
-**标签**: `#RAG`, `#Information Retrieval`, `#Late Interaction`, `#Sentence Transformers`, `#Embedding Models`
+**标签**: `#biomedical AI`, `#drug response prediction`, `#cancer pharmacogenomics`, `#benchmark dataset`, `#precision oncology`
 
 ---
 
 <a id="item-6"></a>
-## [CoxRTL 应对人群变化下的生存预测](https://www.nature.com/articles/s42256-026-01285-x) ⭐️ 7.0/10
+## [用于蛋白质 MLM 工程的随机束搜索](https://arxiv.org/abs/2603.10302) ⭐️ 8.0/10
 
-Pan 等人于 2026 年 8 月 18 日在线发表了 CoxRTL，这是一种用于协变量偏移下生存预测的迁移学习与再校准框架。当目标训练数据有限且部署阶段没有结局标签时，该方法利用外部队列和部署人群的协变量来调整模型。 当部署人群与模型开发人群存在差异时，临床预测模型的可靠性往往会下降。CoxRTL 仅利用协变量进行再校准，并借助外部队列的信息，可能在新的结局数据尚未获得前提升模型的可迁移性。 配套的 CoxRTL 代码库提供了仿真流程，并使用 Harrell C-index、时间依赖 AUC 和 Brier 分数评估生存预测性能。现有介绍没有说明论文采用的验证数据集、效果大小或实际假设，因此仅凭摘要无法判断其临床收益。
+arXiv:2603.10302 的作者提出了温度退火随机束搜索，用于从蛋白质掩码语言模型（MLM）中进行引导采样。研究在计算机模拟以及体外抗体治疗工程项目中，系统比较了不同模型和采样方法。 蛋白质语言模型越来越多地被用于提出突变方案，但其实际效用高度取决于如何生成和排序候选序列。论文报告的湿实验正面对比使采样策略成为抗体工程师在追求多个生物学目标时可以具体选择的设计环节。 该方法通过评估一个序列完整单编辑邻域中的伪困惑度来评估整条序列，而不是仅将生成视为从左到右的标记预测。这使无梯度的多目标引导成为可能，但所提供的摘要未给出数值结果、具体抗体靶点或实验效应量。
 
-rss · Nature Machine Intelligence · 8月18日 00:00
+rss · arXiv q-bio.QM · 8月19日 04:00
 
-**背景**: 生存预测用于估计患者到某一事件发生的时间，例如死亡或疾病复发，同时处理部分患者随访不完整的情况。协变量偏移是指模型开发数据与实际部署人群之间的患者特征分布发生变化。再校准旨在调整模型，使预测结果更符合新的人群；传统方法通常需要结局数据，而 CoxRTL 设计为在没有这些标签时利用部署协变量完成调整。
+**背景**: 掩码语言模型通过蛋白质序列的上下文预测被隐藏的氨基酸标记；这不同于以固定从左到右顺序生成标记的因果语言模型。伪困惑度概括了一个序列与 MLM 预测的一致程度，并可作为基于模型的适应度信号。在抗体工程中，候选序列改动最终必须接受体外测试，因为仅凭计算评分无法证明其治疗相关性质。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.nature.com/articles/s42256-026-01285-x">Transfer learning with deployment-covariate recalibration for ...</a></li>
-<li><a href="https://bioengineer.org/transfer-learning-recalibrates-deployment-data-for-better-survival-prediction-under-covariate-shifts/">Transfer Learning Recalibrates Deployment Data for Better ...</a></li>
-<li><a href="https://github.com/PanLululu/CoxRTL">GitHub - PanLululu/CoxRTL: Deployment-oriented recalibrated ...</a></li>
+<li><a href="https://arxiv.org/abs/2603.10302">[2603.10302] How to make the most of your masked language model for protein engineering</a></li>
+<li><a href="https://arxiv.org/html/2407.07265v1">Pseudo-perplexity in One Fell Swoop for Protein Fitness Estimation</a></li>
+<li><a href="https://www.twistbioscience.com/antibody-discovery/in-vitro-antibody-discovery">In Vitro Antibody Discovery | Twist Bioscience</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Medical AI`, `#Survival analysis`, `#Transfer learning`, `#Covariate shift`, `#Clinical prediction`
-
----
-
-<a id="item-7"></a>
-## [2022 至 2023 年后学校层面麻疹传播越过流行阈值](https://www.nature.com/articles/s41591-026-04561-w) ⭐️ 7.0/10
-
-《Nature Medicine》一项采用多尺度建模的研究发现，美国学校层面的麻疹有效再生数在 2022 至 2023 年后越过了流行阈值。这一变化未被县级或学区级汇总监测发现。 这一发现表明，覆盖范围较大的监测可能掩盖早期、局部的麻疹传播，从而延误疫情响应。学校层面的监测和分析或能为公共卫生机构提供更敏感的传播预警信号。 该分析覆盖了 2013 年至 2025 年的美国麻疹传播，并报告称，疫情大流行后平均易感比例从约 5%翻倍至 10%。研究的核心限制在于，即使个别学校已经越过流行阈值，县级和学区级信号仍可能低于该阈值。
-
-rss · Nature Medicine · 8月18日 00:00
-
-**背景**: 有效再生数用于估计在当前条件下，一名感染者平均会传染给多少人；通常数值高于 1 意味着传播可能增加。多尺度建模同时考察县、学区和单个学校等多个地理层级，而不是只依赖区域汇总数据。相关建模框架采用了基于引力模型的传播模型，并以麻疹基本再生数 15 进行校准。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.nature.com/articles/s41591-026-04561-w">County, district and community-level measles transmission in the United States in 2013−2025 | Nature Medicine</a></li>
-<li><a href="https://www.medrxiv.org/content/10.64898/2026.01.27.26345010v1">Multiscale Modelling Reveals Accelerating Community Outbreak Risks of Measles in the United States | medRxiv</a></li>
-<li><a href="https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1a-epidemiology/epidemic-theory">Epidemic theory (effective &amp; basic reproduction numbers, epidemic thresholds) &amp; techniques for analysis of infectious disease data (construction &amp; use of epidemic curves, generation numbers, exceptional reporting &amp; identification of significant clusters) | Health Knowledge</a></li>
-
-</ul>
-</details>
-
-**标签**: `#infectious disease modeling`, `#measles surveillance`, `#multiscale epidemiology`, `#public health analytics`, `#outbreak detection`
-
----
-
-<a id="item-8"></a>
-## [AWS 展示使用 GitHub Actions 部署 Bedrock AgentCore 智能体](https://news.google.com/rss/articles/CBMisgFBVV95cUxOQzFXSFUxb0NJSzNWbGRPY25mZE5FQUNEMjMxNzBnbFhvTjlxMThKUG9MLXNoOTRoblJtdlVoZlJGb3JIR2pTS2JkeUZjd0pVWUNydVRGc3JoWDRlRXdHcDlCaXQwSjYwR1h2VURmeXRZVE5NVmNITkVjc3ZGWmdiTlNGTW1rMW1EM2pXYnc0aXBKOEhTZUtYVmFETFNKUFYyTkRHejhLNDFBMmo3R0h6S1JR?oc=5) ⭐️ 7.0/10
-
-2026 年 1 月 16 日，AWS 发布指南，展示如何使用 GitHub Actions 工作流，将 AI 智能体自动部署到 Amazon Bedrock AgentCore Runtime。该方案旨在为智能体运营提供可重复的持续集成与持续交付流程。 自动化部署可以减少手动发布工作，并让企业团队更一致地更新生产环境中的智能体。该方案还将智能体开发与成熟的软件交付实践连接起来，但指南具有 AWS 特定性，也没有提供独立基准测试或实际部署结果。 该工作流面向 AgentCore Runtime，并被描述为提供具有企业级安全控制的完整持续集成与持续交付自动化。现有材料说明了部署模式，但没有证明该方案在不同工作负载下能够改善性能、成本或可靠性。
-
-google\_news · Amazon Web Services \(AWS\) · 1月16日 08:00
-
-**背景**: Amazon Bedrock AgentCore 是一个用于构建和运行生产环境 AI 智能体的平台，相关介绍提到它包含运行时、记忆、身份和可观测性等能力。GitHub Actions 是一项工作流自动化服务，可以在软件代码库发生变更时执行构建、测试和部署步骤。在这一场景中，持续集成与持续交付是指使用自动化工作流验证并发布智能体变更，而不是依赖手动部署。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://aws.amazon.com/blogs/machine-learning/deploy-ai-agents-on-amazon-bedrock-agentcore-using-github-actions/">Deploy AI agents on Amazon Bedrock AgentCore using GitHub Actions</a></li>
-<li><a href="https://www.goml.io/gen-ai-live/the-2026-guide-to-amazon-bedrock-agentcore">The 2026 Guide to Amazon Bedrock AgentCore | Gen AI Live</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI agents`, `#Amazon Bedrock`, `#CI/CD`, `#MLOps`, `#Production deployment`
+**标签**: `#protein language models`, `#protein engineering`, `#antibody therapeutics`, `#biomedical AI`, `#in-vitro validation`
 
 ---
