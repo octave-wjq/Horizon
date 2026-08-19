@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T00:59:46.305836+00:00",
+  "updated_at": "2026-08-19T23:59:11.952417+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3807,6 +3807,177 @@
       "extra_keys": [
         "title:deploy ai agents on amazon bedrock agentcore using github actions artificial intelligence amazon web services aws",
         "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMisgFBVV95cUxOQzFXSFUxb0NJSzNWbGRPY25mZE5FQUNEMjMxNzBnbFhvTjlxMThKUG9MLXNoOTRoblJtdlVoZlJGb3JIR2pTS2JkeUZjd0pVWUNydVRGc3JoWDRlRXdHcDlCaXQwSjYwR1h2VURmeXRZVE5NVmNITkVjc3ZGWmdiTlNGTW1rMW1EM2pXYnc0aXBKOEhTZUtYVmFETFNKUFYyTkRHejhLNDFBMmo3R0h6S1JR', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "PertMind 利用细胞扰动训练生物学推理",
+      "url": "",
+      "url_key": "",
+      "title_key": "pertmind 利用细胞扰动训练生物学推理",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "框架审查神经群体模型的机制推断可靠性",
+      "url": "",
+      "url_key": "",
+      "title_key": "框架审查神经群体模型的机制推断可靠性",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "模型路由平衡前沿模型成本与能力",
+      "url": "",
+      "url_key": "",
+      "title_key": "模型路由平衡前沿模型成本与能力",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "测量人工智能代理的记忆需求",
+      "url": "",
+      "url_key": "",
+      "title_key": "测量人工智能代理的记忆需求",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Sentence Transformers 支持多向量晚交互检索",
+      "url": "",
+      "url_key": "",
+      "title_key": "sentence transformers 支持多向量晚交互检索",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "CoxRTL 应对人群变化下的生存预测",
+      "url": "",
+      "url_key": "",
+      "title_key": "coxrtl 应对人群变化下的生存预测",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "2022 至 2023 年后学校层面麻疹传播越过流行阈值",
+      "url": "",
+      "url_key": "",
+      "title_key": "2022 至 2023 年后学校层面麻疹传播越过流行阈值",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "AWS 展示使用 GitHub Actions 部署 Bedrock AgentCore 智能体",
+      "url": "",
+      "url_key": "",
+      "title_key": "aws 展示使用 github actions 部署 bedrock agentcore 智能体",
+      "extra_keys": [
+        "arxiv:2608.16419",
+        "arxiv:2607.24874",
+        "arxiv:2508.12939"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "A blinded, prospective benchmark of in silico antibody discovery anchored to experimental affinity and developability",
+      "url": "https://www.nature.com/articles/s41587-026-03238-6",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41587-026-03238-6', '')",
+      "title_key": "a blinded prospective benchmark of in silico antibody discovery anchored to experimental affinity and developability",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:b4fc84ee23d83be4",
+      "extra_keys": [
+        "title:a blinded prospective benchmark of in silico antibody discovery anchored to experimental affinity and developability",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41587-026-03238-6', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Large-scale AI-guided liver malignancy diagnosis: multicenter study and a single-arm trial",
+      "url": "https://www.nature.com/articles/s41591-026-04589-y",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04589-y', '')",
+      "title_key": "large scale ai guided liver malignancy diagnosis multicenter study and a single arm trial",
+      "id": "rss:www.nature.com_subjects_machine-learning.rss:ee9eb9ac7baab7e0",
+      "extra_keys": [
+        "title:large scale ai guided liver malignancy diagnosis multicenter study and a single arm trial",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04589-y', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "The Sicilian Web plAtform for Rheumatology Network: complete regional implementation and first-year real-world drug utilisation",
+      "url": "https://www.frontiersin.org/articles/10.3389/fdgth.2026.1808227",
+      "url_key": "('https', '', '', 'www.frontiersin.org', None, '/articles/10.3389/fdgth.2026.1808227', '')",
+      "title_key": "the sicilian web platform for rheumatology network complete regional implementation and first year real world drug utilisation",
+      "id": "rss:www.frontiersin.org_journals_digital-health_rss:0d7e1e3d81bfa9c8",
+      "extra_keys": [
+        "title:the sicilian web platform for rheumatology network complete regional implementation and first year real world drug utilisation",
+        "url:('https', '', '', 'www.frontiersin.org', None, '/articles/10.3389/fdgth.2026.1808227', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Grounding Healthcare LLMs in a Causal Knowledge Graph: Framework, Metrics, and a Cardiovascular Pilot",
+      "url": "https://arxiv.org/abs/2608.15382",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.15382', '')",
+      "title_key": "grounding healthcare llms in a causal knowledge graph framework metrics and a cardiovascular pilot",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:6e2b032bfa64b020",
+      "extra_keys": [
+        "arxiv:2608.15382",
+        "title:grounding healthcare llms in a causal knowledge graph framework metrics and a cardiovascular pilot",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.15382', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Large-scale AI-Ready Data for Anti-Cancer Drug Response Modeling",
+      "url": "https://arxiv.org/abs/2608.11444",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.11444', '')",
+      "title_key": "large scale ai ready data for anti cancer drug response modeling",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:3f31c6e33dbe8bb1",
+      "extra_keys": [
+        "arxiv:2608.11444",
+        "title:large scale ai ready data for anti cancer drug response modeling",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.11444', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "How to make the most of your masked language model for protein engineering",
+      "url": "https://arxiv.org/abs/2603.10302",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2603.10302', '')",
+      "title_key": "how to make the most of your masked language model for protein engineering",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:ed21056b841439e1",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "title:how to make the most of your masked language model for protein engineering",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2603.10302', '')"
       ]
     }
   ]
