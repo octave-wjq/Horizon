@@ -793,11 +793,11 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 6.8,
+    "ai_score_threshold": 7.5,
     "time_window_hours": 24,
     "max_items": 12,
-    "min_items": 4,
-    "min_paper_items": 2,
+    "min_items": null,
+    "min_paper_items": null,
     "recent_digest_days": 21,
     "category_groups": {
       "med_ai": {
@@ -858,7 +858,9 @@
       }
     },
     "default_group": "other",
-    "default_group_limit": 1
+    "default_group_limit": 1,
+    "skip_weekends": true,
+    "skip_cn_holidays": true
   },
   "extractors": {},
   "email": {

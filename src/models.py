@@ -491,6 +491,9 @@ class FilteringConfig(BaseModel):
     min_paper_items: Optional[int] = Field(default=None, gt=0)
     # Drop items already covered in recent digests / seen ledger (by URL/title).
     recent_digest_days: int = Field(default=21, ge=0)
+    # Skip Saturday/Sunday (Asia/Shanghai) and China statutory holiday off-days.
+    skip_weekends: bool = True
+    skip_cn_holidays: bool = True
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)

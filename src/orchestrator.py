@@ -31,6 +31,7 @@ from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer
 from .ai.enricher import ContentEnricher
 from .ai.tokens import get_usage_snapshot
+from .schedule_policy import should_skip_digest_day
 
 
 _TRACKING_QUERY_PARAMETERS = {
@@ -203,6 +204,17 @@ class HorizonOrchestrator:
             self.email_manager.check_subscriptions(self.storage)
 
         try:
+            filtering = self.config.filtering
+            skip, skip_reason = should_skip_digest_day(
+                skip_weekends=getattr(filtering, "skip_weekends", True),
+                skip_cn_holidays=getattr(filtering, "skip_cn_holidays", True),
+            )
+            if skip:
+                self.console.print(
+                    f"[yellow]⏭ Skipping digest push: {skip_reason}[/yellow]\n"
+                )
+                return
+
             # 1. Determine time window
             since = self._determine_time_window(force_hours)
             self.console.print(f"📅 Fetching content since: {since.strftime('%Y-%m-%d %H:%M:%S')}\n")

@@ -34,8 +34,23 @@ jobs:
           echo "today=$TODAY" >> "$GITHUB_OUTPUT"
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Manual dispatch → always run"
+            echo "Manual dispatch → always run (holiday/weekend policy bypassed)"
             echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Skip weekends + China statutory holidays (Asia/Shanghai).
+          # Gate runs before uv install, so use stdlib-only module via PYTHONPATH.
+          if ! PYTHONPATH=. python3 - <<'PY'
+          from src.schedule_policy import should_skip_digest_day
+          skip, reason = should_skip_digest_day()
+          print(reason)
+          raise SystemExit(1 if skip else 0)
+          PY
+          then
+            echo "Holiday/weekend skip → not running"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=holiday_or_weekend" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -232,5 +247,9 @@ jobs:
       - name: Skipped because already delivered today
         if: steps.gate.outputs.should_run != 'true'
         run: |
-          echo "Skip: digest for ${{ steps.gate.outputs.today }} already exists on gh-pages."
-          echo "No Feishu re-send. Use workflow_dispatch to force a fresh run."
+          if [ "${{ steps.gate.outputs.skip_reason }}" = "holiday_or_weekend" ]; then
+            echo "Skip: weekend or China statutory holiday — no Feishu push."
+          else
+            echo "Skip: digest for ${{ steps.gate.outputs.today }} already exists on gh-pages."
+            echo "No Feishu re-send. Use workflow_dispatch to force a fresh run."
+          fi
