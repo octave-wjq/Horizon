@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T23:59:11.952417+00:00",
+  "updated_at": "2026-08-20T03:15:55.444742+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -3978,6 +3978,90 @@
         "arxiv:2603.10302",
         "title:how to make the most of your masked language model for protein engineering",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2603.10302', '')"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "盲法基准测试计算抗体发现方法",
+      "url": "",
+      "url_key": "",
+      "title_key": "盲法基准测试计算抗体发现方法",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "多中心 AI 引导肝恶性肿瘤诊断研究",
+      "url": "",
+      "url_key": "",
+      "title_key": "多中心 ai 引导肝恶性肿瘤诊断研究",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "西西里完成风湿病处方平台全区域部署",
+      "url": "",
+      "url_key": "",
+      "title_key": "西西里完成风湿病处方平台全区域部署",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "心血管试点以因果方式约束医疗 LLM。",
+      "url": "",
+      "url_key": "",
+      "title_key": "心血管试点以因果方式约束医疗 llm",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "IMPROVE 获得大规模药物反应数据。",
+      "url": "",
+      "url_key": "",
+      "title_key": "improve 获得大规模药物反应数据",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "title": "用于蛋白质 MLM 工程的随机束搜索",
+      "url": "",
+      "url_key": "",
+      "title_key": "用于蛋白质 mlm 工程的随机束搜索",
+      "extra_keys": [
+        "arxiv:2603.10302",
+        "arxiv:2608.15382",
+        "arxiv:2608.11444"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "title": "OpenRouter is joining Stripe",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+      "url_key": "('https', '', '', 'openrouter.ai', None, '/blog/announcements/openrouter-is-joining-stripe', '')",
+      "title_key": "openrouter is joining stripe",
+      "id": "hackernews:story:49364559",
+      "extra_keys": [
+        "title:openrouter is joining stripe",
+        "url:('https', '', '', 'openrouter.ai', None, '/blog/announcements/openrouter-is-joining-stripe', '')"
       ]
     }
   ]
