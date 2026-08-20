@@ -2,21 +2,28 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub cron is UTC. Times below are Asia/Shanghai (UTC+8):
-    #   07:30  primary
-    #   08:30  retry if primary missed/failed
-    #   09:30  final retry
-    # :30 past the hour reduces top-of-hour Actions congestion skips.
-    - cron: '30 23 * * *'   # 07:30 Asia/Shanghai
-    - cron: '30 0 * * *'    # 08:30 Asia/Shanghai
-    - cron: '30 1 * * *'    # 09:30 Asia/Shanghai
-  workflow_dispatch:        # Always runs (ignores "already done today" skip)
+    # ONE slot only. Multiple crons previously caused 2–3 Feishu pushes/day
+    # because GitHub delays schedules and the "already delivered" gate raced
+    # before gh-pages deploy finished.
+    # 23:30 UTC ≈ 07:30 Asia/Shanghai.
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force run even if already delivered today (still skips holiday/weekend)"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # Needed to commit changes / deploy Pages
+    # Serialize scheduled runs so a delayed cron cannot overlap another.
+    concurrency:
+      group: horizon-daily-summary
+      cancel-in-progress: false
 
     steps:
       - name: Checkout code
@@ -33,14 +40,8 @@ jobs:
           echo "DATE=$TODAY" >> "$GITHUB_ENV"
           echo "today=$TODAY" >> "$GITHUB_OUTPUT"
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Manual dispatch → always run (holiday/weekend policy bypassed)"
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
           # Skip weekends + China statutory holidays (Asia/Shanghai).
-          # Gate runs before uv install, so use stdlib-only module via PYTHONPATH.
+          # Manual dispatch also respects this unless you comment it out later.
           if ! PYTHONPATH=. python3 - <<'PY'
           from src.schedule_policy import should_skip_digest_day
           skip, reason = should_skip_digest_day()
@@ -54,7 +55,10 @@ jobs:
             exit 0
           fi
 
-          # Scheduled retries: skip if today's digest already landed on gh-pages.
+          # Once-per-day gate (schedule AND manual):
+          # 1) gh-pages post exists
+          # 2) OR seen_items.json already has today's date (written before Feishu
+          #    deploy race can let a second job through)
           POST_PATH="_posts/${TODAY}-summary-zh.md"
           API="https://api.github.com/repos/${{ github.repository }}/contents/${POST_PATH}?ref=gh-pages"
           code=$(curl -sS -o /tmp/post_meta.json -w "%{http_code}" \
@@ -63,13 +67,41 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             "$API" || true)
 
-          if [ "$code" = "200" ]; then
-            echo "Found existing $POST_PATH on gh-pages (HTTP $code) → skip retry"
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "No successful digest for $TODAY yet (HTTP $code) → run"
+          FORCE="${{ github.event_name == 'workflow_dispatch' && inputs.force || false }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "Force=true → run even if already delivered"
             echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          if [ "$code" = "200" ]; then
+            echo "Found existing $POST_PATH on gh-pages → skip (already pushed today)"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=already_delivered" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ -f data/seen_items.json ]; then
+            if python3 - <<PY
+          import json
+          from pathlib import Path
+          today = "${TODAY}"
+          data = json.loads(Path("data/seen_items.json").read_text(encoding="utf-8"))
+          items = data.get("items", data if isinstance(data, list) else [])
+          hit = any(str(x.get("date") or "") == today for x in items if isinstance(x, dict))
+          print("seen_today", hit, "count", sum(1 for x in items if isinstance(x, dict) and str(x.get("date") or "") == today))
+          raise SystemExit(0 if hit else 1)
+          PY
+            then
+              echo "seen_items.json already has ${TODAY} → skip (already pushed today)"
+              echo "should_run=false" >> "$GITHUB_OUTPUT"
+              echo "skip_reason=already_delivered" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+
+          echo "No digest for ${TODAY} yet → run"
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.gate.outputs.should_run == 'true'
