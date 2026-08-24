@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-23T23:48:43.975399+00:00",
+  "updated_at": "2026-08-24T23:58:34.408688+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4071,6 +4071,43 @@
       "url_key": "",
       "title_key": "openrouter is joining stripe",
       "extra_keys": []
+    },
+    {
+      "date": "2026-08-24",
+      "title": "Citywide implementation of a rapid whole-genome sequencing program for critically ill pediatric patients",
+      "url": "https://www.nature.com/articles/s41591-026-04598-x",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04598-x', '')",
+      "title_key": "citywide implementation of a rapid whole genome sequencing program for critically ill pediatric patients",
+      "id": "rss:www.nature.com_nm.rss:4f2a9592b64e58b7",
+      "extra_keys": [
+        "title:citywide implementation of a rapid whole genome sequencing program for critically ill pediatric patients",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04598-x', '')"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "PerturbRx: Learning Treatment-Conditioned Latent Transitions for Patient Drug Response Prediction",
+      "url": "https://arxiv.org/abs/2608.21349",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.21349', '')",
+      "title_key": "perturbrx learning treatment conditioned latent transitions for patient drug response prediction",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:692889984caabe7c",
+      "extra_keys": [
+        "arxiv:2608.21349",
+        "title:perturbrx learning treatment conditioned latent transitions for patient drug response prediction",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.21349', '')"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "A case of Bundibugyo virus disease treated with monoclonal antibodies and remdesivir",
+      "url": "https://www.nature.com/articles/s41591-026-04663-5",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04663-5', '')",
+      "title_key": "a case of bundibugyo virus disease treated with monoclonal antibodies and remdesivir",
+      "id": "rss:www.nature.com_nm.rss:411975acbc4990b5",
+      "extra_keys": [
+        "title:a case of bundibugyo virus disease treated with monoclonal antibodies and remdesivir",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04663-5', '')"
+      ]
     }
   ]
 }
