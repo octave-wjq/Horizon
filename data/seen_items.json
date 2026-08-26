@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-24T23:58:34.408688+00:00",
+  "updated_at": "2026-08-25T23:50:29.733708+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4107,6 +4107,36 @@
       "extra_keys": [
         "title:a case of bundibugyo virus disease treated with monoclonal antibodies and remdesivir",
         "url:('https', '', '', 'www.nature.com', None, '/articles/s41591-026-04663-5', '')"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "迪拜为重症儿童实施全市快速全基因组测序",
+      "url": "",
+      "url_key": "",
+      "title_key": "迪拜为重症儿童实施全市快速全基因组测序",
+      "extra_keys": [
+        "arxiv:2608.21349"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "PerturbRx 建模治疗诱导的分子变化以预测药物反应",
+      "url": "",
+      "url_key": "",
+      "title_key": "perturbrx 建模治疗诱导的分子变化以预测药物反应",
+      "extra_keys": [
+        "arxiv:2608.21349"
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "title": "患者接受以 MBP134 为基础的治疗后从本迪布焦病毒病中康复。",
+      "url": "",
+      "url_key": "",
+      "title_key": "患者接受以 mbp134 为基础的治疗后从本迪布焦病毒病中康复",
+      "extra_keys": [
+        "arxiv:2608.21349"
       ]
     }
   ]
