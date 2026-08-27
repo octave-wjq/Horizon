@@ -4,6 +4,8 @@ import os
 import re
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
+
+import httpx
 from openai import AsyncAzureOpenAI, AsyncOpenAI
 from anthropic import AsyncAnthropic
 from google import genai
@@ -123,15 +125,22 @@ class AnthropicClient(AIClient):
         self.config = config
 
         api_key = _resolve_api_key(config)
+        self._api_key = api_key
 
         kwargs = {"api_key": api_key}
         if config.base_url:
             kwargs["base_url"] = config.base_url
+            # Packy and similar gateways expect Authorization: Bearer in addition
+            # to x-api-key; without it Cloudflare may edge-block the SDK.
+            kwargs["default_headers"] = {"Authorization": f"Bearer {api_key}"}
 
         self.client = AsyncAnthropic(**kwargs)
         self.model = config.model
         self.temperature = config.temperature
         self.max_tokens = config.max_tokens
+        self._use_httpx_fallback = bool(
+            (config.base_url or "").lower().find("packyapi") >= 0
+        )
 
     async def complete(
         self,
@@ -154,13 +163,35 @@ class AnthropicClient(AIClient):
         temperature = self.temperature if temperature is None else temperature
         max_tokens = self.max_tokens if max_tokens is None else max_tokens
 
-        message = await self.client.messages.create(
-            model=self.model,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            system=system,
-            messages=[{"role": "user", "content": user}]
-        )
+        if self._use_httpx_fallback:
+            return await self._complete_via_httpx(
+                system=system,
+                user=user,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+
+        try:
+            message = await self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                system=system,
+                messages=[{"role": "user", "content": user}],
+            )
+        except Exception as exc:
+            # Some OpenAI-compatible Claude gateways block the Anthropic SDK
+            # user-agent; fall back to a plain Messages HTTP call.
+            if "edge-blocked" in str(exc).lower() or "403" in str(exc):
+                self._use_httpx_fallback = True
+                return await self._complete_via_httpx(
+                    system=system,
+                    user=user,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+            raise
+
         usage = getattr(message, "usage", None)
         if usage is not None:
             record_usage(
@@ -169,6 +200,56 @@ class AnthropicClient(AIClient):
                 output_tokens=getattr(usage, "output_tokens", 0),
             )
         return message.content[0].text
+
+    async def _complete_via_httpx(
+        self,
+        *,
+        system: str,
+        user: str,
+        temperature: float,
+        max_tokens: int,
+    ) -> str:
+        """Call Anthropic-compatible /v1/messages over plain HTTP."""
+        base = (self.config.base_url or "https://api.anthropic.com").rstrip("/")
+        if base.endswith("/v1"):
+            url = f"{base}/messages"
+        else:
+            url = f"{base}/v1/messages"
+
+        headers = {
+            "Authorization": f"Bearer {self._api_key}",
+            "x-api-key": self._api_key,
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "model": self.model,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "system": system,
+            "messages": [{"role": "user", "content": user}],
+        }
+        async with httpx.AsyncClient(timeout=120.0) as http:
+            response = await http.post(url, headers=headers, json=payload)
+            response.raise_for_status()
+            data = response.json()
+
+        usage = data.get("usage") or {}
+        record_usage(
+            "anthropic",
+            input_tokens=int(usage.get("input_tokens") or 0),
+            output_tokens=int(usage.get("output_tokens") or 0),
+        )
+        content = data.get("content") or []
+        texts = [
+            block.get("text", "")
+            for block in content
+            if isinstance(block, dict) and block.get("type") == "text"
+        ]
+        text = "".join(texts).strip()
+        if not text:
+            raise ValueError(f"Empty Claude response for model={self.model!r}")
+        return text
 
 
 class OpenAIClient(AIClient):
