@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-27T04:40:07.634640+00:00",
+  "updated_at": "2026-08-28T07:24:28.148440+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4137,6 +4137,44 @@
       "title_key": "患者接受以 mbp134 为基础的治疗后从本迪布焦病毒病中康复",
       "extra_keys": [
         "arxiv:2608.21349"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "url_key": "('https', '', '', 'simonwillison.net', None, '/2026/Aug/27/breaking-claude-code-opus-5-auto-mode', '')",
+      "title_key": "breaking claude code opus 5 auto mode",
+      "id": "rss:simonwillison.net_atom_everything_:bc6639b3f24621f6",
+      "extra_keys": [
+        "title:breaking claude code opus 5 auto mode",
+        "url:('https', '', '', 'simonwillison.net', None, '/2026/Aug/27/breaking-claude-code-opus-5-auto-mode', '')"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "Multimodal risk trajectories reveal heterogeneous paths to dementia",
+      "url": "https://arxiv.org/abs/2608.26210",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.26210', '')",
+      "title_key": "multimodal risk trajectories reveal heterogeneous paths to dementia",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:c2aaef566b8220f7",
+      "extra_keys": [
+        "arxiv:2608.26210",
+        "title:multimodal risk trajectories reveal heterogeneous paths to dementia",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.26210', '')"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "DINIRS: Digital Twin for Individualized Treatment Effects of Non-Invasive Respiratory Support Strategies",
+      "url": "https://arxiv.org/abs/2608.26915",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.26915', '')",
+      "title_key": "dinirs digital twin for individualized treatment effects of non invasive respiratory support strategies",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:8134b1093f012a33",
+      "extra_keys": [
+        "arxiv:2608.26915",
+        "title:dinirs digital twin for individualized treatment effects of non invasive respiratory support strategies",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.26915', '')"
       ]
     }
   ]
