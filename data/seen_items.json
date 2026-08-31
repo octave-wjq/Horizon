@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-08-28T07:24:28.148440+00:00",
+  "updated_at": "2026-08-31T01:32:20.130998+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4175,6 +4175,39 @@
         "arxiv:2608.26915",
         "title:dinirs digital twin for individualized treatment effects of non invasive respiratory support strategies",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2608.26915', '')"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "攻破 Claude Code Opus 5 自动模式",
+      "url": "",
+      "url_key": "",
+      "title_key": "攻破 claude code opus 5 自动模式",
+      "extra_keys": [
+        "arxiv:2608.26210",
+        "arxiv:2608.26915"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "AI 模型 NetMoint 通过多模态数据预测痴呆症亚型风险",
+      "url": "",
+      "url_key": "",
+      "title_key": "ai 模型 netmoint 通过多模态数据预测痴呆症亚型风险",
+      "extra_keys": [
+        "arxiv:2608.26210",
+        "arxiv:2608.26915"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "数字孪生 AI 模型估算无创通气对个体患者的差异化获益",
+      "url": "",
+      "url_key": "",
+      "title_key": "数字孪生 ai 模型估算无创通气对个体患者的差异化获益",
+      "extra_keys": [
+        "arxiv:2608.26210",
+        "arxiv:2608.26915"
       ]
     }
   ]
