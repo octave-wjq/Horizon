@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T02:00:15.738178+00:00",
+  "updated_at": "2026-09-02T01:29:52.055002+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4208,6 +4208,68 @@
       "extra_keys": [
         "arxiv:2608.26210",
         "arxiv:2608.26915"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "url_key": "('https', '', '', 'www.anthropic.com', None, '/claude-fable-and-mythos-5-1', '')",
+      "title_key": "claude fable 5 1 and claude mythos 5 1",
+      "id": "hackernews:story:49525378",
+      "extra_keys": [
+        "title:claude fable 5 1 and claude mythos 5 1",
+        "url:('https', '', '', 'www.anthropic.com', None, '/claude-fable-and-mythos-5-1', '')"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "url_key": "('https', '', '', 'openai.com', None, '/index/chatgpt-connects-health-records-and-healthcare-sources', '')",
+      "title_key": "healthcare organizations can now connect ehr and additional industry data to chatgpt",
+      "id": "rss:openai.com_blog_rss.xml:c0364833b41073ca",
+      "extra_keys": [
+        "title:healthcare organizations can now connect ehr and additional industry data to chatgpt",
+        "url:('https', '', '', 'openai.com', None, '/index/chatgpt-connects-health-records-and-healthcare-sources', '')"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Science sandboxes measure the scientific capability of AI agents",
+      "url": "https://arxiv.org/abs/2608.30165",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.30165', '')",
+      "title_key": "science sandboxes measure the scientific capability of ai agents",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:b3fdddb3fbe74d0a",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "title:science sandboxes measure the scientific capability of ai agents",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.30165', '')"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "LNODE: latent dynamics reveal the shared spatiotemporal structure of amyloid-$\\beta$ progression",
+      "url": "https://arxiv.org/abs/2605.00272",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2605.00272', '')",
+      "title_key": "lnode latent dynamics reveal the shared spatiotemporal structure of amyloid beta progression",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:04e5eba662d96907",
+      "extra_keys": [
+        "arxiv:2605.00272",
+        "title:lnode latent dynamics reveal the shared spatiotemporal structure of amyloid beta progression",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2605.00272', '')"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Latent Reasoning Landscape in 2026: Mapping BDH-CQ, HRM/TRM, Coconut [D]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1w4evwo/latent_reasoning_landscape_in_2026_mapping_bdhcq/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w4evwo/latent_reasoning_landscape_in_2026_mapping_bdhcq', '')",
+      "title_key": "latent reasoning landscape in 2026 mapping bdh cq hrm trm coconut d",
+      "id": "reddit:subreddit-rss:t3_1w4evwo",
+      "extra_keys": [
+        "title:latent reasoning landscape in 2026 mapping bdh cq hrm trm coconut d",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w4evwo/latent_reasoning_landscape_in_2026_mapping_bdhcq', '')"
       ]
     }
   ]
