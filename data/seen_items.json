@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-02T01:29:52.055002+00:00",
+  "updated_at": "2026-09-03T01:35:57.552021+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4270,6 +4270,197 @@
       "extra_keys": [
         "title:latent reasoning landscape in 2026 mapping bdh cq hrm trm coconut d",
         "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w4evwo/latent_reasoning_landscape_in_2026_mapping_bdhcq', '')"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Anthropic 发布 Claude Fable 5.1 和 Mythos 5.1，缓存价格下调 75%",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic claude fable 5 1 和 mythos 5 1 缓存价格下调 75",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "arxiv:2412.06769",
+        "arxiv:2605.00272",
+        "arxiv:2608.09888",
+        "arxiv:2506.21734"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "OpenAI 将 ChatGPT 连接到 EHR 系统和医疗数据",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 将 chatgpt 连接到 ehr 系统和医疗数据",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "arxiv:2412.06769",
+        "arxiv:2605.00272",
+        "arxiv:2608.09888",
+        "arxiv:2506.21734"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Science sandboxes measure the scientific capability of AI agents",
+      "url": "",
+      "url_key": "",
+      "title_key": "science sandboxes measure the scientific capability of ai agents",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "arxiv:2412.06769",
+        "arxiv:2605.00272",
+        "arxiv:2608.09888",
+        "arxiv:2506.21734"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "LNODE 模型使用 neural ODE 预测阿尔茨海默病淀粉样蛋白-β进展",
+      "url": "",
+      "url_key": "",
+      "title_key": "lnode 模型使用 neural ode 预测阿尔茨海默病淀粉样蛋白 β进展",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "arxiv:2412.06769",
+        "arxiv:2605.00272",
+        "arxiv:2608.09888",
+        "arxiv:2506.21734"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "潜在推理架构绘制超越思维链的替代路径",
+      "url": "",
+      "url_key": "",
+      "title_key": "潜在推理架构绘制超越思维链的替代路径",
+      "extra_keys": [
+        "arxiv:2608.30165",
+        "arxiv:2412.06769",
+        "arxiv:2605.00272",
+        "arxiv:2608.09888",
+        "arxiv:2506.21734"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "url_key": "('https', '', '', 'blog.google', None, '/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber', '')",
+      "title_key": "gemini 3 8 flash and 3 8 flash cyber",
+      "id": "hackernews:story:49537553",
+      "extra_keys": [
+        "title:gemini 3 8 flash and 3 8 flash cyber",
+        "url:('https', '', '', 'blog.google', None, '/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Quoting Rick Brewster",
+      "url": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+      "url_key": "('https', '', '', 'simonwillison.net', None, '/2026/Sep/2/rick-brewster', '')",
+      "title_key": "quoting rick brewster",
+      "id": "rss:simonwillison.net_atom_everything_:b6e93fadaf7ee802",
+      "extra_keys": [
+        "title:quoting rick brewster",
+        "url:('https', '', '', 'simonwillison.net', None, '/2026/Sep/2/rick-brewster', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "OpenAI halts testing, slows development after rogue model hacked Hugging Face",
+      "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1w53lck/openai_halts_testing_slows_development_after/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/ChatGPTCoding/comments/1w53lck/openai_halts_testing_slows_development_after', '')",
+      "title_key": "openai halts testing slows development after rogue model hacked hugging face",
+      "id": "reddit:subreddit-rss:t3_1w53lck",
+      "extra_keys": [
+        "title:openai halts testing slows development after rogue model hacked hugging face",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/ChatGPTCoding/comments/1w53lck/openai_halts_testing_slows_development_after', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Muse Spark 1.3",
+      "url": "https://developer.meta.com/ai/models/muse-spark/",
+      "url_key": "('https', '', '', 'developer.meta.com', None, '/ai/models/muse-spark', '')",
+      "title_key": "muse spark 1 3",
+      "id": "hackernews:story:49541256",
+      "extra_keys": [
+        "title:muse spark 1 3",
+        "url:('https', '', '', 'developer.meta.com', None, '/ai/models/muse-spark', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "OpenAI Astra and Looped Transformers",
+      "url": "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html",
+      "url_key": "('https', '', '', 'sebastianraschka.com', None, '/blog/2026/openai-astra-looped-transformers.html', '')",
+      "title_key": "openai astra and looped transformers",
+      "id": "rss:sebastianraschka.com_rss_feed.xml:beac058622d843a6",
+      "extra_keys": [
+        "title:openai astra and looped transformers",
+        "url:('https', '', '', 'sebastianraschka.com', None, '/blog/2026/openai-astra-looped-transformers.html', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "url_key": "('https', '', '', 'blog.google', None, '/innovation-and-ai/technology/safety-security/fairwind-program', '')",
+      "title_key": "proactive cyber defense for governments and enterprises",
+      "id": "rss:blog.google_technology_ai_rss_:5eb2aa71a90a9c91",
+      "extra_keys": [
+        "title:proactive cyber defense for governments and enterprises",
+        "url:('https', '', '', 'blog.google', None, '/innovation-and-ai/technology/safety-security/fairwind-program', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Qwen Developers Open-Sources zg (zvec-grep): A Local-First Search Layer Unifying ripgrep, BM25, and Vector Search",
+      "url": "https://www.marktechpost.com/2026/09/02/qwen-developers-open-sources-zg-zvec-grep-a-local-first-search-layer-unifying-ripgrep-bm25-and-vector-search/",
+      "url_key": "('https', '', '', 'www.marktechpost.com', None, '/2026/09/02/qwen-developers-open-sources-zg-zvec-grep-a-local-first-search-layer-unifying-ripgrep-bm25-and-vector-search', '')",
+      "title_key": "qwen developers open sources zg zvec grep a local first search layer unifying ripgrep bm25 and vector search",
+      "id": "rss:marktechpost.com_feed_:8f5d4d2e4c016001",
+      "extra_keys": [
+        "title:qwen developers open sources zg zvec grep a local first search layer unifying ripgrep bm25 and vector search",
+        "url:('https', '', '', 'www.marktechpost.com', None, '/2026/09/02/qwen-developers-open-sources-zg-zvec-grep-a-local-first-search-layer-unifying-ripgrep-bm25-and-vector-search', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Anthropic Introduces Enterprise Frontier Safeguards (EFS): Zero-Data-Retention Privacy Plus Cross-Session Misuse Detection",
+      "url": "https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs/",
+      "url_key": "('https', '', '', 'www.marktechpost.com', None, '/2026/09/02/anthropic-enterprise-frontier-safeguards-efs', '')",
+      "title_key": "anthropic introduces enterprise frontier safeguards efs zero data retention privacy plus cross session misuse detection",
+      "id": "rss:marktechpost.com_feed_:fc61f3648a17f5c7",
+      "extra_keys": [
+        "title:anthropic introduces enterprise frontier safeguards efs zero data retention privacy plus cross session misuse detection",
+        "url:('https', '', '', 'www.marktechpost.com', None, '/2026/09/02/anthropic-enterprise-frontier-safeguards-efs', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Operationalizing open-ended biological discovery across single-cell representations",
+      "url": "https://arxiv.org/abs/2609.00681",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2609.00681', '')",
+      "title_key": "operationalizing open ended biological discovery across single cell representations",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:a46636aacce65ff4",
+      "extra_keys": [
+        "arxiv:2609.00681",
+        "title:operationalizing open ended biological discovery across single cell representations",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2609.00681', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "I scraped 5.94 billion TikTok videos and 3.23 billion profiles in 3 weeks. Uploaded full dataset to Hugging Face for free. Step by step tutorial and code below. [P]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1w5h9se/i_scraped_594_billion_tiktok_videos_and_323/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w5h9se/i_scraped_594_billion_tiktok_videos_and_323', '')",
+      "title_key": "i scraped 5 94 billion tiktok videos and 3 23 billion profiles in 3 weeks uploaded full dataset to hugging face for free step by step tutorial and code below p",
+      "id": "reddit:subreddit-rss:t3_1w5h9se",
+      "extra_keys": [
+        "title:i scraped 5 94 billion tiktok videos and 3 23 billion profiles in 3 weeks uploaded full dataset to hugging face for free step by step tutorial and code below p",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w5h9se/i_scraped_594_billion_tiktok_videos_and_323', '')"
       ]
     }
   ]
