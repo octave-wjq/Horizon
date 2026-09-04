@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T01:35:57.552021+00:00",
+  "updated_at": "2026-09-04T01:14:34.441881+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4461,6 +4461,106 @@
       "extra_keys": [
         "title:i scraped 5 94 billion tiktok videos and 3 23 billion profiles in 3 weeks uploaded full dataset to hugging face for free step by step tutorial and code below p",
         "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1w5h9se/i_scraped_594_billion_tiktok_videos_and_323', '')"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "谷歌发布 Gemini 3.8 Flash，性能达到 Opus 5 水平",
+      "url": "",
+      "url_key": "",
+      "title_key": "谷歌发布 gemini 3 8 flash 性能达到 opus 5 水平",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "引用 Rick Brewster",
+      "url": "",
+      "url_key": "",
+      "title_key": "引用 rick brewster",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "OpenAI 在流氓模型攻击 Hugging Face 后暂停测试并放缓开发",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai 在流氓模型攻击 hugging face 后暂停测试并放缓开发",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Meta 发布 Muse Spark 1.3，以极具竞争力的价格实现顶级基准测试成绩",
+      "url": "",
+      "url_key": "",
+      "title_key": "meta muse spark 1 3 以极具竞争力的价格实现顶级基准测试成绩",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "OpenAI Astra 与循环 Transformer",
+      "url": "",
+      "url_key": "",
+      "title_key": "openai astra 与循环 transformer",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "谷歌推出 Fairwind 计划以提供先进网络防御",
+      "url": "",
+      "url_key": "",
+      "title_key": "谷歌推出 fairwind 计划以提供先进网络防御",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Qwen 发布 zg：融合 ripgrep、BM25 和向量搜索的统一本地搜索工具",
+      "url": "",
+      "url_key": "",
+      "title_key": "qwen zg 融合 ripgrep bm25 和向量搜索的统一本地搜索工具",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Anthropic 推出企业前沿安全保障措施，实现客户控制的数据托管",
+      "url": "",
+      "url_key": "",
+      "title_key": "anthropic 推出企业前沿安全保障措施 实现客户控制的数据托管",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "PROSPECTor 框架实现单细胞数据的开放式发现",
+      "url": "",
+      "url_key": "",
+      "title_key": "prospector 框架实现单细胞数据的开放式发现",
+      "extra_keys": [
+        "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "我在 3 周内爬取了 59.4 亿条 TikTok 视频和 32.3 亿个账号，并将完整数据集免费上传到 Hugging Face。附详细教程和代码。\\[P\\",
+      "url": "",
+      "url_key": "",
+      "title_key": "我在 3 周内爬取了 59 4 亿条 tiktok 视频和 32 3 亿个账号 并将完整数据集免费上传到 hugging face 附详细教程和代码 p",
+      "extra_keys": [
+        "arxiv:2609.00681"
       ]
     }
   ]
