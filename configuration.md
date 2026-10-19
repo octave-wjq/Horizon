@@ -453,7 +453,10 @@ Content is scored 0-10:
 }
 ```
 
-- `ai_score_threshold`: Only include content scoring >= this value
+- `ai_score_threshold`: Only include content scoring strictly greater than this
+  value. With `7.5`, a score of `7.5` is excluded and `7.6` is included.
+- `min_items` / `min_paper_items`: Optional backfill below the score threshold.
+  Leave both unset or `null` to enforce the threshold for every selected item.
 - `time_window_hours`: Fetch content from last N hours
 - `max_items`: Optional final cap after all group limits are applied
 - `category_groups`: Optional map of quota groups. Each group requires a positive

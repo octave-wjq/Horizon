@@ -39,7 +39,7 @@ Engagement metadata is source-specific: HN provides score and comment count, Red
 
 ## Filtering
 
-After scoring, items are filtered by `filtering.ai_score_threshold` (default: `7.0`) and sorted by score descending. Optional balanced digest quotas are then applied before enrichment.
+After scoring, only items scoring strictly greater than `filtering.ai_score_threshold` (default: `7.0`) pass the threshold. They are sorted by score descending. Optional balanced digest quotas are then applied before enrichment. The repository's daily workflow uses `7.5`, excludes scores equal to `7.5`, and disables below-threshold backfill (`min_items` and `min_paper_items` are `null`). The threshold is checked again after targeted Twitter re-analysis.
 
 ```json
 {
