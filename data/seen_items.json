@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T01:33:28.999265+00:00",
+  "updated_at": "2026-10-19T02:07:38.989292+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4561,6 +4561,19 @@
       "title_key": "我在 3 周内爬取了 59 4 亿条 tiktok 视频和 32 3 亿个账号 并将完整数据集免费上传到 hugging face 附详细教程和代码 p",
       "extra_keys": [
         "arxiv:2609.00681"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.18861', '')",
+      "title_key": "hybrid reasoning agents llm agents that think in latent space act through text",
+      "id": "hackernews:story:50145337",
+      "extra_keys": [
+        "arxiv:2610.18861",
+        "title:hybrid reasoning agents llm agents that think in latent space act through text",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.18861', '')"
       ]
     }
   ]
