@@ -1,9 +1,9 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "anthropic",
-    "model": "claude-sonnet-5",
-    "base_url": "https://www.packyapi.com",
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "base_url": "https://www.packyapi.com/v1",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,

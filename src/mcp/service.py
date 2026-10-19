@@ -366,7 +366,10 @@ class HorizonPipelineService:
 
         self.run_store.save_items(run_id, "scored", items_to_dicts(scored_items))
         score_threshold = ctx.config.filtering.ai_score_threshold
-        above_threshold = [x for x in scored_items if x.ai_score and x.ai_score >= score_threshold]
+        above_threshold = [
+            item for item in scored_items
+            if item.ai_score is not None and item.ai_score > score_threshold
+        ]
 
         meta = self.run_store.update_meta(
             run_id,

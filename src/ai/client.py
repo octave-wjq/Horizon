@@ -276,6 +276,7 @@ class OpenAIClient(AIClient):
     # Packy / Codex-sale style models often only expose the Responses API
     # (chat.completions returns protocol_not_supported).
     _MODELS_PREFERRING_RESPONSES_API = (
+        "gpt-6.1-sol",
         "gpt-5.6",
         "gpt-5.5",
         "gpt-5.4",

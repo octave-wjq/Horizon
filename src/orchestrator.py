@@ -255,8 +255,10 @@ class HorizonOrchestrator:
             # 5.5 Optional second-stage Twitter reply expansion + targeted re-analysis
             await self._expand_twitter_discussion(important_items)
 
-            # 5.6 Apply digest limits after any targeted re-analysis changes scores.
-            important_items = self.apply_balanced_digest(important_items).items
+            # 5.6 Re-apply the score threshold and limits after re-analysis.
+            important_items = (
+                await self.filter_items(important_items, topic_dedup=False)
+            ).items
             # Final cross-day pass in case balance reordered from a larger pool.
             important_items = self.filter_recently_covered_items(
                 important_items, log_label="final"
@@ -1014,13 +1016,13 @@ class HorizonOrchestrator:
         threshold_items = [
             item
             for item in scored_pool
-            if (item.ai_score or 0) >= effective_threshold
+            if item.ai_score > effective_threshold
         ]
         above_threshold_count = len(threshold_items)
 
         if log:
             self.console.print(
-                f"⭐️ {above_threshold_count} items scored ≥ {effective_threshold}\n"
+                f"⭐️ {above_threshold_count} items scored > {effective_threshold}\n"
             )
 
         # Floor before dedup so quiet days still keep candidate papers.

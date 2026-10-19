@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+from types import SimpleNamespace
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
@@ -140,6 +141,32 @@ class TestOpenAIClientInit:
 
 
 class TestOpenAIClientComplete:
+    def test_gpt_6_1_sol_uses_responses_api(self, monkeypatch):
+        monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+        client = OpenAIClient(_make_config(
+            provider=AIProvider.OPENAI,
+            model="gpt-6.1-sol",
+            api_key_env="OPENAI_API_KEY",
+            base_url="https://www.packyapi.com/v1",
+        ))
+        response = SimpleNamespace(output_text='{"ok":true}', usage=None)
+
+        with (
+            patch.object(client.client.responses, "create", new_callable=AsyncMock) as responses,
+            patch.object(client.client.chat.completions, "create", new_callable=AsyncMock) as chat,
+        ):
+            responses.return_value = response
+            result = asyncio.run(client.complete(system="Return JSON", user="hello", max_tokens=128))
+
+        assert result == '{"ok":true}'
+        chat.assert_not_called()
+        responses.assert_awaited_once_with(
+            model="gpt-6.1-sol",
+            input=[{"role": "system", "content": "Return JSON"}, {"role": "user", "content": "hello"}],
+            max_output_tokens=128,
+            temperature=0.3,
+        )
+
     def test_basic_completion(self, monkeypatch):
         monkeypatch.setenv("MINIMAX_API_KEY", "test-key")
         client = OpenAIClient(_make_config())

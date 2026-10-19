@@ -4,6 +4,7 @@ import asyncio
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import AsyncMock
 import json
 
 from src.models import ContentItem, FilteringConfig, SourceType
@@ -302,6 +303,32 @@ def test_filter_items_applies_balanced_digest(tmp_path: Path, monkeypatch) -> No
     assert result["removed_by_balanced_digest"] == 1
     assert result["balanced_digest_enabled"] is True
     assert result["group_counts"] == {"other": 1}
+
+
+def test_score_items_counts_only_scores_strictly_above_threshold(tmp_path: Path, monkeypatch) -> None:
+    service = HorizonPipelineService(runs_root=tmp_path / "mcp-runs")
+    service.run_store.create_run("run-score-boundary")
+    items = [
+        make_item("equal", score=7.5),
+        make_item("lower", score=7.49),
+        make_item("higher", score=7.51),
+        make_item("unscored"),
+    ]
+    analyzer = SimpleNamespace(analyze_batch=AsyncMock(return_value=items))
+    context = SimpleNamespace(
+        config=SimpleNamespace(ai=object(), filtering=FilteringConfig(ai_score_threshold=7.5)),
+        runtime=SimpleNamespace(
+            create_ai_client=lambda config: object(),
+            ContentAnalyzer=lambda client: analyzer,
+        ),
+    )
+    monkeypatch.setattr(service, "_load_stage_items", lambda **kwargs: (items, context))
+
+    result = asyncio.run(service.score_items(run_id="run-score-boundary"))
+
+    assert result["scored"] == 4
+    assert result["above_threshold"] == 1
+    assert result["meta"]["scored_above_threshold"] == 1
 
 
 def test_filter_items_matches_native_filtering_pipeline(tmp_path: Path, monkeypatch) -> None:

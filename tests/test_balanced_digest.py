@@ -16,6 +16,7 @@ from src.models import (
     SourcesConfig,
 )
 from src.orchestrator import HorizonOrchestrator
+from src.storage.manager import StorageManager
 
 
 def make_item(item_id: str, score: float, category: str | None) -> ContentItem:
@@ -36,6 +37,27 @@ def make_orchestrator(filtering: FilteringConfig) -> HorizonOrchestrator:
     orchestrator.config = SimpleNamespace(filtering=filtering)
     orchestrator.console = Console(record=True)
     return orchestrator
+
+
+@pytest.mark.parametrize("threshold_override", [None, 8.0])
+def test_score_threshold_excludes_equal_lower_and_unscored_items(threshold_override) -> None:
+    orchestrator = make_orchestrator(FilteringConfig(ai_score_threshold=7.5))
+    threshold = 7.5 if threshold_override is None else threshold_override
+    items = [
+        make_item("equal", threshold, "ai"),
+        make_item("lower", threshold - 0.01, "ai"),
+        make_item("higher", threshold + 0.01, "ai"),
+        make_item("unscored", 0.0, "ai"),
+    ]
+    items[-1].ai_score = None
+
+    result = asyncio.run(orchestrator.filter_items(
+        items, threshold=threshold_override, topic_dedup=False,
+    ))
+
+    assert [item.id for item in result.items] == ["higher"]
+    assert result.threshold_count == 1
+    assert f"scored > {threshold}" in orchestrator.console.export_text()
 
 
 def test_unconfigured_balanced_digest_preserves_old_behavior() -> None:
@@ -147,6 +169,8 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
         sources=SourcesConfig(),
         filtering=FilteringConfig(
             ai_score_threshold=7.0,
+            skip_weekends=False,
+            skip_cn_holidays=False,
             max_items=1,
             category_groups={
                 "ai": CategoryGroupConfig(limit=1, categories=["ai"]),
@@ -154,7 +178,7 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
             },
         ),
     )
-    storage = SimpleNamespace()
+    storage = StorageManager(str(tmp_path / "data"))
     orchestrator = HorizonOrchestrator(config, storage)
     items = [
         make_item("ai", 9.0, "ai"),
@@ -190,7 +214,8 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
     assert enriched_ids == ["ai"]
 
 
-def test_run_balances_after_twitter_reanalysis(tmp_path, monkeypatch) -> None:
+@pytest.mark.parametrize("max_items", [1, 2])
+def test_run_refilters_and_balances_after_twitter_reanalysis(tmp_path, monkeypatch, max_items) -> None:
     config = Config(
         ai=AIConfig(
             provider="openai",
@@ -199,9 +224,14 @@ def test_run_balances_after_twitter_reanalysis(tmp_path, monkeypatch) -> None:
             languages=[],
         ),
         sources=SourcesConfig(),
-        filtering=FilteringConfig(ai_score_threshold=7.0, max_items=1),
+        filtering=FilteringConfig(
+            ai_score_threshold=7.5,
+            max_items=max_items,
+            skip_weekends=False,
+            skip_cn_holidays=False,
+        ),
     )
-    orchestrator = HorizonOrchestrator(config, SimpleNamespace())
+    orchestrator = HorizonOrchestrator(config, StorageManager(str(tmp_path / "data")))
     items = [make_item("first", 9.0, "ai"), make_item("second", 8.0, "ai")]
     enriched_ids: list[str] = []
 
@@ -215,7 +245,7 @@ def test_run_balances_after_twitter_reanalysis(tmp_path, monkeypatch) -> None:
         return input_items
 
     async def expand_twitter_discussion(input_items):  # type: ignore[no-untyped-def]
-        input_items[0].ai_score = 7.0
+        input_items[0].ai_score = 7.5
         input_items[1].ai_score = 10.0
         input_items.sort(key=lambda item: item.ai_score or 0, reverse=True)
 

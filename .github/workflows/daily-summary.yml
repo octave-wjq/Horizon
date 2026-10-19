@@ -119,7 +119,17 @@ jobs:
 
       - name: Prepare GitHub Actions config
         if: steps.gate.outputs.should_run == 'true'
-        run: cp data/config.github.json data/config.json
+        run: |
+          cp data/config.github.json data/config.json
+          uv run python - <<'PY'
+          from src.storage.manager import StorageManager
+
+          config = StorageManager().load_config()
+          print(f"AI: {config.ai.provider.value} / {config.ai.model}")
+          print(f"Score filter: > {config.filtering.ai_score_threshold}")
+          if config.filtering.min_items is not None or config.filtering.min_paper_items is not None:
+              raise SystemExit("Daily summary requires score filtering without below-threshold backfill")
+          PY
 
       - name: Restore previous digests for cross-day dedup
         if: steps.gate.outputs.should_run == 'true'
