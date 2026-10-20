@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T02:07:38.989292+00:00",
+  "updated_at": "2026-10-20T02:00:59.885204+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4574,6 +4574,17 @@
         "arxiv:2610.18861",
         "title:hybrid reasoning agents llm agents that think in latent space act through text",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2610.18861', '')"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "title": "混合推理智能体结合潜在推理与文本行动。",
+      "url": "",
+      "url_key": "",
+      "title_key": "混合推理智能体结合潜在推理与文本行动",
+      "extra_keys": [
+        "arxiv:2412.06769",
+        "arxiv:2610.18861"
       ]
     }
   ]
