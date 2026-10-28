@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T02:21:36.361843+00:00",
+  "updated_at": "2026-10-28T02:52:06.792133+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4585,6 +4585,69 @@
       "extra_keys": [
         "arxiv:2412.06769",
         "arxiv:2610.18861"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "ARMD-Predict: multi-site machine learning to predict antibiotic resistance before culture results",
+      "url": "https://arxiv.org/abs/2610.32998",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.32998', '')",
+      "title_key": "armd predict multi site machine learning to predict antibiotic resistance before culture results",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:815bdc8f696ccf07",
+      "extra_keys": [
+        "arxiv:2610.32998",
+        "title:armd predict multi site machine learning to predict antibiotic resistance before culture results",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.32998', '')"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Physiology as Topology: Intervenable Organ Graphs for Longitudinal Patient Forecasting",
+      "url": "https://arxiv.org/abs/2610.33022",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.33022', '')",
+      "title_key": "physiology as topology intervenable organ graphs for longitudinal patient forecasting",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:ad8d8627c2e22c3e",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "title:physiology as topology intervenable organ graphs for longitudinal patient forecasting",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.33022', '')"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution",
+      "url": "https://arxiv.org/abs/2610.17718",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.17718', '')",
+      "title_key": "ecg rsi recursive self improvement through targeted electrocardiogram waveform evolution",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:4f25bb1a18742626",
+      "extra_keys": [
+        "arxiv:2610.17718",
+        "title:ecg rsi recursive self improvement through targeted electrocardiogram waveform evolution",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.17718', '')"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Clinical AI Has Boomed. A New Stanford-Harvard State of Clinical AI Report Shows What Holds Up in Practice. - Stanford University",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPU0I2QVRNcWg2SE1vVElPaWdxNkJQbU8tZTUtV1JRdnBnV2dtTEVHNngzbmEtUVdVcTEzOFl0T0ltUHp3OW5ZTU9NaUduNWpLZHlDbDZkMjRnR200eVRyREEyMF8xdjIwVl9yS3poa2NnTmkwVVUtSllZUnlMU21Rbm1jRjg?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMihAFBVV95cUxPU0I2QVRNcWg2SE1vVElPaWdxNkJQbU8tZTUtV1JRdnBnV2dtTEVHNngzbmEtUVdVcTEzOFl0T0ltUHp3OW5ZTU9NaUduNWpLZHlDbDZkMjRnR200eVRyREEyMF8xdjIwVl9yS3poa2NnTmkwVVUtSllZUnlMU21Rbm1jRjg', 'oc=5')",
+      "title_key": "clinical ai has boomed a new stanford harvard state of clinical ai report shows what holds up in practice stanford university",
+      "id": "google_news:article:cc10a358954be182",
+      "extra_keys": [
+        "title:clinical ai has boomed a new stanford harvard state of clinical ai report shows what holds up in practice stanford university",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMihAFBVV95cUxPU0I2QVRNcWg2SE1vVElPaWdxNkJQbU8tZTUtV1JRdnBnV2dtTEVHNngzbmEtUVdVcTEzOFl0T0ltUHp3OW5ZTU9NaUduNWpLZHlDbDZkMjRnR200eVRyREEyMF8xdjIwVl9yS3poa2NnTmkwVVUtSllZUnlMU21Rbm1jRjg', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "On-premise medical AI agents for reliable clinical decision-making - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5VanUybXZENTJjdXN1V1FRTFlfZU9Dblo2WWpuMXljeHIwaEdlTUgzc2F1V2YySWhYd2ZnSFFnRXV5TkdOanVvTFJ2NEdDQV9qWUpzODBHRXhXN2QxTzQ0?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE5VanUybXZENTJjdXN1V1FRTFlfZU9Dblo2WWpuMXljeHIwaEdlTUgzc2F1V2YySWhYd2ZnSFFnRXV5TkdOanVvTFJ2NEdDQV9qWUpzODBHRXhXN2QxTzQ0', 'oc=5')",
+      "title_key": "on premise medical ai agents for reliable clinical decision making",
+      "id": "google_news:article:826117e2bd937352",
+      "extra_keys": [
+        "title:on premise medical ai agents for reliable clinical decision making",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE5VanUybXZENTJjdXN1V1FRTFlfZU9Dblo2WWpuMXljeHIwaEdlTUgzc2F1V2YySWhYd2ZnSFFnRXV5TkdOanVvTFJ2NEdDQV9qWUpzODBHRXhXN2QxTzQ0', 'oc=5')"
       ]
     }
   ]
