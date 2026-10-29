@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T02:52:06.792133+00:00",
+  "updated_at": "2026-10-29T02:57:42.946181+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4648,6 +4648,91 @@
       "extra_keys": [
         "title:on premise medical ai agents for reliable clinical decision making",
         "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE5VanUybXZENTJjdXN1V1FRTFlfZU9Dblo2WWpuMXljeHIwaEdlTUgzc2F1V2YySWhYd2ZnSFFnRXV5TkdOanVvTFJ2NEdDQV9qWUpzODBHRXhXN2QxTzQ0', 'oc=5')"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "ARMD-Predict 利用四家医疗中心数据提前预测抗生素敏感性。",
+      "url": "",
+      "url_key": "",
+      "title_key": "armd predict 利用四家医疗中心数据提前预测抗生素敏感性",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "arxiv:2610.32998",
+        "arxiv:2610.17718"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "PhysioCircuit 检验患者预测是否遵循可编辑的生理机制。",
+      "url": "",
+      "url_key": "",
+      "title_key": "physiocircuit 检验患者预测是否遵循可编辑的生理机制",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "arxiv:2610.32998",
+        "arxiv:2610.17718"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "ECG-RSI 通过经验证的波形编辑与反馈训练提升心电图解读能力。",
+      "url": "",
+      "url_key": "",
+      "title_key": "ecg rsi 通过经验证的波形编辑与反馈训练提升心电图解读能力",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "arxiv:2610.32998",
+        "arxiv:2610.17718"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "斯坦福与哈佛的报告审视临床人工智能的实际表现。",
+      "url": "",
+      "url_key": "",
+      "title_key": "斯坦福与哈佛的报告审视临床人工智能的实际表现",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "arxiv:2610.32998",
+        "arxiv:2610.17718"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "title": "本地部署的医疗人工智能智能体旨在提高临床决策可靠性。",
+      "url": "",
+      "url_key": "",
+      "title_key": "本地部署的医疗人工智能智能体旨在提高临床决策可靠性",
+      "extra_keys": [
+        "arxiv:2610.33022",
+        "arxiv:2610.32998",
+        "arxiv:2610.17718"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "url": "https://surgehq.ai/blog/dayjob-tax",
+      "url_key": "('https', '', '', 'surgehq.ai', None, '/blog/dayjob-tax', '')",
+      "title_key": "dayjob tax evaluating ai agents on 50 professional tax assignments",
+      "id": "hackernews:story:50275626",
+      "extra_keys": [
+        "title:dayjob tax evaluating ai agents on 50 professional tax assignments",
+        "url:('https', '', '', 'surgehq.ai', None, '/blog/dayjob-tax', '')"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Multimodal Knowledge Aggregation for Microbial Keratitis: Geographic Confounding and Shortcut Risk in Pooled Multicountry Data",
+      "url": "https://arxiv.org/abs/2607.03740",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2607.03740', '')",
+      "title_key": "multimodal knowledge aggregation for microbial keratitis geographic confounding and shortcut risk in pooled multicountry data",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:a30b81590a62947d",
+      "extra_keys": [
+        "arxiv:2607.03740",
+        "title:multimodal knowledge aggregation for microbial keratitis geographic confounding and shortcut risk in pooled multicountry data",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2607.03740', '')"
       ]
     }
   ]
