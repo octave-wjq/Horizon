@@ -32,6 +32,7 @@ from .ai.summarizer import DailySummarizer
 from .ai.enricher import ContentEnricher
 from .ai.tokens import get_usage_snapshot
 from .schedule_policy import should_skip_digest_day
+from .fallback_papers import fetch_papers
 
 
 _TRACKING_QUERY_PARAMETERS = {
@@ -226,7 +227,7 @@ class HorizonOrchestrator:
             if self.last_fetch_report and self.last_fetch_report.all_failed:
                 raise RuntimeError(self.last_fetch_report.failure_message())
 
-            if not all_items:
+            if not all_items and not filtering.curated_fallback_enabled:
                 self.console.print("[yellow]No new content found. Exiting.[/yellow]")
                 return
 
@@ -239,7 +240,7 @@ class HorizonOrchestrator:
                 )
 
             # 4. Analyze with AI
-            analyzed_items = await self._analyze_content(merged_items)
+            analyzed_items = await self._analyze_content(merged_items) if merged_items else []
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
             # 4.5 Drop stories already covered in recent digests (cross-day dedup)
@@ -264,6 +265,9 @@ class HorizonOrchestrator:
                 important_items, log_label="final"
             )
 
+            if not important_items and filtering.curated_fallback_enabled:
+                important_items = await self._select_fallback_papers()
+
             # Show per-sub-source selection breakdown
             selected_counts: Dict[str, int] = defaultdict(int)
             for item in important_items:
@@ -286,6 +290,9 @@ class HorizonOrchestrator:
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
                 summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
+
+                if any(item.metadata.get("curated_fallback") for item in important_items):
+                    summary = "> 今日无符合常规筛选条件的资讯，以下为 GitHub 书单历史论文推荐（不受当日评分阈值限制）。\n\n" + summary
 
                 # Save to data/summaries/
                 summary_path = self.storage.save_daily_summary(today, summary, language=lang)
@@ -1178,6 +1185,18 @@ class HorizonOrchestrator:
             group_limits=group_limits,
             duplicate_categories=sorted(set(duplicate_categories)),
         )
+
+    async def _select_fallback_papers(self) -> List[ContentItem]:
+        candidates = self.filter_recently_covered_items(await fetch_papers())
+        candidates = self.merge_cross_source_duplicates(candidates)
+        selected = candidates[:2]
+        if len(selected) < 2:
+            raise RuntimeError("Curated fallback requires two unseen papers")
+        selected = await self._analyze_content(selected)
+        if any(item.ai_score is None or item.ai_score <= 0 for item in selected):
+            raise RuntimeError("Curated fallback paper analysis failed")
+        self.console.print("📚 Empty digest: selected two historical papers from GitHub reading lists")
+        return selected
 
     async def _expand_twitter_discussion(self, items: List[ContentItem]) -> None:
         """Second-stage: fetch reply text for important Twitter items and re-analyze.

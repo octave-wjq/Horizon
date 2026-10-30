@@ -481,6 +481,7 @@ class CategoryGroupConfig(BaseModel):
 class FilteringConfig(BaseModel):
     """Content filtering configuration."""
 
+    curated_fallback_enabled: bool = False
     ai_score_threshold: float = 7.0
     time_window_hours: int = 24
     max_items: Optional[int] = Field(default=None, gt=0)

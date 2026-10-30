@@ -176,6 +176,8 @@ class DailySummarizer:
             title_link = f"[{title}]({url})" if url else title
             entries.append(f"{i}. {title_link} \u2b50\ufe0f {score}/10")
 
+        if any(item.metadata.get("curated_fallback") for item in items):
+            header += "> 今日常规筛选为空，以下为书单历史论文推荐，不受当日评分阈值限制。\n\n" if language == "zh" else "> No regular items qualified; historical reading-list recommendations follow, exempt from the daily score cutoff.\n\n"
         return header + "\n".join(entries)
 
     def generate_webhook_item(
@@ -231,7 +233,7 @@ class DailySummarizer:
             source_parts.append(_escape_markdown(meta["feed_name"]))
         else:
             source_parts.append(_escape_markdown(item.author or "unknown"))
-        if item.published_at:
+        if item.published_at and not meta.get("publication_date_unknown"):
             if language == "zh":
                 source_parts.append(
                     f"{item.published_at.month}月{item.published_at.day}日 "
@@ -240,6 +242,10 @@ class DailySummarizer:
             else:
                 day = item.published_at.strftime("%d").lstrip("0")
                 source_parts.append(item.published_at.strftime(f"%b {day}, %H:%M"))
+        if meta.get("curated_fallback"):
+            source_parts.append("历史论文推荐" if language == "zh" else "Historical reading recommendation")
+            repo = meta.get("curated_repository", "")
+            source_parts.append(_escape_markdown(repo))
         source_line = " \u00b7 ".join(source_parts)  # ·
 
         discussion_url = meta.get("discussion_url")

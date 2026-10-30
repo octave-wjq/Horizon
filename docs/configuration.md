@@ -762,3 +762,23 @@ uv run horizon-mcp
 Available tools include `hz_validate_config`, `hz_fetch_items`, `hz_score_items`, `hz_filter_items`, `hz_enrich_items`, `hz_generate_summary`, and `hz_run_pipeline`.
 
 See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [`src/mcp/integration.md`](../src/mcp/integration.md) for client setup.
+
+### Empty working-day digest fallback
+
+`filtering.curated_fallback_enabled` defaults to `false` for compatibility and is
+enabled in this repository's deployed configuration. When the final regular digest
+is empty (including a successful fetch with no items), select two unseen historical
+papers from `mingze-yuan/Awesome-LLM-Healthcare` and
+`AI-in-Health/MedLLMsPracticalGuide`. The lists are interleaved and duplicate arXiv
+versions are collapsed. Previously covered papers are excluded before selection.
+The normal score cutoff remains strict; curated recommendations are an explicitly
+labelled exception and retain their actual AI scores. Failed scoring, unavailable
+lists, or fewer than two unseen papers raise an error rather than fabricate results.
+An overall source outage remains an error. Existing calendar gates still apply.
+
+The local PDF automation runs at 10:30 Asia/Shanghai on eligible working days.
+`download_catchup_dates()` supplies today plus the preceding five calendar days,
+including days missed while the computer was off. It downloads only papers actually
+pushed in those digests, including curated recommendations, and checks files as well
+as the download ledger before retrying. PDF downloads require the local computer
+and Codex to be running; older missed dates are outside the automatic catch-up window.

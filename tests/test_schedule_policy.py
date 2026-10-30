@@ -19,3 +19,11 @@ def test_workday_runs():
     skip, reason = should_skip_digest_day(date(2026, 8, 19))  # Wednesday
     assert not skip
     assert "工作日" in reason
+
+
+def test_download_window_includes_previous_five_calendar_days():
+    from src.schedule_policy import download_catchup_dates
+    assert download_catchup_dates(date(2026, 10, 30)) == [date(2026, 10, d) for d in range(25, 31)]
+    assert download_catchup_dates(date(2026, 10, 31)) == []
+    assert download_catchup_dates(date(2026, 10, 1)) == []
+    assert download_catchup_dates(date(2026, 11, 2))[0] == date(2026, 10, 28)

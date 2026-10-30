@@ -87,3 +87,11 @@ def should_skip_digest_day(
     if skip_cn_holidays and day in china_holiday_dates([day.year, day.year - 1, day.year + 1]):
         return True, f"中国法定节假日（{day.isoformat()}）"
     return False, f"工作日（{day.isoformat()}）"
+
+
+def download_catchup_dates(day: Optional[date] = None) -> list[date]:
+    """On working days inspect today and the preceding five calendar days."""
+    day = day or shanghai_today()
+    if should_skip_digest_day(day)[0]:
+        return []
+    return [day - timedelta(days=offset) for offset in range(5, -1, -1)]
