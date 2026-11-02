@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-29T02:57:42.946181+00:00",
+  "updated_at": "2026-11-02T06:33:37.317824+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4733,6 +4733,39 @@
         "arxiv:2607.03740",
         "title:multimodal knowledge aggregation for microbial keratitis geographic confounding and shortcut risk in pooled multicountry data",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2607.03740', '')"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Dayjob：税务基准以 50 项专业任务评估人工智能智能体。",
+      "url": "",
+      "url_key": "",
+      "title_key": "dayjob 税务基准以 50 项专业任务评估人工智能智能体",
+      "extra_keys": [
+        "arxiv:2607.03740"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "多模态角膜炎模型揭示汇总高分背后的地域偏差。",
+      "url": "",
+      "url_key": "",
+      "title_key": "多模态角膜炎模型揭示汇总高分背后的地域偏差",
+      "extra_keys": [
+        "arxiv:2607.03740"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Physiological Trajectories and Observation Patterns in ICU Mortality Prediction: Transportability Under Changing Measurement Conditions",
+      "url": "https://arxiv.org/abs/2610.42126",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.42126', '')",
+      "title_key": "physiological trajectories and observation patterns in icu mortality prediction transportability under changing measurement conditions",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:f12728a3f53da5bd",
+      "extra_keys": [
+        "arxiv:2610.42126",
+        "title:physiological trajectories and observation patterns in icu mortality prediction transportability under changing measurement conditions",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.42126', '')"
       ]
     }
   ]
