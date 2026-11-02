@@ -24,6 +24,7 @@ class GitHubScraper(BaseScraper):
         """
         super().__init__({"sources": sources}, http_client)
         self.token = os.getenv("GITHUB_TOKEN")
+        self._anonymous = False
         self.base_url = "https://api.github.com"
 
     def _get_headers(self) -> dict:
@@ -36,9 +37,25 @@ class GitHubScraper(BaseScraper):
             "Accept": "application/vnd.github.v3+json",
             "User-Agent": "Horizon-Aggregator"
         }
-        if self.token:
-            headers["Authorization"] = f"token {self.token}"
+        if self.token and not self._anonymous:
+            headers["Authorization"] = f"Bearer {self.token}"
         return headers
+
+    async def _get_public(self, url: str) -> httpx.Response:
+        """Retry an invalid credential once without auth for public endpoints."""
+        async def request():
+            req = self.client.build_request("GET", url, headers=self._get_headers())
+            if self._anonymous:
+                req.headers.pop("Authorization", None)
+            return await self.client.send(req, follow_redirects=True)
+
+        response = await request()
+        if response.status_code == 401 and not self._anonymous:
+            self._anonymous = True
+            logger.warning("GitHub credential rejected (401); retrying public API anonymously")
+            response = await request()
+        response.raise_for_status()
+        return response
 
     async def fetch(self, since: datetime) -> List[ContentItem]:
         """Fetch GitHub content items.
@@ -83,8 +100,7 @@ class GitHubScraper(BaseScraper):
         items = []
 
         try:
-            response = await self.client.get(url, headers=self._get_headers(), follow_redirects=True)
-            response.raise_for_status()
+            response = await self._get_public(url)
             events = response.json()
 
             for event in events:
@@ -187,8 +203,7 @@ class GitHubScraper(BaseScraper):
         items = []
 
         try:
-            response = await self.client.get(url, headers=self._get_headers(), follow_redirects=True)
-            response.raise_for_status()
+            response = await self._get_public(url)
             releases = response.json()
 
             for release in releases:

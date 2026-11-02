@@ -16,6 +16,7 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCo
 from ddgs import DDGS
 
 from .client import AIClient
+from .temporal_context import temporal_context
 from .prompts import (
     CONCEPT_EXTRACTION_SYSTEM, CONCEPT_EXTRACTION_USER,
     CONTENT_ENRICHMENT_SYSTEM, CONTENT_ENRICHMENT_USER,
@@ -118,7 +119,7 @@ class ContentEnricher:
 
         try:
             response = await self.client.complete(
-                system=CONCEPT_EXTRACTION_SYSTEM,
+                system=CONCEPT_EXTRACTION_SYSTEM + temporal_context(item),
                 user=user_prompt,
             )
             result = self._parse_json_response(response)
@@ -186,7 +187,7 @@ class ContentEnricher:
         )
 
         response = await self.client.complete(
-            system=CONTENT_ENRICHMENT_SYSTEM,
+            system=CONTENT_ENRICHMENT_SYSTEM + temporal_context(item),
             user=user_prompt,
         )
 
@@ -241,7 +242,7 @@ class ContentEnricher:
         translate the title and summary to Chinese so the item is not dropped."""
         try:
             response = await self.client.complete(
-                system="You are a translator. Translate to Simplified Chinese. Return only valid JSON, no other text.",
+                system="You are a translator. Translate to Simplified Chinese. Return only valid JSON, no other text." + temporal_context(item),
                 user=(
                     f'Title: {item.title}\n'
                     f'Summary: {item.ai_summary or item.title}\n\n'
