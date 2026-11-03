@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T06:33:37.317824+00:00",
+  "updated_at": "2026-11-03T04:18:22.863913+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4766,6 +4766,54 @@
         "arxiv:2610.42126",
         "title:physiological trajectories and observation patterns in icu mortality prediction transportability under changing measurement conditions",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2610.42126', '')"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "title": "生理轨迹比测量模式更能支持重症死亡风险模型迁移。",
+      "url": "",
+      "url_key": "",
+      "title_key": "生理轨迹比测量模式更能支持重症死亡风险模型迁移",
+      "extra_keys": [
+        "arxiv:2610.42126"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
+      "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
+      "url_key": "('https', '', '', 'latent.space', None, '/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora', '')",
+      "title_key": "building legal agents when you can t see the data jacob lauritzen cto of legora",
+      "id": "rss:www.latent.space_feed:de3d36c3550a7325",
+      "extra_keys": [
+        "title:building legal agents when you can t see the data jacob lauritzen cto of legora",
+        "url:('https', '', '', 'latent.space', None, '/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora', '')"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "A small HER2 reader for routine H&E slides: real-world deployment",
+      "url": "https://arxiv.org/abs/2610.40662",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2610.40662', '')",
+      "title_key": "a small her2 reader for routine h e slides real world deployment",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:993f8f3251240778",
+      "extra_keys": [
+        "arxiv:2610.40662",
+        "title:a small her2 reader for routine h e slides real world deployment",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2610.40662', '')"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "LightMIS: Ultra-lightweight medical image segmentation for edge devices [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xm8dbo/lightmis_ultralightweight_medical_image/",
+      "url_key": "('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1xm8dbo/lightmis_ultralightweight_medical_image', '')",
+      "title_key": "lightmis ultra lightweight medical image segmentation for edge devices r",
+      "id": "reddit:subreddit-rss:t3_1xm8dbo",
+      "extra_keys": [
+        "arxiv:2609.28327",
+        "title:lightmis ultra lightweight medical image segmentation for edge devices r",
+        "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1xm8dbo/lightmis_ultralightweight_medical_image', '')"
       ]
     }
   ]
