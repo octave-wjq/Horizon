@@ -1194,7 +1194,12 @@ class HorizonOrchestrator:
             raise RuntimeError("Curated fallback requires two unseen papers")
         selected = await self._analyze_content(selected)
         if any(item.ai_score is None or item.ai_score <= 0 for item in selected):
-            raise RuntimeError("Curated fallback paper analysis failed")
+            failed = [item for item in selected if item.ai_score is None or item.ai_score <= 0]
+            details = ", ".join(
+                f"{item.id}: {item.metadata.get('analysis_error_type', 'missing_or_zero_score')}"
+                for item in failed
+            )
+            raise RuntimeError(f"Curated fallback paper analysis failed ({details})")
         self.console.print("📚 Empty digest: selected two historical papers from GitHub reading lists")
         return selected
 

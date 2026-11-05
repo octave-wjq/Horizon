@@ -65,6 +65,7 @@ class ContentAnalyzer:
                     print(f"Error analyzing item {item.id}: {e}")
                     item.ai_score = 0.0
                     item.ai_reason = "Analysis failed"
+                    item.metadata["analysis_error_type"] = type(e).__name__
                     item.ai_summary = item.title
                 if throttle_sec > 0 and index < len(items) - 1:
                     await asyncio.sleep(throttle_sec)
@@ -87,6 +88,7 @@ class ContentAnalyzer:
         return analyzed_items
 
     @retry(
+        reraise=True,
         stop=stop_after_attempt(3),
         wait=wait_exponential(min=2, max=10)
     )

@@ -307,6 +307,7 @@ class OpenAIClient(AIClient):
         # Some newer models (e.g. Claude Opus 4.7 on Bedrock Converse) reject
         # `temperature`. We learn this on first 400 and stop sending it.
         self._supports_temperature = True
+        self._responses_stream_only = False
         self._use_max_completion_tokens = any(
             config.model.startswith(prefix)
             for prefix in self._MODELS_REQUIRING_MAX_COMPLETION_TOKENS
@@ -446,6 +447,9 @@ class OpenAIClient(AIClient):
         if self._supports_temperature:
             request_kwargs["temperature"] = temperature
 
+        if self._responses_stream_only:
+            return await self._complete_responses_stream(request_kwargs)
+
         try:
             response = await self.client.responses.create(**request_kwargs)
         except Exception as exc:
@@ -482,9 +486,37 @@ class OpenAIClient(AIClient):
                     chunks.append(part_text)
         if chunks:
             return "".join(chunks)
-        raise ValueError(
-            f"Responses API returned empty content for model={self.model!r}"
-        )
+        # Some compatible gateways omit output in their non-streamed response,
+        # while still emitting valid text deltas in streaming mode.
+        text = await self._complete_responses_stream(request_kwargs)
+        self._responses_stream_only = True
+        return text
+
+    async def _complete_responses_stream(self, request_kwargs: dict) -> str:
+        stream = await self.client.responses.create(**request_kwargs, stream=True)
+        chunks: list[str] = []
+        completed = False
+        async with stream:
+            async for event in stream:
+                if event.type == "response.output_text.delta":
+                    chunks.append(event.delta)
+                elif event.type in ("response.failed", "response.incomplete", "error"):
+                    raise ValueError(f"Responses stream failed: {event.type}")
+                elif event.type == "response.completed":
+                    if event.response.status != "completed":
+                        raise ValueError("Responses stream did not complete successfully")
+                    completed = True
+                    usage = getattr(event.response, "usage", None)
+                    if usage is not None:
+                        record_usage(
+                            self.provider,
+                            input_tokens=getattr(usage, "input_tokens", 0) or 0,
+                            output_tokens=getattr(usage, "output_tokens", 0) or 0,
+                        )
+        text = "".join(chunks)
+        if not completed or not text.strip():
+            raise ValueError("Responses stream missing completed text output")
+        return text
 
     async def _do_request(
         self,
