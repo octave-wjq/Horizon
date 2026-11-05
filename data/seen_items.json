@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T04:18:22.863913+00:00",
+  "updated_at": "2026-11-05T06:04:24.997745+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4814,6 +4814,91 @@
         "arxiv:2609.28327",
         "title:lightmis ultra lightweight medical image segmentation for edge devices r",
         "url:('https', '', '', 'www.reddit.com', None, '/r/MachineLearning/comments/1xm8dbo/lightmis_ultralightweight_medical_image', '')"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Legora 在无法查看客户执行轨迹的情况下构建法律智能体。",
+      "url": "",
+      "url_key": "",
+      "title_key": "legora 在无法查看客户执行轨迹的情况下构建法律智能体",
+      "extra_keys": [
+        "arxiv:2610.40662",
+        "arxiv:2301.08243"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "小型人工智能模型可从常规病理切片预测 HER2 状态。",
+      "url": "",
+      "url_key": "",
+      "title_key": "小型人工智能模型可从常规病理切片预测 her2 状态",
+      "extra_keys": [
+        "arxiv:2610.40662",
+        "arxiv:2301.08243"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "title": "LightMIS 仅用 13.1 万参数实现面向边缘设备的医学图像分割。",
+      "url": "",
+      "url_key": "",
+      "title_key": "lightmis 仅用 13 1 万参数实现面向边缘设备的医学图像分割",
+      "extra_keys": [
+        "arxiv:2610.40662",
+        "arxiv:2301.08243"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Morpheus.AI: agents autonomously generate, execute and refine virtual tissue models",
+      "url": "https://arxiv.org/abs/2611.05413",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2611.05413', '')",
+      "title_key": "morpheus ai agents autonomously generate execute and refine virtual tissue models",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:8eb2ee3074ae897f",
+      "extra_keys": [
+        "arxiv:2611.05413",
+        "title:morpheus ai agents autonomously generate execute and refine virtual tissue models",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2611.05413', '')"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "CellCanon: An Agentic Cellular World Model for Prediction, Explanation, and Observation-Driven Updating",
+      "url": "https://arxiv.org/abs/2611.05890",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2611.05890', '')",
+      "title_key": "cellcanon an agentic cellular world model for prediction explanation and observation driven updating",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:b795fb4421bd9f23",
+      "extra_keys": [
+        "arxiv:2611.05890",
+        "title:cellcanon an agentic cellular world model for prediction explanation and observation driven updating",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2611.05890', '')"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Agentic Literature Extraction Augments Targeted Protein Degradation Databases",
+      "url": "https://arxiv.org/abs/2605.11221",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2605.11221', '')",
+      "title_key": "agentic literature extraction augments targeted protein degradation databases",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:b3659058fc4c2e7c",
+      "extra_keys": [
+        "arxiv:2605.11221",
+        "title:agentic literature extraction augments targeted protein degradation databases",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2605.11221', '')"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "The Little Scientist: What Does the Scientific Method Buy an LLM Agent?",
+      "url": "https://arxiv.org/abs/2608.16951",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2608.16951', '')",
+      "title_key": "the little scientist what does the scientific method buy an llm agent",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:97141d076ce179f0",
+      "extra_keys": [
+        "arxiv:2608.16951",
+        "title:the little scientist what does the scientific method buy an llm agent",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2608.16951', '')"
       ]
     }
   ]
