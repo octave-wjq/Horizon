@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T06:04:24.997745+00:00",
+  "updated_at": "2026-11-06T03:46:11.750933+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4899,6 +4899,83 @@
         "arxiv:2608.16951",
         "title:the little scientist what does the scientific method buy an llm agent",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2608.16951', '')"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Morpheus.AI 智能体自主构建并改进虚拟组织模型。",
+      "url": "",
+      "url_key": "",
+      "title_key": "morpheus ai 智能体自主构建并改进虚拟组织模型",
+      "extra_keys": [
+        "arxiv:2608.16951",
+        "arxiv:2611.05890",
+        "arxiv:2605.11221",
+        "arxiv:2611.05413"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "CellCanon 将细胞预测、循证解释与测量驱动更新相结合。",
+      "url": "",
+      "url_key": "",
+      "title_key": "cellcanon 将细胞预测 循证解释与测量驱动更新相结合",
+      "extra_keys": [
+        "arxiv:2608.16951",
+        "arxiv:2611.05890",
+        "arxiv:2605.11221",
+        "arxiv:2611.05413"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "专家引导的大模型抽取扩充靶向蛋白降解数据。",
+      "url": "",
+      "url_key": "",
+      "title_key": "专家引导的大模型抽取扩充靶向蛋白降解数据",
+      "extra_keys": [
+        "arxiv:2608.16951",
+        "arxiv:2611.05890",
+        "arxiv:2605.11221",
+        "arxiv:2611.05413"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "title": "“小科学家”发现科研智能体循环常不敌简单采样。",
+      "url": "",
+      "url_key": "",
+      "title_key": "小科学家 发现科研智能体循环常不敌简单采样",
+      "extra_keys": [
+        "arxiv:2608.16951",
+        "arxiv:2611.05890",
+        "arxiv:2605.11221",
+        "arxiv:2611.05413"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Exploring the Boundaries of GPT-4 in Radiology",
+      "url": "https://arxiv.org/abs/2310.14573",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2310.14573', '')",
+      "title_key": "exploring the boundaries of gpt 4 in radiology",
+      "id": "github:curated:4a05a3bfb17ffb3c",
+      "extra_keys": [
+        "arxiv:2310.14573",
+        "title:exploring the boundaries of gpt 4 in radiology",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2310.14573', '')"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "NYUTron Health system-scale language models are all-purpose prediction engines",
+      "url": "https://www.nature.com/articles/s41586-023-06160-y",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41586-023-06160-y', '')",
+      "title_key": "nyutron health system scale language models are all purpose prediction engines",
+      "id": "github:curated:59253e14ad61f1b5",
+      "extra_keys": [
+        "title:nyutron health system scale language models are all purpose prediction engines",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41586-023-06160-y', '')"
       ]
     }
   ]
