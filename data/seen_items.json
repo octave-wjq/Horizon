@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T03:46:11.750933+00:00",
+  "updated_at": "2026-11-09T03:01:22.118950+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -4976,6 +4976,51 @@
       "extra_keys": [
         "title:nyutron health system scale language models are all purpose prediction engines",
         "url:('https', '', '', 'www.nature.com', None, '/articles/s41586-023-06160-y', '')"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "2023 年研究探索了 GPT-4 在放射学中的能力边界。",
+      "url": "",
+      "url_key": "",
+      "title_key": "2023 年研究探索了 gpt 4 在放射学中的能力边界",
+      "extra_keys": [
+        "arxiv:2310.14573"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "NYUTron 展示临床语言模型的多任务预测能力。",
+      "url": "",
+      "url_key": "",
+      "title_key": "nyutron 展示临床语言模型的多任务预测能力",
+      "extra_keys": [
+        "arxiv:2310.14573"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "title": "Evaluating large language models on medical evidence summarization",
+      "url": "https://www.nature.com/articles/s41746-023-00896-7",
+      "url_key": "('https', '', '', 'www.nature.com', None, '/articles/s41746-023-00896-7', '')",
+      "title_key": "evaluating large language models on medical evidence summarization",
+      "id": "github:curated:fc167be3f7325e1c",
+      "extra_keys": [
+        "title:evaluating large language models on medical evidence summarization",
+        "url:('https', '', '', 'www.nature.com', None, '/articles/s41746-023-00896-7', '')"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "title": "OphGLM: Training an Ophthalmology Large Language-and-Vision Assistant based on Instructions and Dialogue",
+      "url": "https://arxiv.org/abs/2306.12174",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2306.12174', '')",
+      "title_key": "ophglm training an ophthalmology large language and vision assistant based on instructions and dialogue",
+      "id": "github:curated:29a4d36374786491",
+      "extra_keys": [
+        "arxiv:2306.12174",
+        "title:ophglm training an ophthalmology large language and vision assistant based on instructions and dialogue",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2306.12174', '')"
       ]
     }
   ]
