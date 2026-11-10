@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T03:01:22.118950+00:00",
+  "updated_at": "2026-11-10T05:14:19.392220+00:00",
   "items": [
     {
       "date": "2026-07-15",
@@ -5021,6 +5021,76 @@
         "arxiv:2306.12174",
         "title:ophglm training an ophthalmology large language and vision assistant based on instructions and dialogue",
         "url:('https', '', '', 'arxiv.org', None, '/abs/2306.12174', '')"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "title": "2023 年研究评估大语言模型的医学证据摘要能力。",
+      "url": "",
+      "url_key": "",
+      "title_key": "2023 年研究评估大语言模型的医学证据摘要能力",
+      "extra_keys": [
+        "arxiv:2306.12174"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "title": "OphGLM 探索指令训练驱动的眼科视觉语言辅助。",
+      "url": "",
+      "url_key": "",
+      "title_key": "ophglm 探索指令训练驱动的眼科视觉语言辅助",
+      "extra_keys": [
+        "arxiv:2306.12174"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Kuken Industries searches 70 years of drawings in minutes",
+      "url": "https://openai.com/index/kuken",
+      "url_key": "('https', '', '', 'openai.com', None, '/index/kuken', '')",
+      "title_key": "kuken industries searches 70 years of drawings in minutes",
+      "id": "rss:openai.com_blog_rss.xml:2e34e84f0999c607",
+      "extra_keys": [
+        "title:kuken industries searches 70 years of drawings in minutes",
+        "url:('https', '', '', 'openai.com', None, '/index/kuken', '')"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Personalized health coaching via coachable health age and counterfactual wearable trajectories",
+      "url": "https://arxiv.org/abs/2611.08568",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2611.08568', '')",
+      "title_key": "personalized health coaching via coachable health age and counterfactual wearable trajectories",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:7af6e01b67c90775",
+      "extra_keys": [
+        "arxiv:2611.08568",
+        "title:personalized health coaching via coachable health age and counterfactual wearable trajectories",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2611.08568', '')"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "Health-System-Wide Mapping of Demographic Information in Routine Clinical Histopathology",
+      "url": "https://arxiv.org/abs/2611.09851",
+      "url_key": "('https', '', '', 'arxiv.org', None, '/abs/2611.09851', '')",
+      "title_key": "health system wide mapping of demographic information in routine clinical histopathology",
+      "id": "rss:rss.arxiv.org_rss_q-bio.QM:f8174034b2cffdc6",
+      "extra_keys": [
+        "arxiv:2611.09851",
+        "title:health system wide mapping of demographic information in routine clinical histopathology",
+        "url:('https', '', '', 'arxiv.org', None, '/abs/2611.09851', '')"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "AgentClinic: a multimodal benchmark for tool-using clinical AI agents - npj Digital Medicine - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MRmk5cFo5MmhSR3BqLXROMzRmN0N1QkdkSUZ5TkQtRGlIM1FZYnlDM2JwZzVZQTdtOHFiY2dZSUZpeW91WXRDWUhKNHJVbXdwVnpuNk1YUXRLNk5YakxF?oc=5",
+      "url_key": "('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE1MRmk5cFo5MmhSR3BqLXROMzRmN0N1QkdkSUZ5TkQtRGlIM1FZYnlDM2JwZzVZQTdtOHFiY2dZSUZpeW91WXRDWUhKNHJVbXdwVnpuNk1YUXRLNk5YakxF', 'oc=5')",
+      "title_key": "agentclinic a multimodal benchmark for tool using clinical ai agents npj digital medicine",
+      "id": "google_news:article:9ea15c11390f193c",
+      "extra_keys": [
+        "title:agentclinic a multimodal benchmark for tool using clinical ai agents npj digital medicine",
+        "url:('https', '', '', 'news.google.com', None, '/rss/articles/CBMiX0FVX3lxTE1MRmk5cFo5MmhSR3BqLXROMzRmN0N1QkdkSUZ5TkQtRGlIM1FZYnlDM2JwZzVZQTdtOHFiY2dZSUZpeW91WXRDWUhKNHJVbXdwVnpuNk1YUXRLNk5YakxF', 'oc=5')"
       ]
     }
   ]
